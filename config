@@ -24,6 +24,9 @@ font pango:Inconsolata Medium 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Set default workspace mode as tabbed
+workspace_layout tabbed
+
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
 
