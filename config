@@ -30,6 +30,9 @@ workspace_layout tabbed
 # Hide borders at edge of screen
 hide_edge_borders both
 
+# Allows quick checking of workspaces
+workspace_auto_back_and_forth yes
+
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
 
