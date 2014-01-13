@@ -27,6 +27,9 @@ floating_modifier $mod
 # Set default workspace mode as tabbed
 workspace_layout tabbed
 
+# Hide borders at edge of screen
+hide_edge_borders both
+
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
 
