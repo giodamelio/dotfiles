@@ -159,7 +159,7 @@ bindsym $mod+r mode "resize"
 # Laptop bar
 bar {
         output LVDS
-        status_command i3status
+        status_command python ~/.i3/i3status_main.py
         tray_output primary
 }
 
