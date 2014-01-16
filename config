@@ -163,7 +163,6 @@ bindsym $mod+r mode "resize"
 bar {
         output LVDS
         status_command python ~/.i3/i3status_main.py
-        tray_output primary
 }
 
 # Second moniter bar
@@ -171,5 +170,4 @@ bar {
         output VGA-0
         output VGA-1
         status_command i3status
-        tray_output none
 }
