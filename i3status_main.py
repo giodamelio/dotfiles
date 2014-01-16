@@ -32,7 +32,7 @@ status.register(
 status.register(
     "wireless",
     interface="wlp2s0",
-    format_up="\uF012 {essid} {quality:03.0f}%"
+    format_up="\uF405 {essid} {quality:03.0f}%"
 )
 
 # Shows pulseaudio default sink volume
@@ -44,3 +44,5 @@ status.register(
 )
 
 status.run()
+
+# Reddit icon \uF33B
