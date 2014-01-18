@@ -40,6 +40,11 @@ bindsym $mod+Shift+q kill
 # Turn off screen
 bindsym $mod+z exec "wait 5; xset dpms force off"
 
+# Spotify play, previous and next keys
+bindsym F7 exec /home/giodamelio/bin/spotify_keyboard_shortcuts.sh play
+bindsym F8 exec /home/giodamelio/bin/spotify_keyboard_shortcuts.sh next
+bindsym F6 exec /home/giodamelio/bin/spotify_keyboard_shortcuts.sh prev
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
