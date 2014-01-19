@@ -41,6 +41,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+z [class="St"] focus
 bindsym $mod+x [class="Google-chrome"] focus
 
+# Quick switch
+bindsym $mod+space exec quickswitch.py
+
 # Turn off screen
 bindsym $mod+Shift+z exec "wait 5; xset dpms force off"
 
@@ -98,7 +101,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
