@@ -29,7 +29,7 @@ hide_edge_borders both
 workspace_auto_back_and_forth yes
 
 # Move workspace to other output
-bindsym $mod+x move workspace to output right
+bindsym $mod+c move workspace to output right
 
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
@@ -37,8 +37,12 @@ bindsym $mod+Return exec xfce4-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# Focus on window
+bindsym $mod+z [class="St"] focus
+bindsym $mod+x [class="Google-chrome"] focus
+
 # Turn off screen
-bindsym $mod+z exec "wait 5; xset dpms force off"
+bindsym $mod+Shift+z exec "wait 5; xset dpms force off"
 
 # Spotify play, previous and next keys
 bindsym F7 exec /home/giodamelio/bin/spotify_keyboard_shortcuts.sh play
