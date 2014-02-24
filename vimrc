@@ -15,6 +15,9 @@ set directory=~/tmp/.vim/swap//
 " Show line numbers
 set number
 
+" Don't show the mode in the status line
+set noshowmode 
+
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
