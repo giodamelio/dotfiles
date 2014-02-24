@@ -28,6 +28,9 @@ set shiftround      " Tab/shifting moves to closest tabstop
 set autoindent      " Match indents on new lines
 set smartindent     " Intellegently dedent/indent new lines based on rules
 
+" Autoreload changed files without asking
+set autoread
+
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
