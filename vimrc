@@ -42,6 +42,10 @@ set gdefault    " Use the `g` flag by default
 " Set Leader Key
 let mapleader = ","
 
+" Bind ';' to ':' so we don't have to press shift to input a command
+nnoremap ; :
+vnoremap ; :
+
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
