@@ -46,6 +46,9 @@ let mapleader = ","
 nnoremap ; :
 vnoremap ; :
 
+" Bind jj to esc to exit insert mode faster
+inoremap jf <esc>
+
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
