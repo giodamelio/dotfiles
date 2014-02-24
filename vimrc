@@ -37,7 +37,10 @@ set smartcase   " If there are uppercase letters, become case-sensitive
 set incsearch   " Live incremental searching
 set showmatch   " Live match highlighting
 set hlsearch    " Highlight matches
-set gdefault    " Use the `g` flag by default.
+set gdefault    " Use the `g` flag by default
+
+" Set Leader Key
+let mapleader = ","
 
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
