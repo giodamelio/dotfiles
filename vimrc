@@ -26,5 +26,6 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
 """" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set our colorscheme to molokai
-colorscheme Monokai
+" Set our colorscheme to solorized dark
+set background=dark
+colorscheme monokai
