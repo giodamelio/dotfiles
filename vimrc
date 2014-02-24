@@ -16,7 +16,17 @@ set directory=~/tmp/.vim/swap//
 set number
 
 " Don't show the mode in the status line
-set noshowmode 
+set noshowmode
+
+" Setup tabs
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab       " Use spaces instead of tabs
+set smarttab        " Let's tab key insert 'tab stops', and bksp deletes tabs
+set shiftround      " Tab/shifting moves to closest tabstop
+set autoindent      " Match indents on new lines
+set smartindent     " Intellegently dedent/indent new lines based on rules
 
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
