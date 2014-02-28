@@ -68,6 +68,10 @@ let g:gitgutter_sign_column_always = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
+"" ControlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 """" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set our colorscheme to solorized dark
 set background=dark
