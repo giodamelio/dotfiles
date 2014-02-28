@@ -47,7 +47,13 @@ nnoremap ; :
 vnoremap ; :
 
 " Bind jj to esc to exit insert mode faster
-inoremap jf <esc>
+inoremap jj <esc>
+
+" Change shortcuts for copy, cut and paste
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
 
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
