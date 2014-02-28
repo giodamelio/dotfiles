@@ -13,3 +13,6 @@
 [submodule "bundle/monokai"]
 	path = bundle/monokai
 	url = https://github.com/sickill/vim-monokai
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script
