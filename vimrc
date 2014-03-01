@@ -58,6 +58,10 @@ imap <C-v> <C-r><C-o>+
 " Allow hidden buffers without and error
 set hidden
 
+" Better shortcuts for switching between buffers
+nnoremap <Leader>. :bn<CR>
+nnoremap <Leader>m :bp<CR>
+
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
