@@ -62,6 +62,9 @@ set hidden
 nnoremap <Leader>. :bn<CR>
 nnoremap <Leader>m :bp<CR>
 
+" Stop auto-comment
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
