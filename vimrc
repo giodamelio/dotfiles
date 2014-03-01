@@ -75,6 +75,7 @@ set laststatus=2
 "" ControlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+noremap <C-S-p> :CtrlPBuffer<CR>
 
 "" NerdTree
 " Run nerdtree if vim starts with no files to open
