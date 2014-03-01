@@ -72,6 +72,13 @@ set laststatus=2
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+"" NerdTree
+" Run nerdtree if vim starts with no files to open
+autocmd vimenter * if !argc() | NERDTree | endif
+
+" Custom shortcut to toggle nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
 """" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set our colorscheme to solorized dark
 set background=dark
