@@ -80,6 +80,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 noremap <C-S-p> :CtrlPBuffer<CR>
 
+" Ignore some directorys
+let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
+
 "" NerdTree
 " Run nerdtree if vim starts with no files to open
 autocmd vimenter * if !argc() | NERDTree | endif
