@@ -58,10 +58,6 @@ imap <C-v> <C-r><C-o>+
 " Allow hidden buffers without and error
 set hidden
 
-" Better shortcuts for switching between buffers
-nnoremap <Leader>. :bn<CR>
-nnoremap <Leader>m :bp<CR>
-
 " Stop auto-comment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -75,13 +71,19 @@ let g:gitgutter_sign_column_always = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
-"" ControlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-noremap <C-S-p> :CtrlPBuffer<CR>
+"" Unite
+" File search
+nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
 
-" Ignore some directorys
-let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
+" Content search
+nnoremap <space>/ :Unite grep:.<cr>
+
+" Quick buffer switching
+nnoremap <space>s :Unite -quick-match buffer<cr>
+nnoremap <space>a :Unite -start-insert buffer<cr>
+
+" Use ag for searching(to follow .gitignores)
+let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
 
 "" NerdTree
 " Run nerdtree if vim starts with no files to open
