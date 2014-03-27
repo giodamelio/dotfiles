@@ -98,6 +98,14 @@ autocmd vimenter * if !argc() | NERDTree | endif
 " Custom shortcut to toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+"" Easymotion
+" Make repeated hjkl motions easy
+map <Leader><Leader>l <Plug>(easymotion-lineforward)
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><Leader>h <Plug>(easymotion-linebackward)
+let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+
 """" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set our colorscheme to solorized dark
 set background=dark
