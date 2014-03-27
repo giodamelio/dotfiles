@@ -40,7 +40,7 @@ set hlsearch    " Highlight matches
 set gdefault    " Use the `g` flag by default
 
 " Set Leader Key
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " Bind ';' to ':' so we don't have to press shift to input a command
 nnoremap ; :
