@@ -75,6 +75,9 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+" Allow the cursor to go to the end of the line
+set virtualedit=onemore
+
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
