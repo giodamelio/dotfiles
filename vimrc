@@ -78,6 +78,11 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " Allow the cursor to go to the end of the line
 set virtualedit=onemore
 
+" Hide some gui's in gvim
+set guioptions-=m  "menu bar
+set guioptions-=T  "toolbar
+set guioptions-=r  "scrollbar
+
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
