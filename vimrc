@@ -82,11 +82,10 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " Allow the cursor to go to the end of the line
 set virtualedit=onemore
 
-" Hide some gui's in gvim
-set guioptions-=m  "menu bar
-set guioptions-=T  "toolbar
-set guioptions-=r  "scrollbar
+" Minimal ui
+set guioptions=ae
 
+" Leader+w saves all buffers
 noremap <Leader>w :wa!<CR>
 
 """" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
