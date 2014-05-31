@@ -130,4 +130,4 @@ let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 """" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set our colorscheme to solorized dark
 set background=dark
-colorscheme monokai
+colorscheme gruvbox
