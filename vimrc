@@ -112,10 +112,6 @@ nnoremap <space>a :Unite -start-insert buffer<cr>
 " Use ag for searching(to follow .gitignores)
 let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
 
-"" NerdTree
-" Run nerdtree if vim starts with no files to open
-autocmd vimenter * if !argc() | NERDTree | endif
-
 " Custom shortcut to toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
