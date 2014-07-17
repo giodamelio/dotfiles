@@ -61,3 +61,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
+[submodule "bundle/nimrod.vim"]
+	path = bundle/nimrod.vim
+	url = https://github.com/zah/nimrod.vim
