@@ -1,7 +1,16 @@
-"""" Pathogen Setup """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-runtime bundle/pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-execute pathogen#helptags()
+"""" Vundle Setup """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible    " be iMproved, required
+filetype off        " required
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"""" Here be the plugins """"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call vundle#end()   " required
 
 """" Vanilla Configs """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn on syntax and filetype detection
