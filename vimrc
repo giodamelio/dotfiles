@@ -16,6 +16,7 @@ Plugin 'bling/vim-airline'
 Plugin 'moll/vim-bbye'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
+Plugin 'kchmck/vim-coffee-script'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
