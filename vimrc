@@ -12,6 +12,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'bling/vim-airline'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
@@ -108,8 +109,8 @@ let g:gitgutter_sign_column_always = 1
 
 "" Airline
 " Enable it
-"let g:airline#extensions#tabline#enabled = 1
-"set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
 
 "" Unite
 " File search
