@@ -13,6 +13,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'bling/vim-airline'
+Plugin 'moll/vim-bbye'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
@@ -111,6 +112,9 @@ let g:gitgutter_sign_column_always = 1
 " Enable it
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
+
+"" bbye
+nnoremap <Leader>q :Bdelete<CR>
 
 "" Unite
 " File search
