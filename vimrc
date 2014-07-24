@@ -10,6 +10,7 @@ call vundle#begin()
 Plugin 'sickill/vim-monokai'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
@@ -102,7 +103,7 @@ noremap <Leader>w :wa!<CR>
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
-"let g:gitgutter_sign_column_always = 1
+let g:gitgutter_sign_column_always = 1
 
 "" Airline
 " Enable it
