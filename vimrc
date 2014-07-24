@@ -7,8 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 """" Here be the plugins """"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-Plugin 'tomasr/molokai'
+Plugin 'sickill/vim-monokai'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
 
@@ -38,7 +37,7 @@ set expandtab       " Use spaces instead of tabs
 set smarttab        " Let's tab key insert 'tab stops', and bksp deletes tabs
 set shiftround      " Tab/shifting moves to closest tabstop
 set autoindent      " Match indents on new lines
-set smartindent     " Intellegently dedent/indent new lines based on rules
+set smartindent     " InPlugin 'sickill/vim-monokai'tellegently dedent/indent new lines based on rules
 
 " Autoreload changed files without asking
 set autoread
@@ -128,4 +127,5 @@ noremap <Leader>w :wa!<CR>
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
 set background=dark
-colorscheme molokai
+colorscheme monokai
+
