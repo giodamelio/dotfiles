@@ -103,6 +103,9 @@ set virtualedit=onemore
 " Minimal ui
 set guioptions=ae
 
+" Hide the tabline
+set showtabline=0
+
 " Leader+w saves all buffers
 noremap <Leader>w :wa!<CR>
 
