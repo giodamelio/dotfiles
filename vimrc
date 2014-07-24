@@ -141,3 +141,10 @@ let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --h
 set background=dark
 colorscheme monokai
 
+"" Make Gitgutters background the same as monokai's
+highlight clear SignColumn
+highlight GitGutterAdd guifg=green ctermfg=green guibg=#272822 ctermbg=235
+highlight GitGutterChange guifg=yellow ctermfg=yellow guibg=#272822 ctermbg=235
+highlight GitGutterDelete guifg=red ctermfg=red guibg=#272822 ctermbg=235
+highlight GitGutterChangeDelete guifg=yellow ctermfg=yellow guibg=#272822 ctermbg=235
+
