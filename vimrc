@@ -9,6 +9,7 @@ call vundle#begin()
 """" Here be the plugins """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plugin 'tomasr/molokai'
+Plugin 'mattn/emmet-vim'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
