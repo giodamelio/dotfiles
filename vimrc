@@ -8,6 +8,7 @@ call vundle#begin()
 
 """" Here be the plugins """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
+Plugin 'tomasr/molokai'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
@@ -134,5 +135,5 @@ noremap <Leader>w :wa!<CR>
 "
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
-"set background=dark
-"colorscheme monokai
+set background=dark
+colorscheme molokai
