@@ -14,6 +14,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'bling/vim-airline'
 Plugin 'moll/vim-bbye'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/unite.vim'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
@@ -118,18 +120,17 @@ nnoremap <Leader>q :Bdelete<CR>
 
 "" Unite
 " File search
-"nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
+nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
 
 " Content search
-"nnoremap <space>/ :Unite grep:.<cr>
+nnoremap <space>/ :Unite grep:.<cr>
 
 " Quick buffer switching
-"nnoremap <space>s :Unite -quick-match buffer<cr>
-"nnoremap <space>a :Unite -start-insert buffer<cr>
+nnoremap <space>s :Unite -quick-match buffer<cr>
+nnoremap <space>a :Unite -start-insert buffer<cr>
 
 " Use ag for searching(to follow .gitignores)
-"let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
-
+let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
 
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
