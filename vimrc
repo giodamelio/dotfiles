@@ -99,40 +99,30 @@ set guioptions=ae
 noremap <Leader>w :wa!<CR>
 
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Gitgutter
-"" Always show the gitgutter sign column
+"" Gitgutter
+" Always show the gitgutter sign column
 "let g:gitgutter_sign_column_always = 1
-"
-""" Airline
-"" Enable it
+
+"" Airline
+" Enable it
 "let g:airline#extensions#tabline#enabled = 1
 "set laststatus=2
-"
-""" Unite
-"" File search
+
+"" Unite
+" File search
 "nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
-"
-"" Content search
+
+" Content search
 "nnoremap <space>/ :Unite grep:.<cr>
-"
-"" Quick buffer switching
+
+" Quick buffer switching
 "nnoremap <space>s :Unite -quick-match buffer<cr>
 "nnoremap <space>a :Unite -start-insert buffer<cr>
-"
-"" Use ag for searching(to follow .gitignores)
+
+" Use ag for searching(to follow .gitignores)
 "let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
-"
-"" Custom shortcut to toggle nerdtree
-"map <C-n> :NERDTreeToggle<CR>
-"
-""" Easymotion
-"" Make repeated hjkl motions easy
-"map <Leader><Leader>l <Plug>(easymotion-lineforward)
-"map <Leader><Leader>j <Plug>(easymotion-j)
-"map <Leader><Leader>k <Plug>(easymotion-k)
-"map <Leader><Leader>h <Plug>(easymotion-linebackward)
-"let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
-"
+
+
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
 set background=dark
