@@ -10,6 +10,7 @@ call vundle#begin()
 
 Plugin 'tomasr/molokai'
 Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/syntastic'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
