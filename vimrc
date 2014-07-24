@@ -136,6 +136,9 @@ nnoremap <space>a :Unite -start-insert buffer<cr>
 " Use ag for searching(to follow .gitignores)
 let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
 
+" Use powerline fonts
+let g:airline_powerline_fonts = 1
+
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
 set background=dark
