@@ -18,6 +18,7 @@ Plugin 'moll/vim-bbye'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-commentary'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
@@ -149,7 +150,8 @@ let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --h
 
 "" Commentary
 " Toggle comments
-nnoremap <Leader>c gcc
+vmap <Leader>c gc
+nmap <Leader>c gcc
 
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
