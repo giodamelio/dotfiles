@@ -170,3 +170,7 @@ highlight GitGutterChange guifg=yellow ctermfg=yellow guibg=#272822 ctermbg=235
 highlight GitGutterDelete guifg=red ctermfg=red guibg=#272822 ctermbg=235
 highlight GitGutterChangeDelete guifg=yellow ctermfg=yellow guibg=#272822 ctermbg=235
 
+"" Change the background of the autocomplete menu
+highlight Pmenu ctermbg=59 guibg=#49483e
+highlight PmenuSel guibg=#5A5B55 ctermbg=59
+
