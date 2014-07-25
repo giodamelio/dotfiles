@@ -120,12 +120,15 @@ let g:gitgutter_sign_column_always = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
-" Use powerline fonts
-"let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 
 " Get rid of the ugly arrows
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+let g:airline_left_alt_sep=''
+let g:airline_right_alt_sep=''
 
 "" bbye
 nnoremap <Leader>q :Bdelete<CR>
