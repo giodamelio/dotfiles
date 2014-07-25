@@ -144,14 +144,20 @@ nnoremap <Leader>a :Unite -start-insert buffer<cr>
 " Use ag for searching(to follow .gitignores)
 let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
 
+"" Commentary
+" Toggle comments
+nnoremap <Leader>c gcc
 
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
 set background=dark
 colorscheme monokai
 
+"" Makke the line number background the same as monokais
+highlight LineNr guibg=#272822 ctermbg=235
+
 "" Make Gitgutters background the same as monokai's
-highlight clear SignColumn
+highlight SignColumn guibg=#272822 ctermbg=235
 highlight GitGutterAdd guifg=green ctermfg=green guibg=#272822 ctermbg=235
 highlight GitGutterChange guifg=yellow ctermfg=yellow guibg=#272822 ctermbg=235
 highlight GitGutterDelete guifg=red ctermfg=red guibg=#272822 ctermbg=235
