@@ -7,6 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 """" Here be the plugins """"""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'gmarik/Vundle.vim'
 Plugin 'sickill/vim-monokai'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
