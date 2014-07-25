@@ -20,6 +20,7 @@ Plugin 'Shougo/unite.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
+Plugin 'Valloric/YouCompleteMe'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
