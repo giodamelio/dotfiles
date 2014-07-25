@@ -1,2 +1,5 @@
 .netrwhist
 bundle/
+.backup/
+.swap/
+
