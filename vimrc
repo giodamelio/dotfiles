@@ -120,6 +120,13 @@ let g:gitgutter_sign_column_always = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
+" Use powerline fonts
+"let g:airline_powerline_fonts = 1
+
+" Get rid of the ugly arrows
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
 "" bbye
 nnoremap <Leader>q :Bdelete<CR>
 
@@ -137,8 +144,6 @@ nnoremap <Leader>a :Unite -start-insert buffer<cr>
 " Use ag for searching(to follow .gitignores)
 let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
 
-" Use powerline fonts
-let g:airline_powerline_fonts = 1
 
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
