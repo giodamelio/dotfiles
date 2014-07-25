@@ -128,11 +128,11 @@ nnoremap <Leader>q :Bdelete<CR>
 nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
 
 " Content search
-nnoremap <space>/ :Unite grep:.<cr>
+nnoremap <Leader>/ :Unite grep:.<cr>
 
 " Quick buffer switching
-nnoremap <space>s :Unite -quick-match buffer<cr>
-nnoremap <space>a :Unite -start-insert buffer<cr>
+nnoremap <Leader>s :Unite -quick-match buffer<cr>
+nnoremap <Leader>a :Unite -start-insert buffer<cr>
 
 " Use ag for searching(to follow .gitignores)
 let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
