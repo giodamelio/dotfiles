@@ -19,6 +19,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
