@@ -115,6 +115,10 @@ set showtabline=0
 " Leader+w saves all buffers
 noremap <Leader>w :wa!<CR>
 
+" Close the scratch buffer after I finish the completion or exit insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
