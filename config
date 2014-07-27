@@ -41,8 +41,13 @@ bindsym $mod+Shift+q kill
 bindsym $mod+z [class="St"] focus
 bindsym $mod+x [class="Google-chrome"] focus
 
-# Quick switch
-bindsym $mod+space exec quickswitch.py
+# Start our status browser automaticly
+exec --no-startup-id surf google.com
+# Move it to the scratchpad
+for_window [class="Surf" instance="surf"] move scratchpad
+
+# Toggle the scratchpad
+bindsym $mod+space scratchpad show
 
 # Turn off screen
 bindsym $mod+Shift+z exec "wait 5; xset dpms force off"
