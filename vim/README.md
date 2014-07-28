@@ -4,9 +4,9 @@ Here are my vim configs. Do what you want with them.
 
 # Manual install instructions
 
-Compile syntastic
+Compile vimproc
 
-    cd bundle/syntastic/ && make
+    cd bundle/vimproc.vim && make
 
 Compile YouCompleteMe
 
