@@ -32,3 +32,8 @@ npm install
 # Make symlink
 ln -s $(pwd)/tmux/tmux.conf ~/.tmux.conf
 
+#### Fish ####
+
+# Make symlink
+ln -s $(pwd)/fish ~/.config/fish
+

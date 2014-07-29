@@ -5,10 +5,11 @@ Here are my dotfiles. To install them you need a bunch of stuff.
  - vim or gvim
  - Node.js
  - tmux
+ - fish
 
 On Arch
 
-    sudo pacman -Sy vim nodejs tmux
+    sudo pacman -Sy vim nodejs tmux fish
 
 When you have all the dependencies, just run
 
