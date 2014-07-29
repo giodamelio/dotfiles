@@ -1,3 +1,4 @@
+#!/bin/bash
 ##### Vim ####
 
 # Make symlink
@@ -36,4 +37,9 @@ ln -s $(pwd)/tmux/tmux.conf ~/.tmux.conf
 
 # Make symlink
 ln -s $(pwd)/fish ~/.config/fish
+
+#### Dunst ####
+
+# Make symlink
+ln -s $(pwd)/dunst ~/.config/dunst
 
