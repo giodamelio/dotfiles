@@ -10,7 +10,7 @@ Here are my dotfiles. To install them you need a bunch of stuff.
 
 On Arch
 
-    sudo pacman -Sy vim nodejs tmux fish dunst
+    yaourt -Sy vim nodejs tmux fish-shell-git dunst-git
 
 When you have all the dependencies, just run
 
