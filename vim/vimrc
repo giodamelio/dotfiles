@@ -24,6 +24,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
+Plugin 'dag/vim-fish'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
