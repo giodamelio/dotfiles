@@ -27,4 +27,8 @@ cd -
 cd vim/bundle/tern_for_vim
 npm install
 
+#### Tmux ####
+
+# Make symlink
+ln -s $(pwd)/tmux/tmux.conf ~/.tmux.conf
 
