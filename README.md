@@ -6,10 +6,11 @@ Here are my dotfiles. To install them you need a bunch of stuff.
  - Node.js
  - tmux
  - fish
+ - Dunst
 
 On Arch
 
-    sudo pacman -Sy vim nodejs tmux fish
+    sudo pacman -Sy vim nodejs tmux fish dunst
 
 When you have all the dependencies, just run
 
