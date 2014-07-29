@@ -8,6 +8,9 @@ function prompt_pwd --description 'Print the current working directory, NOT shor
 end
 
 function fish_prompt
+    # Save the status of the last command
+    set -l last_status $status
+
     #### First line ####
     set_color -o blue
     printf "┌─["
@@ -59,5 +62,12 @@ function fish_prompt
         printf " ─ [\$] "
     end
     set_color normal
+
+    # If the last command took longer the ten seconds, send a notification
+    if test $CMD_DURATION
+        if test (expr $CMD_DURATION \> 10) = "1"
+            notify-send "$history[1]" "Returned $last_status, took $CMD_DURATION seconds" -t 5000 -i emblem-default
+        end
+    end
 end
 
