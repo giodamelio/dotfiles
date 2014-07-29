@@ -34,6 +34,9 @@ call vundle#end()   " required
 syntax on
 filetype plugin indent on
 
+" Use bash as the shell
+set shell=/bin/bash
+
 " Set location for backup and swap files
 set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swap//
