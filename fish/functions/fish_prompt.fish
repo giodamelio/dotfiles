@@ -56,7 +56,9 @@ function fish_prompt
 
     # If the last command took longer the ten seconds, send a notification
     if test $CMD_DURATION
-        if test (expr $CMD_DURATION \> 10) = "1"
+        # Remove the s from time
+        set time (echo $CMD_DURATION | sed "s/s//g")
+        if test (math "($time+0.5)/1") -gt 10
             notify-send "$history[1]" "Returned $last_status, took $CMD_DURATION seconds" -t 5000 -i emblem-default
         end
     end
