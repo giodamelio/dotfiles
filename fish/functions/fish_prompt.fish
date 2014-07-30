@@ -55,12 +55,20 @@ function fish_prompt
     set_color normal
 
     # If the last command took longer the ten seconds, send a notification
-    if test $CMD_DURATION
-        # Remove the s from time
-        set time (echo $CMD_DURATION | sed "s/s//g")
-        if test (math "($time+0.5)/1") -gt 10
-            notify-send "$history[1]" "Returned $last_status, took $CMD_DURATION seconds" -t 5000 -i emblem-default
-        end
-    end
+    # if test $CMD_DURATION
+    #     echo $CMD_DURATION
+    #     echo $CMD_DURATION | wc -m
+        
+    #     # If there is a letter m in it, it has taken more then ten seconds
+    #     if test !(echo $CMD_DURATION | grep -q "m")
+    #         notify-send "$history[1]" "Returned $last_status, took $CMD_DURATION seconds" -t 5000 -i emblem-default
+    #     else
+    #         # If there is no m, remove the s and see if it less then ten
+    #         set time (echo $CMD_DURATION | sed "s/s//g")
+    #         if test (math "($time+0.5)/1") -gt 10
+    #             notify-send "$history[1]" "Returned $last_status, took $CMD_DURATION seconds" -t 5000 -i emblem-default
+    #         end
+    #     end
+    # end
 end
 
