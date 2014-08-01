@@ -25,6 +25,8 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'dag/vim-fish'
+Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
@@ -165,6 +167,11 @@ let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --h
 " Toggle comments
 vmap <Leader>c gc
 nmap <Leader>c gcc
+
+"" UtilSnips
+let g:UltiSnipsExpandTrigger="<right>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
