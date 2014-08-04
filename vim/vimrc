@@ -27,6 +27,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'dag/vim-fish'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'rhysd/clever-f.vim'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
