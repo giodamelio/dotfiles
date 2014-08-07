@@ -52,10 +52,20 @@ bindsym $mod+space scratchpad show
 # Turn off screen
 bindsym $mod+Shift+z exec "wait 5; xset dpms force off"
 
-# Spotify play, previous and next keys
-bindsym F7 exec /home/giodamelio/bin/spotify_keyboard_shortcuts.sh play
-bindsym F8 exec /home/giodamelio/bin/spotify_keyboard_shortcuts.sh next
-bindsym F6 exec /home/giodamelio/bin/spotify_keyboard_shortcuts.sh prev
+# MPD control buttons
+# Play and pause toggles
+bindsym XF86Launch7 exec mpc toggle
+bindsym XF86AudioPlay exec mpc toggle
+# Next
+bindsym XF86Launch8 exec mpc next
+# Prev
+bindsym XF86Launch6 exec mpc prev
+# Volume up
+bindsym XF86AudioRaiseVolume exec amixer set Master 10%+
+# Volume down
+bindsym XF86AudioLowerVolume exec amixer set Master 10%-
+# Toggle Mute
+bindsym XF86AudioMute exec amixer set Master toggle
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
