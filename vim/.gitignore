@@ -1,5 +1,6 @@
 .netrwhist
 bundle/
+sessions/
 .backup/
 .swap/
 

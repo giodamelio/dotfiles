@@ -28,6 +28,8 @@ Plugin 'dag/vim-fish'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'rhysd/clever-f.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
@@ -173,6 +175,13 @@ nmap <Leader>c gcc
 let g:UltiSnipsExpandTrigger="<right>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+"" Vim-Session
+" Auto save on exit
+let g:session_autosave = 1
+
+" Auto save session every once and awile
+let g:session_autosave_periodic = 5 " Minutes
 
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
