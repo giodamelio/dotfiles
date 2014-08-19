@@ -30,6 +30,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'rhysd/clever-f.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+Plugin 'valloric/MatchTagAlways'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
