@@ -43,6 +43,17 @@ status.register(
     format="\uF027 {volume}"
 )
 
+# Show mpd status
+status.register(
+    "mpd",
+    format="{status} {title} - {artist}",
+    status={
+        "pause": "▷",
+        "play": "▶",
+        "stop": "◾"
+    }
+)
+
 status.run()
 
 # Reddit icon \uF33B
