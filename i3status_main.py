@@ -21,8 +21,8 @@ status.register(
     alert=True,
     alert_percentage=5,
     status={
-        "DIS":  "\uF211",
-        "CHR":  "\uF212",
+        "DIS":  "\uF212",
+        "CHR":  "\uF211",
         "FULL": "\uF213",
     }
 )
