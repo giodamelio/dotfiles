@@ -58,8 +58,10 @@ bindsym XF86Launch7 exec mpc toggle
 bindsym XF86AudioPlay exec mpc toggle
 # Next
 bindsym XF86Launch8 exec mpc next
+bindsym XF86AudioNext exec mpc next
 # Prev
 bindsym XF86Launch6 exec mpc prev
+bindsym XF86AudioPrev exec mpc prev
 # Volume up
 bindsym XF86AudioRaiseVolume exec amixer set Master 10%+
 # Volume down
