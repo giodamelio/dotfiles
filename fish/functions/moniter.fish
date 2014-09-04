@@ -7,5 +7,7 @@ function moniter
             xrandr --output LVDS --auto --primary --output $vga --auto --right-of LVDS
         case dual-left
             xrandr --output LVDS --primary  --auto --output $vga --auto --left-of LVDS
+        case "*"
+            echo "Usage: moniter [single|dual|dual-left]"
     end
 end
