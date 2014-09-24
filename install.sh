@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Add bin dir to the path
+set PATH ~/.dotfiles/bin/ $PATH
+
 ##### Vim ####
 
 # Make symlink
