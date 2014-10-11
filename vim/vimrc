@@ -31,6 +31,7 @@ Plugin 'rhysd/clever-f.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'valloric/MatchTagAlways'
+Plugin 'majutsushi/tagbar'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
