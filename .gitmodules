@@ -1,0 +1,3 @@
+[submodule "fish/nvm"]
+	path = fish/nvm
+	url = https://github.com/Alex7Kom/nvm-fish

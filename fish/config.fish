@@ -8,6 +8,9 @@ set -x PATH ~/.dotfiles/bin $PATH
 set -x GOPATH $HOME/Projects/go
 set -x PATH $GOPATH/bin $PATH
 
+# Setup NVM
+source ~/.dotfiles/fish/nvm/nvm.fish
+
 # Use the fortune command as a greeting
 function fish_greeting
     fortune -as
