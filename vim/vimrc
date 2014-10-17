@@ -185,8 +185,8 @@ nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
 " Content search
 nnoremap <Leader>/ :Unite grep:.<cr>
 
-" Quick buffer switching
-nnoremap <Leader>s :Unite -quick-match buffer<cr>
+" Quick buffer and tab switching
+nnoremap <Leader>s :Unite -start-insert tab<cr>
 nnoremap <Leader>a :Unite -start-insert buffer<cr>
 
 " Use ag for searching(to follow .gitignores)
