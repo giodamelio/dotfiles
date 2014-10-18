@@ -155,6 +155,9 @@ inoremap UU <Esc>u
 " Copy current line below "
 inoremap PP <Esc>pi
 
+" Highlight .ejs files with html
+au BufNewFile,BufRead *.ejs set filetype=html
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
