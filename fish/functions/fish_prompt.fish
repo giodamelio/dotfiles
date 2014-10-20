@@ -12,6 +12,14 @@ function fish_prompt
     set_color -o blue
     printf "] ─ ["
 
+    # Show virtualenv if we are in one
+    if set -q VIRTUAL_ENV
+        set_color -o 555
+        printf (basename $VIRTUAL_ENV)
+        set_color -o blue
+        printf "] ─ ["
+    end
+
     # Working directory
     set_color -o 555
     printf "%s" (prompt_pwd)
