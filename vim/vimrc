@@ -34,6 +34,7 @@ Plugin 'valloric/MatchTagAlways'
 Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
 Plugin 'groenewege/vim-less'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
