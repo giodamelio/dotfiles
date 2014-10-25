@@ -10,10 +10,11 @@ Here are my dotfiles. To install them you need a bunch of stuff.
 
 On Arch
 
-    yaourt -Sy vim nodejs tmux fish-shell-git dunst-git
+    packer -Sy vim nodejs tmux fish-shell-git dunst-git
 
 When you have all the dependencies, just run
 
-    git clone git@github.com:giodamelio/dotfile.git ~/.dotfiles
-    ~/.dotfiles/install.sh
+    cd ~
+    git clone git@github.com:giodamelio/dotfile.git
+    ~/dotfiles/install.sh
 
