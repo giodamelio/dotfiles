@@ -1,3 +1,3 @@
 #!/bin/bash
-stow ~/dotfiles/*/
+stow */
 

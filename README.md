@@ -16,5 +16,6 @@ When you have all the dependencies, just run
 
     cd ~
     git clone git@github.com:giodamelio/dotfile.git
-    ~/dotfiles/install.sh
+    cd ~/dotfiles
+    ./install.sh
 
