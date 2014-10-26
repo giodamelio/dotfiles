@@ -1,6 +1,6 @@
 .netrwhist
 bundle/
 sessions/
-.backup/
-.swap/
+.backup/*
+.swap/*
 
