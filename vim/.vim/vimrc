@@ -137,26 +137,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " Toggle between current and previously edited file
 map <leader><Backspace> <C-^>
 
-" Insert mode shortcuts
-" Go back to beggining of the line "
-inoremap II <Esc>I   
-" Go to the end of line "
-inoremap AA <Esc>A   
-" Enter blank line below "
-inoremap QQ <c-o>o   
-" Enter blank line above "
-inoremap OO <Esc>O   
-" Change whole word under the cursor "
-inoremap CC <Esc>ciw 
-" Clear current line "
-inoremap SS <Esc>S   
-" Delete current line "
-inoremap DD <Esc>ddi 
-" Undo "
-inoremap UU <Esc>u   
-" Copy current line below "
-inoremap PP <Esc>pi
-
 " Highlight .ejs files with html
 au BufNewFile,BufRead *.ejs set filetype=html
 
