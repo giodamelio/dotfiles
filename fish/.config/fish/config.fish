@@ -1,9 +1,6 @@
 # Set our editor
 set -U EDITOR vim
 
-# Append our bin path
-set -x PATH ~/.dotfiles/bin $PATH
-
 # Append perl bin to path
 set -x PATH $PATH /usr/bin/core_perl/
 
