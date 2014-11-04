@@ -35,6 +35,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
 Plugin 'groenewege/vim-less'
 Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'leafgarland/typescript-vim'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
