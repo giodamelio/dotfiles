@@ -214,6 +214,9 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 " Open up godoc
 au FileType go nmap <Leader>g :Godoc<cr>
 
+" Use goimports
+set g:go_fmt_command = "goimports"
+
 " Go + TagBar
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_type_go = {
