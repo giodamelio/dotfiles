@@ -1,5 +1,5 @@
 # Set our editor
-set -U EDITOR vim
+set -x EDITOR vim
 
 # Append perl bin to path
 set -x PATH $PATH /usr/bin/core_perl/
