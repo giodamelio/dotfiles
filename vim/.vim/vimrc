@@ -215,7 +215,8 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <Leader>g :Godoc<cr>
 
 " Use goimports
-set g:go_fmt_command = "goimports"
+let g:go_bin_path = expand("~/Projects/go/bin")
+let g:go_fmt_command = "goimports"
 
 " Go + TagBar
 nmap <F8> :TagbarToggle<CR>
