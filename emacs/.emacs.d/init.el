@@ -17,12 +17,7 @@
   (package-install 'use-package))
 (require 'use-package)
 
-; Load themes
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-
-; Set theme to molokai
-(load-theme 'molokai t)
-
+(require 'my-theme)
 (require 'my-elisp-slime-nav)
 (require 'my-evil)
 
