@@ -20,6 +20,7 @@
 (require 'my-functions)
 (require 'my-theme)
 (require 'my-core)
+(require 'my-git-gutter)
 (require 'my-elisp-slime-nav)
 (require 'my-helm)
 (require 'my-evil)
