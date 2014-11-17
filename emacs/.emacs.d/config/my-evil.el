@@ -1,3 +1,19 @@
+; Setup evil-leader
+(use-package evil-leader
+  :commands (evil-leader-mode global-evil-leader-mode)
+  :ensure evil-leader
+  :demand evil-leader
+  :init
+  (progn
+    ; Set leader to space
+    (evil-leader/set-leader "<SPC>")
+    (global-evil-leader-mode t)
+
+    ; Save a buffer
+    (evil-leader/set-key (kbd "w") 'save-buffer)
+  )
+)
+
 ; Setup evil
 (use-package evil
   :ensure evil
