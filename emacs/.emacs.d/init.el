@@ -20,5 +20,6 @@
 (require 'my-theme)
 (require 'my-core)
 (require 'my-elisp-slime-nav)
+(require 'my-helm)
 (require 'my-evil)
 
