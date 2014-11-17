@@ -17,6 +17,7 @@
   (package-install 'use-package))
 (require 'use-package)
 
+(require 'my-functions)
 (require 'my-theme)
 (require 'my-core)
 (require 'my-elisp-slime-nav)
