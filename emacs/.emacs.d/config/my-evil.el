@@ -11,9 +11,6 @@
 
     ; Save a buffer
     (evil-leader/set-key (kbd "w") 'save-buffer)
-
-    ; Open helm-mini
-    (evil-leader/set-key (kbd "a") 'helm-mini)
   )
 )
 
