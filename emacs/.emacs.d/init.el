@@ -1,13 +1,21 @@
+; Add directories to path
+(add-to-list 'load-path (concat user-emacs-directory "config"))
+
 ; Add repos
 (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
                          ("org" . "http://orgmode.org/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")))
 
-; Load package manager
+; Setup load packages
 (require 'package)
-
-; Load and activate packages
 (package-initialize)
+(setq package-enable-at-startup nil)
+
+; Make sure use-package is installed
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(require 'use-package)
 
 ; Load themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
@@ -25,14 +33,5 @@
   (add-hook 'emacs-lisp-mode-hook 'my-load-slime)
 )
 
-; Enable evil by default
-; Keep this at the bottom
-(require 'evil)
-(evil-mode 1)
-
-; Easy switching between windows
-(define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
-(define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
-(define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
-(define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+(require 'my-evil)
 
