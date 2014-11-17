@@ -23,15 +23,6 @@
 ; Set theme to molokai
 (load-theme 'molokai t)
 
-; Setup slime-nav
-(progn
-  (require 'elisp-slime-nav)
-  (defun my-load-slime ()
-    (elisp-slime-nav-mode)
-    (turn-on-eldoc-mode)
-    )
-  (add-hook 'emacs-lisp-mode-hook 'my-load-slime)
-)
-
+(require 'my-elisp-slime-nav)
 (require 'my-evil)
 
