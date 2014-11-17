@@ -9,6 +9,16 @@
 ; Load and activate packages
 (package-initialize)
 
+; Setup slime-nav
+(progn
+  (require 'elisp-slime-nav)
+  (defun my-load-slime ()
+    (elisp-slime-nav-mode)
+    (turn-on-eldoc-mode)
+    )
+  (add-hook 'emacs-lisp-mode-hook 'my-load-slime)
+)
+
 ; Enable evil by default
 ; Keep this at the bottom
 (require 'evil)
