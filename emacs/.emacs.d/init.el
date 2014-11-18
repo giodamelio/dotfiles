@@ -25,6 +25,7 @@
 (require 'my-git-gutter)
 (require 'my-magit)
 (require 'my-company)
+(require 'my-flycheck)
 (require 'my-elisp-slime-nav)
 (require 'my-helm)
 (require 'my-evil)
