@@ -28,6 +28,7 @@
 (require 'my-flycheck)
 (require 'my-rainbow-delimiters)
 (require 'my-rainbow-mode)
+(require 'my-guide-key)
 (require 'my-elisp-slime-nav)
 (require 'my-helm)
 (require 'my-evil)
