@@ -26,6 +26,7 @@
 (require 'my-magit)
 (require 'my-company)
 (require 'my-flycheck)
+(require 'my-rainbow-delimiters)
 (require 'my-elisp-slime-nav)
 (require 'my-helm)
 (require 'my-evil)
