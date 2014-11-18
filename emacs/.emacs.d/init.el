@@ -21,6 +21,7 @@
 (require 'my-theme)
 (require 'my-core)
 (require 'my-git-gutter)
+(require 'my-magit)
 (require 'my-elisp-slime-nav)
 (require 'my-helm)
 (require 'my-evil)
