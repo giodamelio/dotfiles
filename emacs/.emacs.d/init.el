@@ -1,5 +1,6 @@
 ; Add directories to path
 (add-to-list 'load-path (concat user-emacs-directory "config"))
+(add-to-list 'load-path (concat user-emacs-directory "config" "/languages"))
 
 ; Add repos
 (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
@@ -20,8 +21,10 @@
 (require 'my-functions)
 (require 'my-theme)
 (require 'my-core)
+(require 'my-languages)
 (require 'my-git-gutter)
 (require 'my-magit)
+(require 'my-company)
 (require 'my-elisp-slime-nav)
 (require 'my-helm)
 (require 'my-evil)
