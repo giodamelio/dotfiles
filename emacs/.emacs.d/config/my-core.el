@@ -10,6 +10,9 @@
 ; Tabs are evil(not the good evil)
 (setq-default indent-tabs-mode nil)
 
+; Set tab width to 4
+(setq tab-width 4)
+
 ; Show line numbers
 (global-linum-mode t)
 
