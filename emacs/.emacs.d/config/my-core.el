@@ -7,11 +7,10 @@
 ; Don't create lockfiles
 (setq create-lockfiles nil)
 
-; Tabs are evil(not the good evil)
+; Make tabs 4 spaces
 (setq-default indent-tabs-mode nil)
-
-; Set tab width to 4
-(setq tab-width 4)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
 
 ; Show line numbers
 (global-linum-mode t)
