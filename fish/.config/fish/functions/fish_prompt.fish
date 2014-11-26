@@ -3,27 +3,28 @@ function fish_prompt
     set -l last_status $status
 
     #### First line ####
-    set_color -o blue
+    set_color blue
     printf "┌─["
 
     # Username and hostname
-    set_color -o 555
+    set_color green
     printf "%s@%s" (whoami) (hostname -s)
-    set_color -o blue
+
+    set_color blue
     printf "] ─ ["
 
     # Show virtualenv if we are in one
     if set -q VIRTUAL_ENV
-        set_color -o 555
+        set_color green
         printf (basename $VIRTUAL_ENV)
-        set_color -o blue
+        set_color blue
         printf "] ─ ["
     end
 
     # Working directory
-    set_color -o 555
+    set_color green
     printf "%s" (prompt_pwd)
-    set_color -o blue
+    set_color blue
     printf "]"
     echo
     
@@ -50,11 +51,11 @@ function fish_prompt
     set -g __fish_git_prompt_color_untrackedfiles blue
     set -g __fish_git_prompt_color_cleanstate green --bold
     printf "└─[%s" (__fish_git_prompt "%s")
-    set_color -o blue
+    set_color blue
     printf "]"
 
     # Regular user or root
-    set_color -o blue
+    set_color blue
     if test (command whoami) = root
         printf " ─ [%%] "
     else
