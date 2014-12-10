@@ -36,6 +36,7 @@ Plugin 'fatih/vim-go'
 Plugin 'groenewege/vim-less'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'altercation/vim-colors-solarized'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
