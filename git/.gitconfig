@@ -1,0 +1,47 @@
+[user]
+	name = Gio d'Amelio
+	email = giodamelio@gmail.com
+[core]
+	editor = vim 
+	excludesfile = ~/.gitignore
+[alias]
+	ci = commit
+	st = status
+	br = branch
+	co = checkout
+    ca = commit -am
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	h = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	amend = commit --amend
+	remove-last = reset --soft HEAD~1
+	remove-last-hard = reset --hard HEAD~1
+    rm-deleted = !git ls-files --deleted -z | xargs -0 git rm
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
+[push]
+	default = matching
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
