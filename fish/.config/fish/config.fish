@@ -10,6 +10,9 @@ set -x PATH $PATH /usr/bin/core_perl/
 set -x GOPATH $HOME/Projects/go
 set -x PATH $GOPATH/bin $PATH
 
+# Set elm path
+set -x PATH $HOME/bin/elm/.cabal-sandbox/bin $PATH
+
 # Use the fortune command as a greeting
 function fish_greeting
     fortune -as
