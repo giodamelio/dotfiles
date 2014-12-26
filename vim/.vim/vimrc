@@ -39,6 +39,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'wavded/vim-stylus'
 Plugin 'cespare/vim-toml'
+Plugin 'lambdatoast/elm.vim'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
