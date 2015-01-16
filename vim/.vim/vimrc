@@ -75,6 +75,9 @@ set smartindent     " InPlugin 'sickill/vim-monokai'tellegently dedent/indent ne
 " Autoreload changed files without asking
 set autoread
 
+" Sane backspace
+set backspace=indent,eol,start
+
 " Make search better
 set ignorecase  " Case insensitive search
 set smartcase   " If there are uppercase letters, become case-sensitive
