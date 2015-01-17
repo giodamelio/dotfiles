@@ -1,3 +1,6 @@
+# Set out term to 256 colors
+set -x TERM "xterm-256color"
+
 # Set our editor
 set -x EDITOR "nvim"
 set -x VISUAL "gvim"
