@@ -1,7 +1,6 @@
 # Set our editor
-set -x EDITOR "emacsclient -t" 
-set -x VISUAL "emacsclient -c -a ''"
-alias ec "emacsclient -c -a ''"
+set -x EDITOR "nvim"
+set -x VISUAL "gvim"
 
 # Append perl bin to path
 set -x PATH $PATH /usr/bin/core_perl/
