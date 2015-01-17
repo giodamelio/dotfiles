@@ -263,3 +263,6 @@ let g:tagbar_type_go = {
 set background=dark
 colorscheme solarized
 
+"" Fix gitgutter's colors
+highlight! link SignColumn LineNr
+
