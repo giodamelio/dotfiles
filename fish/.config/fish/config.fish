@@ -2,6 +2,9 @@
 set -x EDITOR "nvim"
 set -x VISUAL "gvim"
 
+# Add ~/bin to the path
+set -x PATH $PATH $HOME/bin
+
 # Append perl bin to path
 set -x PATH $PATH /usr/bin/core_perl/
 
