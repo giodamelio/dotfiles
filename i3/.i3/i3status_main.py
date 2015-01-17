@@ -31,7 +31,7 @@ status.register(
 # Show wifi status
 status.register(
     "wireless",
-    interface="wlp2s0",
+    interface="wlo1",
     format_up="\uF405 {essid} {quality:03.0f}%"
 )
 

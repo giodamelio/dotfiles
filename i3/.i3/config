@@ -185,13 +185,14 @@ bindsym $mod+r mode "resize"
 
 # Laptop bar
 bar {
-        output LVDS
+        output eDP1
         status_command python ~/.i3/i3status_main.py
         tray_output none
 }
 
 # Second moniter bar
 bar {
+        output HDMI1
         output VGA-0
         output VGA-1
         status_command python ~/.i3/i3status_main.py
