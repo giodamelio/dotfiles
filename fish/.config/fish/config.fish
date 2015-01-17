@@ -20,3 +20,6 @@ function fish_greeting
     fortune -as
 end
 
+# Replace vim with neovim
+alias vim="nvim"
+
