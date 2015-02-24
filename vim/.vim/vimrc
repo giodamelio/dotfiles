@@ -41,6 +41,7 @@ Plugin 'wavded/vim-stylus'
 Plugin 'cespare/vim-toml'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'wting/rust.vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
