@@ -8,7 +8,7 @@ function fish_prompt
 
     # Username and hostname
     set_color green
-    printf "%s@%s" (whoami) (hostname -s)
+    printf "%s@%s" (whoami) (hostname)
 
     set_color blue
     printf "] ─ ["
