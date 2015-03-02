@@ -157,6 +157,9 @@ au BufNewFile,BufRead *.ejs set filetype=html
 " Exit insert mode with Control-c
 imap <C-c> <ESC>
 
+" Allow modelines
+set modeline
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
