@@ -23,7 +23,10 @@ set -x PATH $HOME/bin/iojs-v1.0.1-linux-x64/bin $PATH
 
 # Use the fortune command as a greeting
 function fish_greeting
-    fortune -as
+    # Only run fortune ~20% of the time
+    if test (random) -lt 6553
+        fortune -as
+    end
 end
 
 # Replace vim with neovim
