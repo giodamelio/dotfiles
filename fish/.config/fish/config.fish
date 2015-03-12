@@ -18,8 +18,8 @@ set -x PATH $GOPATH/bin $PATH
 # Set elm path
 set -x PATH $HOME/bin/elm/.cabal-sandbox/bin $PATH
 
-# Add iojs to the path
-set -x PATH $HOME/bin/iojs-v1.0.1-linux-x64/bin $PATH
+# Setup nvm wrapper
+source ~/.config/fish/nvm.fish
 
 # Use the fortune command as a greeting
 function fish_greeting
