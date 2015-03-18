@@ -113,15 +113,15 @@ set hidden
 " Stop auto-comment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Disable Arrow
+" Disable Arrow keys
 map <Up> <NOP>
 map <Down> <NOP>
-map <Left> <P>
-map <Right> <P>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+map <Left> <NOP>
+map <Right> <NOP>
+imap <Up> <NOP>
+imap <Down> <NOP>
+imap <Left> <NOP>
+imap <Right> <NOP>
 
 " Swap lines up and down
 nnoremap <C-j> :m .+1<CR>==
