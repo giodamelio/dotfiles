@@ -44,6 +44,7 @@ Plugin 'wting/rust.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'wellsjo/wells-colorscheme.vim'
+Plugin 'justinmk/vim-sneak'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
@@ -267,6 +268,9 @@ let g:tagbar_type_go = {
 
 "" Syntastic
 let g:syntastic_javascript_checkers = ['jsxhint']
+
+"" Sneak
+let g:sneak#s_next = 1
 
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
