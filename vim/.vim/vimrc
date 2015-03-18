@@ -162,6 +162,9 @@ imap <C-c> <ESC>
 " Allow modelines
 set modeline
 
+" ROT13 Madness
+map <F5> ggg?G``
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
