@@ -43,6 +43,7 @@ Plugin 'lambdatoast/elm.vim'
 Plugin 'wting/rust.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'wellsjo/wells-colorscheme.vim'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
