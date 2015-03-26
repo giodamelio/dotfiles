@@ -29,6 +29,3 @@ function fish_greeting
     end
 end
 
-# Replace vim with neovim
-alias vim="nvim"
-
