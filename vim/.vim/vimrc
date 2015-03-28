@@ -162,6 +162,10 @@ set modeline
 " ROT13 Madness
 map <F5> ggg?G``
 
+" Refresh the file from disk when the cursor is idle
+" Run checktime in buffers, but avoiding the "Command Line" (q:) window
+au CursorHold * if getcmdwintype() == '' | checktime | endif
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
