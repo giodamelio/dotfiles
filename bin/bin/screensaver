@@ -1,0 +1,3 @@
+#!/bin/bash
+./pipes -p 10 -f 50 -r 0
+
