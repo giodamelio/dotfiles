@@ -1,3 +1,6 @@
+-- Allow moonscript files to to loaded
+require("moonscript")
+
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
