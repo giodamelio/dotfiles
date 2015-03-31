@@ -1,5 +1,6 @@
 awful = require("awful")
 wibox = require("wibox")
+vicious = require("vicious")
 
 seperator = require("widgets.seperator")
 
@@ -10,8 +11,13 @@ bar_bottom = awful.wibox.new({
     height: 16
 })
 
+-- Setup our widgets {{
+
 -- Clock widget
-clock_widget = awful.widget.textclock("%A %B %d, %I:%M %p")
+clock_widget = wibox.widget.textbox()
+vicious.register(clock_widget, vicious.widgets.date, "%A %B %d, %I:%M %p")
+
+-- }}
 
 -- Right aligned layout
 right_layout = wibox.layout.fixed.horizontal()
