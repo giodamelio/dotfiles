@@ -1,3 +1,6 @@
 [submodule "fish/nvm"]
 	path = fish/nvm
 	url = https://github.com/Alex7Kom/nvm-fish
+[submodule "awesome/.config/awesome/vicious"]
+	path = awesome/.config/awesome/vicious
+	url = git@github.com:Mic92/vicious.git
