@@ -17,12 +17,17 @@ bar_bottom = awful.wibox.new({
 clock_widget = wibox.widget.textbox()
 vicious.register(clock_widget, vicious.widgets.date, "%A %B %d, %I:%M %p")
 
+-- Battery widget
+battery_widget = wibox.widget.textbox()
+vicious.register(battery_widget, vicious.widgets.bat, "$1 $2%", 60, "BAT0")
+
 -- }}
 
 -- Right aligned layout
 right_layout = wibox.layout.fixed.horizontal()
 
 -- Add widgets left to right
+right_layout\add(battery_widget)
 right_layout\add(seperator)
 right_layout\add(clock_widget)
 
