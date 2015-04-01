@@ -37,12 +37,32 @@ for s = 1, screen.count()
         60,
         "BAT0"
 
+    -- Wifi widget
+    wifi_widget = wibox.widget.textbox()
+    vicious.register wifi_widget,
+        vicious.widgets.wifi,
+        ((widget, args) ->
+            ssid = args["{ssid}"]
+            linp = args["{linp}"] -- Connection quality in percent
+            color = if linp < 40
+                "red"
+            elseif linp < 70
+                "yellow"
+            else
+                "green"
+            "<span color='#{color}'>#{ssid} #{linp}%</span>"
+         ),
+        30,
+        "wlo1"
+
     -- }}
 
     -- Right aligned layout
     right_layout = wibox.layout.fixed.horizontal()
 
     -- Add widgets left to right
+    right_layout\add(wifi_widget)
+    right_layout\add(seperator)
     right_layout\add(battery_widget)
     right_layout\add(seperator)
     right_layout\add(clock_widget)
