@@ -20,7 +20,22 @@ for s = 1, screen.count()
 
     -- Battery widget
     battery_widget = wibox.widget.textbox()
-    vicious.register(battery_widget, vicious.widgets.bat, "$1 $2%", 60, "BAT0")
+    vicious.register battery_widget,
+        vicious.widgets.bat,
+        ((widget, args) ->
+            status = args[1]
+            percent = args[2]
+            color = if percent < 20
+                "red"
+            elseif percent < 50
+                "yellow"
+            else
+                "green"
+
+            "<span color='#{color}'>#{status} #{percent}%</span>"
+        ),
+        60,
+        "BAT0"
 
     -- }}
 
