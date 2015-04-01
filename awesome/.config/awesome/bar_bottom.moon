@@ -1,5 +1,6 @@
 awful = require("awful")
 wibox = require("wibox")
+naughty = require("naughty")
 vicious = require("vicious")
 
 seperator = require("widgets.seperator")
@@ -55,12 +56,18 @@ for s = 1, screen.count()
         30,
         "wlo1"
 
+    -- Volume widget
+    volume_widget = wibox.widget.textbox()
+    vicious.register(volume_widget, vicious.widgets.volume, "$1%", 2, "Master")
+
     -- }}
 
     -- Right aligned layout
     right_layout = wibox.layout.fixed.horizontal()
 
     -- Add widgets left to right
+    right_layout\add(volume_widget)
+    right_layout\add(seperator)
     right_layout\add(wifi_widget)
     right_layout\add(seperator)
     right_layout\add(battery_widget)
