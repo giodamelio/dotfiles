@@ -23,9 +23,9 @@ source ~/.config/fish/nvm.fish
 
 # Use the fortune command as a greeting
 function fish_greeting
-    # Only run fortune ~20% of the time
-    if test (random) -lt 6553
-        fortune -as
-    end
+  # Only run fortune ~20% of the time
+  if test (random) -lt 6553
+    fortune -as
+  end
 end
 
