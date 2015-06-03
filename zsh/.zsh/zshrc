@@ -1,6 +1,18 @@
 # Source antigen
 source './antigen/antigen.zsh'
 
+# Load oh-my-zsh
+antigen use oh-my-zsh
+
+# Load oh-my-zsh plugins
+antigen bundles <<EOBUNDLES
+  # Guess what to install when running an unknown command.
+  command-not-found
+EOBUNDLES
+
 # Fish like highlighting
 antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Tell antigen we are done
+antigen apply
 
