@@ -13,6 +13,10 @@ EOBUNDLES
 # Fish like highlighting
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Setup editor
+export EDITOR='nvim'
+export VISUAL='gvim'
+
 # Load our functions
 fpath=( './functions' "${fpath[@]}" )
 autoload -Uz $(ls ./functions)
