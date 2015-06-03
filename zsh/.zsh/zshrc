@@ -27,6 +27,8 @@ autoload -Uz $(ls $HOME/.zsh/functions)
 # Load out aliases
 source $HOME/.zsh/aliases.zsh
 
+# Set our theme
+antigen theme bureau
 
 # Tell antigen we are done
 antigen apply
