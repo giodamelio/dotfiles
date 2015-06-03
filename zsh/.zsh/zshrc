@@ -27,6 +27,9 @@ autoload -Uz $(ls $HOME/.zsh/functions)
 # Load out aliases
 source $HOME/.zsh/aliases.zsh
 
+# Fancy Control-z
+source $HOME/.zsh/fancy-control-z.zsh
+
 # Set our theme
 antigen theme bureau
 
