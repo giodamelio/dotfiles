@@ -1,3 +1,6 @@
 # Source antigen
 source './antigen/antigen.zsh'
 
+# Fish like highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
+
