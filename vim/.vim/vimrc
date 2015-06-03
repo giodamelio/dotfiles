@@ -124,6 +124,9 @@ imap <Down> <NOP>
 imap <Left> <NOP>
 imap <Right> <NOP>
 
+" Disable escape key
+imap <Esc> <NOP>
+
 " Swap lines up and down
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
