@@ -13,6 +13,13 @@ EOBUNDLES
 # Fish like highlighting
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Load our functions
+fpath=( './functions' "${fpath[@]}" )
+autoload -Uz $(ls ./functions)
+
+# Load out aliases
+source ./aliases.zsh
+
 # Tell antigen we are done
 antigen apply
 
