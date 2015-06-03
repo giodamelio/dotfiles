@@ -8,6 +8,35 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
   # Guess what to install when running an unknown command.
   command-not-found
+
+  # A bunch of aliases
+  common-aliases
+
+  # Cycle through directorys
+  dirhistory
+
+  # Docker autocomplete
+  docker
+
+  # Extract any type of archive
+  extract
+
+  # Git stuff
+  git
+  git-extras
+  github
+
+  # Golang autocomplete
+  golang
+
+  # NPM autocomplete and alias
+  npm
+
+  # Some rsync alias
+  rsync
+
+  # Systemd alias
+  systemd
 EOBUNDLES
 
 # Fish like highlighting
