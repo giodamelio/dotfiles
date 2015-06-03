@@ -17,6 +17,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 export EDITOR='nvim'
 export VISUAL='gvim'
 
+# Setup NVM
+source ~/.nvm/nvm.sh
+
 # Load our functions
 fpath=( './functions' "${fpath[@]}" )
 autoload -Uz $(ls ./functions)
