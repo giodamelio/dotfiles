@@ -141,8 +141,8 @@ set showtabline=0
 " Use the mouse in the terminal
 set mouse=a
 
-" Leader+w saves all buffers
-noremap <Leader>w :wa!<CR>
+" Save current buffer
+noremap <Leader>w :w<CR>
 
 " Close the scratch buffer after I finish the completion or exit insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
