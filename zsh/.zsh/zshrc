@@ -1,5 +1,5 @@
 # Source antigen
-source './antigen/antigen.zsh'
+source "$HOME/.zsh/antigen/antigen.zsh"
 
 # Load oh-my-zsh
 antigen use oh-my-zsh
@@ -21,11 +21,12 @@ export VISUAL='gvim'
 source ~/.nvm/nvm.sh
 
 # Load our functions
-fpath=( './functions' "${fpath[@]}" )
-autoload -Uz $(ls ./functions)
+fpath=( "$HOME/.zsh/functions" "${fpath[@]}" )
+autoload -Uz $(ls $HOME/.zsh/functions)
 
 # Load out aliases
-source ./aliases.zsh
+source $HOME/.zsh/aliases.zsh
+
 
 # Tell antigen we are done
 antigen apply
