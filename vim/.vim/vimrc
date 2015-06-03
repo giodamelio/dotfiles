@@ -46,6 +46,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'wellsjo/wells-colorscheme.vim'
 Plugin 'justinmk/vim-sneak'
 Plugin 'leafo/moonscript-vim'
+Plugin 'terryma/vim-expand-region'
 
 """" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()   " required
