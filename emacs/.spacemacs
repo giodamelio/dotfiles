@@ -20,8 +20,9 @@
      auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; (git :variables
-     ;;      git-gutter-use-fringe t)
+     (git :variables
+          git-gutter-use-fringe t
+          git-enable-github-support t)
      ;; markdown
      ;; org
      ;; shell
@@ -151,6 +152,9 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+
+  ;; Put gitgutter on the right
+  (setq git-gutter-fr:side 'left-fringe)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
