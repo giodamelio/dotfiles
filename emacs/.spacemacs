@@ -153,6 +153,9 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
+  ;; Show line numbers
+  (global-linum-mode)
+
   ;; Put gitgutter on the right
   (setq git-gutter-fr:side 'left-fringe)
 )
