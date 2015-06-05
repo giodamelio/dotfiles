@@ -23,6 +23,7 @@
      (git :variables
           git-gutter-use-fringe t
           git-enable-github-support t)
+     javascript
      ;; markdown
      ;; org
      ;; shell
