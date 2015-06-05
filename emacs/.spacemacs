@@ -154,6 +154,14 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
+  ;; Indent with two spaces
+  (setq indent-tabs-mode nil)
+  (setq tab-width 2)
+  (setq standard-indent 2)
+  (setq js2-basic-offset 2)
+  (setq js2-bounce-indent-p t)
+  (setq js-indent-level 2)
+
   ;; Show line numbers
   (global-linum-mode)
 
