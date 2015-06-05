@@ -158,6 +158,9 @@ layers configuration."
 
   ;; Put gitgutter on the right
   (setq git-gutter-fr:side 'left-fringe)
+
+  ;; Turn off golden-ratio by default
+  (golden-ratio-mode 0)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
