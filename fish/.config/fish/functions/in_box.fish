@@ -3,11 +3,21 @@ function in_box
     echo "Usage: in_box [<title>] <command> [<charset>]"
   end
 
+  # Default charset
+  set c_horizontal "━"
+  set c_vertical "┃"
+  set c_corner_up_left "┏"
+  set c_corner_up_right "┓"
+  set c_corner_down_left "┗"
+  set c_corner_down_right "┛"
+  set c_t_right "┣"
+  set c_t_left "┫"
+
   # Handle the parameters
   switch (count $argv)
     case 0
       print_usage
-      return 0
+      return 1
     case 1
       set command_ $argv[1]
     case 2
@@ -17,9 +27,36 @@ function in_box
       set label $argv[1]
       set command_ $argv[2]
       set charset $argv[3]
+
+      # Make sure it is a valid charset
+      switch $charset
+        case "thin"
+          set c_horizontal "─"
+          set c_vertical "│"
+          set c_corner_up_left "┌"
+          set c_corner_up_right "┐"
+          set c_corner_down_left "└"
+          set c_corner_down_right "┘"
+          set c_t_right "├"
+          set c_t_left "┤"
+        case "thick"
+        case "double"
+          set c_horizontal "═"
+          set c_vertical "║"
+          set c_corner_up_left "╔"
+          set c_corner_up_right "╗"
+          set c_corner_down_left "╚"
+          set c_corner_down_right "╝"
+          set c_t_right "╠"
+          set c_t_left "╣"
+        case "*"
+          print_usage
+          echo "Charset must be one of ['thin', 'thick', 'double']"
+          return 1
+      end
     case "*"
       print_usage
-      return 0
+      return 1
   end
 
   # Get the output of the command,
@@ -33,11 +70,11 @@ function in_box
 
   # Print the beginning of the top of the box
   if set -q label
-    set label_beginning  "┏━━━┫ $label ┣━━━"
+    set label_beginning  "$c_corner_up_left$c_horizontal$c_horizontal$c_horizontal$c_t_left $label $c_t_right$c_horizontal$c_horizontal$c_horizontal"
     set label_beginning_length (echo $label_beginning | wc -m)
     echo -n $label_beginning
   else
-    set label_beginning  "┏━━━━━━"
+    set label_beginning  "$c_corner_up_left$c_horizontal$c_horizontal$c_horizontal"
     set label_beginning_length (echo $label_beginning | wc -m)
     echo -n $label_beginning
   end
@@ -47,16 +84,16 @@ function in_box
 
   # Finish the top of the box
   for i in (seq 1 (math $max_length - $label_beginning_length + 4))
-    echo -n "━"
+    echo -n "$c_horizontal"
   end
-  echo "┓"
+  echo "$c_corner_up_right"
 
   # Print each line of the command with the left and right edges
   for line in $command_output
-    echo -n "┃ $line "
+    echo -n "$c_vertical $line "
 
     # Pad some spaces to match length of longest line
-    set line_length (echo "┃ $line " | wc -m)
+    set line_length (echo "$c_vertical $line " | wc -m)
     set pad_by (math $max_length - $line_length + 4)
 
     # If the longest line is shorter then the label width,
@@ -71,13 +108,13 @@ function in_box
     end
 
     # Add the right border
-    echo "┃"
+    echo "$c_vertical"
   end
 
   # Add buttom line
-  echo -n "┗"
+  echo -n "$c_corner_down_left"
   for i in (seq 1 (math $max_length + 2 + $extra_pad))
-    echo -n "━"
+    echo -n "$c_horizontal"
   end
-  echo "┛"
+  echo "$c_corner_down_right"
 end
