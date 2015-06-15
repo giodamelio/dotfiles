@@ -1,12 +1,40 @@
 function in_box
-  set label $argv[1]
-  set command_ $argv[2]
+  function print_usage
+    echo "Usage: in_box [<title>] <command> [<charset>]"
+  end
+
+  # Handle the parameters
+  switch (count $argv)
+    case 0
+      print_usage
+      return 0
+    case 1
+      set command_ $argv[1]
+    case 2
+      set label $argv[1]
+      set command_ $argv[2]
+    case 3
+      set label $argv[1]
+      set command_ $argv[2]
+      set charset $argv[3]
+    case "*"
+      print_usage
+      return 0
+  end
+
+  # Get the output of the command
   set command_output (eval $command_)
 
   # Print the beginning of the top of the box
-  set label_beginning  "┏━━━┫ $label ┣━━━"
-  set label_beginning_length (echo $label_beginning | wc -m)
-  printf $label_beginning
+  if set -q label
+    set label_beginning  "┏━━━┫ $label ┣━━━"
+    set label_beginning_length (echo $label_beginning | wc -m)
+    echo -n $label_beginning
+  else
+    set label_beginning  "┏━━━━━━"
+    set label_beginning_length (echo $label_beginning | wc -m)
+    echo -n $label_beginning
+  end
 
   # Find the longest line in the output
   set max_length (echo -n {$command_output}\n |  wc -L)
@@ -41,7 +69,7 @@ function in_box
   end
 
   # Add buttom line
-  printf "┗"
+  echo -n "┗"
   for i in (seq 1 (math $max_length + 2 + $extra_pad))
     echo -n "━"
   end
