@@ -22,8 +22,14 @@ function in_box
       return 0
   end
 
-  # Get the output of the command
+  # Get the output of the command,
+  # if it fails, exit
   set command_output (eval $command_)
+  set command_exit_code $status
+  if test $command_exit_code -eq 127
+    echo "Command \"$command_\" not found $command_exit_code"
+    return $command_exit_code
+  end
 
   # Print the beginning of the top of the box
   if set -q label
