@@ -170,6 +170,10 @@ layers configuration."
 
   ;; Turn off golden-ratio by default
   (golden-ratio-mode 0)
+
+  ;; Swap : and ;
+  (define-key evil-normal-state-map (kbd ";") 'evil-ex)
+  (define-key evil-normal-state-map (kbd ":") 'evil-repeat-find-char)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
