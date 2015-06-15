@@ -22,7 +22,17 @@ function in_box
     echo -n "┃ $line "
 
     # Pad some spaces to match length of longest line
-    for i in (seq 1 (math $max_length - (echo "┃ $line " | wc -m) + 4))
+    set line_length (echo "┃ $line " | wc -m)
+    set pad_by (math $max_length - $line_length + 4)
+
+    # If the longest line is shorter then the label width,
+    # add extra padding to make it line up
+    set extra_pad 0
+    if test $max_length -lt (math $label_beginning_length + 1)
+      set extra_pad (math $label_beginning_length - $max_length - 4)
+    end
+
+    for i in (seq 1 (math $pad_by + $extra_pad))
       echo -n " "
     end
 
@@ -32,7 +42,7 @@ function in_box
 
   # Add buttom line
   printf "┗"
-  for i in (seq 1 (math $max_length + 2))
+  for i in (seq 1 (math $max_length + 2 + $extra_pad))
     echo -n "━"
   end
   echo "┛"
