@@ -1,4 +1,4 @@
 function disks
-  in_box "Mount Points" "lsblk -a"
-  in_box "Disk Usage" "df -h"
+  lsblk -a | little_boxes --title "Mount Points"
+  df -h | little_boxes --title "Disk Usage"
 end
