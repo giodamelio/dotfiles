@@ -274,7 +274,12 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end)
+    awful.key({ modkey }, "p", function() menubar.show() end),
+
+    -- Music buttons
+    awful.key({}, "XF86Launch7", function() awful.util.spawn("mpc toggle") end),
+    awful.key({}, "XF86Launch6", function() awful.util.spawn("mpc prev") end),
+    awful.key({}, "XF86Launch8", function() awful.util.spawn("mpc next") end)
 )
 
 clientkeys = awful.util.table.join(
