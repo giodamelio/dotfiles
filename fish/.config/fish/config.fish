@@ -5,18 +5,13 @@ set -x TERM "xterm-256color"
 set -x EDITOR "nvim"
 set -x VISUAL "gvim"
 
-# Add ~/bin to the path
-set -x PATH $PATH $HOME/bin
-
-# Append perl bin to path
-set -x PATH $PATH /usr/bin/core_perl/
-
-# Set GOPATH
-set -x GOPATH $HOME/Projects/go
+# Add a bunch of things to our path
+set -x PATH $PATH $HOME/bin  # Personal scripts
+set -x PATH $PATH /usr/local/bin/
+set -x PATH $PATH /usr/bin/core_perl/  # Append perl bin to path
+set -x GOPATH $HOME/Projects/go # Setup GOPATH
 set -x PATH $GOPATH/bin $PATH
-
-# Set elm path
-set -x PATH $HOME/bin/elm/.cabal-sandbox/bin $PATH
+set -x PATH $HOME/bin/elm/.cabal-sandbox/bin $PATH # Elm
 
 # Setup nvm wrapper
 source ~/.config/fish/nvm.fish
