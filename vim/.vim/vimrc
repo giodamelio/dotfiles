@@ -171,6 +171,9 @@ map <F5> ggg?G``
 " Run checktime in buffers, but avoiding the "Command Line" (q:) window
 au CursorHold * if getcmdwintype() == '' | checktime | endif
 
+" Use system clipboard by defautl
+set clipboard=unnamedplus
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
