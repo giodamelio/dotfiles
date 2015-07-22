@@ -4,6 +4,7 @@ naughty = require("naughty")
 vicious = require("vicious")
 
 seperator = require("widgets.seperator")
+space = require("widgets.space")
 
 for s = 1, screen.count()
     -- Create bar
@@ -72,6 +73,15 @@ for s = 1, screen.count()
       ),
       3
 
+    -- Space widget
+    space_widget = wibox.widget.textbox()
+    vicious.register space_widget,
+      space,
+      ((spacewidget, args) ->
+        "People in space: #{args.number}"
+      ),
+      86400
+
     -- }}
 
     -- Right aligned layout
@@ -88,9 +98,16 @@ for s = 1, screen.count()
     right_layout\add(seperator)
     right_layout\add(clock_widget)
 
+    -- Left aligned layout
+    left_layout = wibox.layout.fixed.horizontal()
+
+    -- Add widgets left to right
+    left_layout\add(space_widget)
+
     -- Main layout
     layout = wibox.layout.align.horizontal()
     layout\set_right(right_layout)
+    layout\set_left(left_layout)
 
     -- Add layout to bar
     bar_bottom\set_widget(layout)
