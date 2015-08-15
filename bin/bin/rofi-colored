@@ -1,0 +1,3 @@
+#!/bin/bash
+rofi -font "Inconsolata 12" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -fuzzy $@
+
