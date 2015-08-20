@@ -1,48 +1,50 @@
 """" Be VIM """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
-filetype off
 
 """" Load plugins with vim-plug """""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
+" Color themes
 Plug 'sickill/vim-monokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'wellsjo/wells-colorscheme.vim'
+
+" Languages
+Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'dag/vim-fish', { 'for': 'fish' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'groenewege/vim-less', { 'for': 'less' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
+Plug 'wting/rust.vim', { 'for': 'rust' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
+Plug 'leafo/moonscript-vim', { 'for': 'moonscript' }
+
+" Other
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
-Plug 'digitaltoad/vim-jade'
 Plug 'bling/vim-airline'
 Plug 'moll/vim-bbye'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/unite.vim'
-Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
-Plug 'dag/vim-fish'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'rhysd/clever-f.vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'valloric/MatchTagAlways'
-Plug 'majutsushi/tagbar'
-Plug 'fatih/vim-go'
-Plug 'groenewege/vim-less'
-Plug 'Glench/Vim-Jinja2-Syntax'
-Plug 'leafgarland/typescript-vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'wavded/vim-stylus'
-Plug 'cespare/vim-toml'
-Plug 'lambdatoast/elm.vim'
-Plug 'wting/rust.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'wellsjo/wells-colorscheme.vim'
 Plug 'justinmk/vim-sneak'
-Plug 'leafo/moonscript-vim'
 Plug 'terryma/vim-expand-region'
 Plug 'KabbAmine/zeavim.vim'
 
