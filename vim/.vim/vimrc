@@ -283,7 +283,7 @@ let g:tagbar_type_go = {
 \ }
 
 "" Syntastic
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 "" Sneak
 let g:sneak#s_next = 1
