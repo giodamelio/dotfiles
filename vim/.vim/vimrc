@@ -1,56 +1,52 @@
-"""" Vundle Setup """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible    " be iMproved, required
-filetype off        " required
+"""" Be VIM """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+filetype off
 
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"""" Load plugins with vim-plug """""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
 
-"""" Here be the plugins """"""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'gmarik/Vundle.vim'
-Plugin 'sickill/vim-monokai'
-Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'bling/vim-airline'
-Plugin 'moll/vim-bbye'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/unite.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'dag/vim-fish'
-Plugin 'sirver/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'rhysd/clever-f.vim'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'valloric/MatchTagAlways'
-Plugin 'majutsushi/tagbar'
-Plugin 'fatih/vim-go'
-Plugin 'groenewege/vim-less'
-Plugin 'Glench/Vim-Jinja2-Syntax'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'wavded/vim-stylus'
-Plugin 'cespare/vim-toml'
-Plugin 'lambdatoast/elm.vim'
-Plugin 'wting/rust.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'wellsjo/wells-colorscheme.vim'
-Plugin 'justinmk/vim-sneak'
-Plugin 'leafo/moonscript-vim'
-Plugin 'terryma/vim-expand-region'
-Plugin 'KabbAmine/zeavim.vim'
+Plug 'sickill/vim-monokai'
+Plug 'mattn/emmet-vim'
+Plug 'scrooloose/syntastic'
+Plug 'airblade/vim-gitgutter'
+Plug 'digitaltoad/vim-jade'
+Plug 'bling/vim-airline'
+Plug 'moll/vim-bbye'
+Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/unite.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe'
+Plug 'marijnh/tern_for_vim'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'dag/vim-fish'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'rhysd/clever-f.vim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+Plug 'valloric/MatchTagAlways'
+Plug 'majutsushi/tagbar'
+Plug 'fatih/vim-go'
+Plug 'groenewege/vim-less'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'leafgarland/typescript-vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'wavded/vim-stylus'
+Plug 'cespare/vim-toml'
+Plug 'lambdatoast/elm.vim'
+Plug 'wting/rust.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'wellsjo/wells-colorscheme.vim'
+Plug 'justinmk/vim-sneak'
+Plug 'leafo/moonscript-vim'
+Plug 'terryma/vim-expand-region'
+Plug 'KabbAmine/zeavim.vim'
 
-"""" Vundle Teardown """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call vundle#end()   " required
+call plug#end()
 
 """" Vanilla Configs """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn on syntax and filetype detection
