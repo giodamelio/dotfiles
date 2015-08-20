@@ -1,3 +1,0 @@
-" Load our normal vim config
-source $HOME/.vim/vimrc
-
