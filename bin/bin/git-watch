@@ -1,0 +1,16 @@
+#!/bin/bash
+
+print_git_status() {
+  clear
+  git -c color.status=always --no-pager diff --shortstat
+  git -c color.status=always status --short | sed "s/^/  /"
+}
+
+# Get the files from git
+cd $(git rev-parse --show-toplevel)
+
+print_git_status
+while inotifywait -r --quiet -e modify,move,create,delete *; do
+  print_git_status
+done
+
