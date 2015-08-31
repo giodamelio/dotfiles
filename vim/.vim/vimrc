@@ -216,7 +216,7 @@ nnoremap <Leader>s :Unite -start-insert tab<cr>
 nnoremap <Leader>a :Unite -start-insert buffer<cr>
 
 " Use ag for searching(to follow .gitignores)
-let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore ".git" --hidden -g ""'
+let g:unite_source_rec_async_command=['ag', '--nocolor', '--nogroup', '--hidden', '-g', '']
 
 "" Commentary
 " Toggle comments
