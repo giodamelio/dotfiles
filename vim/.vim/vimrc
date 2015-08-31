@@ -175,6 +175,12 @@ set clipboard=unnamedplus
 " Paste on next line
 noremap <Leader>p :pu<CR>
 
+" Neovim specific config
+if has('nvim')
+  " Allow you to use ESC to exit terminal mode
+  tnoremap <Esc> <C-\><C-n>
+endif
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
