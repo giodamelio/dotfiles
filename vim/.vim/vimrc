@@ -20,7 +20,7 @@ Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript', 'branch': 'develop' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 Plug 'leafo/moonscript-vim', { 'for': 'moonscript' }
 
