@@ -153,8 +153,8 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " Toggle between current and previously edited file
 map <leader><Backspace> <C-^>
 
-" Highlight .ejs files with html
-au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead *.ejs set filetype=html  " Highlight .ejs files with html
+au BufRead,BufNewFile *.swig set filetype=html " Highlight .swig files as html
 
 " Exit insert mode with Control-c
 imap <C-c> <ESC>
