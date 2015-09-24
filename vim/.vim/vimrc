@@ -23,6 +23,7 @@ Plug 'wting/rust.vim', { 'for': 'rust' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript', 'branch': 'develop' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 Plug 'leafo/moonscript-vim', { 'for': 'moonscript' }
+Plug 'https://github.com/gf3/peg.vim', { 'for': 'peg' }
 
 " Other
 Plug 'mattn/emmet-vim' " Make writing html so much better
