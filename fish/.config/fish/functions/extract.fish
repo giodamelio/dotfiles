@@ -9,6 +9,8 @@ function extract --description "Expand or extract bundled & compressed files"
           tar -jxvf $file
         case *.tar.gz *.tgz
           tar -zxvf $file
+        case *.tar.xz
+          tar -Jxvf $file
         case *.bz2
           bunzip2 $file
           # Can also use: bzip2 -d $file
