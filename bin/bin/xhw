@@ -1,0 +1,132 @@
+#!/bin/elixir
+
+defmodule Devices do
+  @doc """
+  Return a list of xinput devices
+  """
+  def list() do
+    {output, _status} = System.cmd("xinput", ["--list"])
+
+    output
+      |> String.split("\n")
+
+      # Filter out the slave devices
+      |> Enum.filter(fn device ->
+        String.contains?(device, "slave")
+      end)
+
+      # Parse out the data
+      |> Enum.map(fn device ->
+        # Remove the first six chars
+        {_, device} = String.split_at(device, 6)
+
+        device
+          |> String.split("\t")
+          |> Enum.map(&String.strip/1)
+          |> List.delete_at(2)
+
+      end)
+
+      |> Enum.map(fn [name, id_string] ->
+        id = id_string
+          |> String.split("=")
+          |> List.last
+          |> String.to_integer
+
+        {name, id}
+      end)
+  end
+
+  @doc """
+  Enable a device
+  """
+  def enable(name) do
+    System.cmd("xinput", ["--enable", name])
+  end
+
+  @doc """
+  Disable a device
+  """
+  def disable(name) do
+    System.cmd("xinput", ["--disable", name])
+  end
+
+  @doc """
+  Toggle a device
+  """
+  def toggle(name) do
+    case enabled?(name) do
+      true  -> disable(name)
+      false -> enable(name)
+    end
+  end
+
+  @doc """
+  Detect if a device is enabled
+  """
+  def enabled?(name) do
+    {output, _status} = System.cmd("xinput", ["list-props", name])
+
+    (output
+      |> String.split("\n")
+      |> Enum.at(1)
+      |> String.split(":")
+      |> Enum.at(1)
+      |> String.strip
+      |> String.to_integer) == 1
+  end
+end
+
+defmodule App do
+  @doc """
+  Main app start
+  """
+  def main() do
+    {args, raw, errors} = OptionParser.parse(System.argv, strict: [
+      disable: :string,
+    ])
+
+    case {args, raw, errors} do
+      # Exit on unexpected args
+      {_, _, error} when error != [] ->
+        IO.puts("ERROR")
+        System.halt(1)
+
+      # List the processes
+      {[], ["list"], []} -> list_devices()
+
+      # Enable a device
+      {[], ["enable", name], []} ->
+        IO.puts("Enabling '#{name}'")
+        Devices.enable(name)
+
+      # Disable a device
+      {[], ["disable", name], []} ->
+        IO.puts("Disabling '#{name}'")
+        Devices.disable(name)
+
+      # Toggle a device
+      {[], ["toggle", name], []} ->
+        IO.puts("Toggling '#{name}'")
+        Devices.toggle(name)
+
+      # List the devices
+      _ -> list_devices()
+    end
+  end
+
+  def list_devices() do
+    Devices.list
+      |> Enum.sort(fn {_name1, id1}, {_name2, id2} ->
+        id1 < id2
+      end)
+      |> Enum.map(fn {name, id} ->
+        padded_id = String.rjust(Integer.to_string(id), 3)
+        "#{padded_id}: #{name}"
+      end)
+      |> Enum.join("\n")
+      |> IO.puts
+  end
+end
+
+App.main
