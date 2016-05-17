@@ -188,6 +188,9 @@ set clipboard=unnamedplus
 " Paste on next line
 noremap <Leader>p :pu<CR>
 
+" Text operator for entire file
+onoremap af :<C-u>normal! ggVG<CR>
+
 " Neovim specific config
 if has('nvim')
   " Allow you to use ESC to exit terminal mode
