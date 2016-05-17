@@ -74,6 +74,7 @@ set directory=~/.vim/.swap//
 
 " Show line numbers
 set number
+set relativenumber
 
 " Don't show the mode in the status line
 set noshowmode
