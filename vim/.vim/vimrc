@@ -241,7 +241,7 @@ vmap <Leader>c gc
 nmap <Leader>c gcc
 
 "" UtilSnips
-let g:UltiSnipsExpandTrigger="<right>"
+let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
