@@ -201,6 +201,10 @@ endif
 " indent it after pasting.
 noremap gV `[v`]
 
+" Stay in visual move after indenting
+vnoremap < <gv
+vnoremap > >gv
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
