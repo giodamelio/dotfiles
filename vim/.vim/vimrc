@@ -10,6 +10,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'wellsjo/wells-colorscheme.vim'
 
 " Languages
+Plug 'pangloss/vim-javascript', { 'for': 'javascript', 'branch': 'develop' }
+Plug 'sheerun/vim-polyglot'
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'dag/vim-fish', { 'for': 'fish' }
@@ -18,14 +20,17 @@ Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
-Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
-Plug 'wting/rust.vim', { 'for': 'rust' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript', 'branch': 'develop' }
+Plug 'elmcast/elm-vim', { 'for': 'elm' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 Plug 'leafo/moonscript-vim', { 'for': 'moonscript' }
 Plug 'https://github.com/gf3/peg.vim', { 'for': 'peg' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja' }
+Plug 'dag/vim2hs', { 'for': 'haskell' }
+Plug 'posva/vim-vue', { 'for': 'vue' }
+Plug 'daveyarwood/vim-alda', { 'for': 'alda' }
+Plug 'ARM9/arm-syntax-vim'
 
 " Other
 Plug 'mattn/emmet-vim' " Make writing html so much better
