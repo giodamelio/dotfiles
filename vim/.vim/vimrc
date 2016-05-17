@@ -55,6 +55,7 @@ Plug 'justinmk/vim-sneak' " Better movement the find
 Plug 'terryma/vim-expand-region' " Quick modification of visual selections
 Plug 'KabbAmine/zeavim.vim' " Access zeal documentation browser from inside vim
 Plug 'tpope/vim-repeat' " Repeat plugin maps
+Plug 'bhurlow/vim-parinfer', { 'do': 'npm install' } " Parentheses inference for Lisp
 
 call plug#end()
 
