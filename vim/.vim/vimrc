@@ -205,6 +205,9 @@ noremap gV `[v`]
 vnoremap < <gv
 vnoremap > >gv
 
+" Make Y yank the rest of the line
+noremap Y y$
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
