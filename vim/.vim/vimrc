@@ -317,6 +317,10 @@ autocmd! BufWritePost *.js Neomake
 "" Sneak
 let g:sneak#s_next = 1
 
+"" Rust
+" Run rustfmt after save
+let g:rustfmt_autosave = 1
+
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
 set background=dark
