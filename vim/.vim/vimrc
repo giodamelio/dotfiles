@@ -58,6 +58,7 @@ Plug 'valloric/YouCompleteMe', { 'do': './install.sh' } " Auto complete
 Plug 'wellle/targets.vim', " Add more text objects
 Plug 'xolox/vim-misc' " Misc helper functions for plugins
 Plug 'xolox/vim-session' " Session management
+Plug 'terryma/vim-expand-region' " Cool visual mode expansion and shrinking
 
 call plug#end()
 
