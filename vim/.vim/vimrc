@@ -78,6 +78,16 @@ set directory=~/.vim/.swap//
 set number
 set relativenumber
 
+" Toggle to between relative and absolute line numbers
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
+nnoremap <C-n> :call NumberToggle()<cr>
+
 " Don't show the mode in the status line
 set noshowmode
 
