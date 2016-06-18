@@ -31,6 +31,7 @@ Plug 'posva/vim-vue', { 'for': 'vue' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'sheerun/vim-polyglot'
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
+Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
 " Other
 Plug 'airblade/vim-gitgutter' " Shows git status for each line in the gutter
@@ -230,6 +231,10 @@ set list listchars=trail:·
 "" Gitgutter
 " Always show the gitgutter sign column
 let g:gitgutter_sign_column_always = 1
+
+" Run diffs sync to fix error with typescript
+" https://github.com/Quramy/tsuquyomi/issues/55
+let g:gitgutter_async = 0
 
 "" Airline
 " Enable it
