@@ -227,6 +227,9 @@ vnoremap <Leader>rc y:%s/<C-r>"/
 " Show whitespace at the end of the line
 set list listchars=trail:·
 
+" Disable folding
+set nofoldenable
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
