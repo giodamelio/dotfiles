@@ -48,5 +48,7 @@
     changed = green
     untracked = cyan
 
+[diff]
+	algorithm = patience
 [commit]
 	gpgsign = true
