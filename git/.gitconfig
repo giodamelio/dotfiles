@@ -3,7 +3,7 @@
 	email = giodamelio@gmail.com
 	signingkey = B0D2B57F
 [core]
-	editor = vim 
+	editor = NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim 
 	excludesfile = ~/.gitignore
 [alias]
 	ci = commit
