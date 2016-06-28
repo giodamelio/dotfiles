@@ -1,6 +1,7 @@
 [user]
 	name = Gio d'Amelio
 	email = giodamelio@gmail.com
+	signingkey = B0D2B57F
 [core]
 	editor = vim 
 	excludesfile = ~/.gitignore
@@ -11,7 +12,7 @@
 	co = checkout
     ca = commit -am
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-	h = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	h = log --graph --pretty=format:'%Cred%h%Creset %G? -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	amend = commit --amend
 	remove-last = reset --soft HEAD~1
 	remove-last-hard = reset --hard HEAD~1
@@ -45,3 +46,5 @@
     changed = green
     untracked = cyan
 
+[commit]
+	gpgsign = true
