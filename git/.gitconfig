@@ -26,6 +26,7 @@
 	sync = !legit sync \"$@\"
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
+  cdiff = diff --cached
 [push]
 	default = matching
 [color]
