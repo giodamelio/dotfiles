@@ -5,6 +5,7 @@
 [core]
 	editor = NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim 
 	excludesfile = ~/.gitignore
+	pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -XFR
 [alias]
 	ci = commit
 	st = status
