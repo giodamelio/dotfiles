@@ -6,6 +6,20 @@ function fish_prompt
     set_color blue
     printf "┌─["
 
+    switch $fish_bind_mode
+      case default
+        set_color red
+        printf 'N'
+      case insert
+        set_color green
+        printf 'I'
+      case visual
+        set_color magenta
+        echo 'V'
+    end
+    set_color blue
+    printf "] ─ ["
+
     # Username and hostname
     set_color green
     printf "%s@%s" (whoami) (hostname)

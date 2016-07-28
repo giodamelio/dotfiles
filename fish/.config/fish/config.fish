@@ -24,3 +24,9 @@ function fish_greeting
   end
 end
 
+# Enable fish vi mode
+fish_vi_key_bindings
+
+# Remove the default fish vi prompt
+function fish_mode_prompt
+end function
