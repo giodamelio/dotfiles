@@ -230,6 +230,16 @@ set list listchars=trail:·
 " Disable folding
 set nofoldenable
 
+" Toggle a debugger statement
+function! ToggleDebuggerStatement()
+  if (getline(".") =~ "debugger;")
+    normal "_dd
+  else
+    normal Odebugger;
+  endif
+endfunction
+noremap <Leader>d :call ToggleDebuggerStatement()<cr>
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
