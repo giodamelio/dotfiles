@@ -60,6 +60,7 @@ Plug 'wellle/targets.vim', " Add more text objects
 Plug 'xolox/vim-misc' " Misc helper functions for plugins
 Plug 'xolox/vim-session' " Session management
 Plug 'terryma/vim-expand-region' " Cool visual mode expansion and shrinking
+Plug 'takac/vim-hardtime' " Disable lots of arrow key and hjkl keys
 
 call plug#end()
 
@@ -372,6 +373,10 @@ let g:sneak#s_next = 1
 "" Rust
 " Run rustfmt after save
 let g:rustfmt_autosave = 1
+
+"" Hardtime
+let g:hardtime_default_on = 1 " Enable in all buffers
+let g:hardtime_maxcount = 2 " Allow two presses before enforcing timeout
 
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
