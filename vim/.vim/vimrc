@@ -63,6 +63,7 @@ Plug 'terryma/vim-expand-region' " Cool visual mode expansion and shrinking
 Plug 'takac/vim-hardtime' " Disable lots of arrow key and hjkl keys
 Plug 'luochen1990/rainbow' " Make the parens rainbow!
 Plug 'tpope/vim-fireplace' " Awesome clojure REPL
+Plug 'vim-scripts/paredit.vim' " Quick editing of lisp expressions
 
 call plug#end()
 
