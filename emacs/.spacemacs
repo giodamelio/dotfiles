@@ -232,6 +232,8 @@ values."
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
+   ;; Use jk to exit evil mode
+   evil-escape-key-sequence "jk"
    ))
 
 (defun dotspacemacs/user-init ()
