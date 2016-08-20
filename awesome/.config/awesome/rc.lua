@@ -278,14 +278,14 @@ globalkeys = awful.util.table.join(
 
     -- Music buttons
     --- Media Keys
-    awful.key({}, "XF86AudioPlay", function() awful.util.spawn("mpc toggle") end),
-    awful.key({}, "XF86AudioPrev", function() awful.util.spawn("mpc prev") end),
-    awful.key({}, "XF86AudioNext", function() awful.util.spawn("mpc next") end),
+    awful.key({}, "XF86AudioPlay", function() awful.util.spawn("playerctl play-pause") end),
+    awful.key({}, "XF86AudioPrev", function() awful.util.spawn("playerctl previous") end),
+    awful.key({}, "XF86AudioNext", function() awful.util.spawn("playerctl next") end),
 
     --- Custom keys on Microsoft keyboard
-    awful.key({}, "XF86Launch7", function() awful.util.spawn("mpc toggle") end),
-    awful.key({}, "XF86Launch6", function() awful.util.spawn("mpc prev") end),
-    awful.key({}, "XF86Launch8", function() awful.util.spawn("mpc next") end)
+    awful.key({}, "XF86Launch7", function() awful.util.spawn("playerctl play-pause") end),
+    awful.key({}, "XF86Launch6", function() awful.util.spawn("playerctl previous") end),
+    awful.key({}, "XF86Launch8", function() awful.util.spawn("playerctl next") end)
 )
 
 clientkeys = awful.util.table.join(
