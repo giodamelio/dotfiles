@@ -27,7 +27,7 @@ values."
      ;; better-defaults
      emacs-lisp
      lua
-     ;; git
+     git
      ;; markdown
      ;; org
      ;; (shell :variables
