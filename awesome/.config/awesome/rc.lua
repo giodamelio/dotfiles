@@ -40,7 +40,7 @@ end
 -- }}}
 
 -- Create bottom bar
--- require("bar_bottom")
+require("bar_bottom")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.

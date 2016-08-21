@@ -74,13 +74,13 @@ for s = 1, screen.count()
       3
 
     -- Space widget
-    space_widget = wibox.widget.textbox()
-    vicious.register space_widget,
-      space,
-      ((spacewidget, args) ->
-        "People in space: #{args.number}"
-      ),
-      86400
+    -- space_widget = wibox.widget.textbox()
+    -- vicious.register space_widget,
+    --  space,
+    --  ((spacewidget, args) ->
+    --    "People in space: #{args.number}"
+    --  ),
+    --  86400
 
     -- }}
 
@@ -102,7 +102,7 @@ for s = 1, screen.count()
     left_layout = wibox.layout.fixed.horizontal()
 
     -- Add widgets left to right
-    left_layout\add(space_widget)
+    -- left_layout\add(space_widget)
 
     -- Main layout
     layout = wibox.layout.align.horizontal()
