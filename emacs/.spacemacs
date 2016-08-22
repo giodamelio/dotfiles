@@ -30,9 +30,10 @@ values."
      git
      ;; markdown
      ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom
+            shell-default-term-shell "/usr/bin/fish")
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
@@ -243,7 +244,12 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  )
+  ; Make ansi-term handle utf8 chars
+  (setq locale-coding-system 'utf-8)
+  (set-terminal-coding-system 'utf-8)
+  (set-keyboard-coding-system 'utf-8)
+  (set-selection-coding-system 'utf-8)
+  (prefer-coding-system 'utf-8))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
