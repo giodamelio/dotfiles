@@ -25,9 +25,15 @@ values."
      ;; ----------------------------------------------------------------
      ;; auto-completion
      ;; better-defaults
+
+     ;; Languages
      emacs-lisp
      lua
+
+     ;; Git stuff
      git
+     version-control
+     
      ;; markdown
      ;; org
      (shell :variables
@@ -36,7 +42,6 @@ values."
             shell-default-term-shell "/usr/bin/fish")
      ;; spell-checking
      ;; syntax-checking
-     ;; version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
