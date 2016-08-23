@@ -254,7 +254,10 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (set-terminal-coding-system 'utf-8)
   (set-keyboard-coding-system 'utf-8)
   (set-selection-coding-system 'utf-8)
-  (prefer-coding-system 'utf-8))
+  (prefer-coding-system 'utf-8)
+
+  ; Automaticly follow symlinks
+  (setq vc-follow-symlinks t))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
