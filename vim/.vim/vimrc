@@ -360,13 +360,11 @@ let g:tagbar_type_go = {
 \ }
 
 "" Neomake
-let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
+let g:neomake_javascript_enabled_makers = ['eslint']
 
 " Make neomake load the local copy of eslint and flow if aviable
 let s:eslint_path = system('PATH=$(npm bin 2> /dev/null):$PATH && which eslint')
-let s:flow_path = system('PATH=$(npm bin 2> /dev/null):$PATH && which flow')
 let g:neomake_javascript_eslint_exe = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-let g:neomake_javascript_flow_exe = substitute(s:flow_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
 
 " Run after save on javascript files
 autocmd! BufWritePost *.js Neomake
