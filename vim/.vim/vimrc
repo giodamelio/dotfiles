@@ -129,7 +129,7 @@ nnoremap ; :
 vnoremap ; :
 
 " Bind jj to esc to exit insert mode faster
-inoremap jj <esc>
+inoremap jk <esc>
 
 " Change shortcuts for copy, cut and paste
 vmap <C-c> "+yi
