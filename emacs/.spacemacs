@@ -29,6 +29,7 @@ values."
      ;; Languages
      emacs-lisp
      lua
+     javascript
 
      ;; Git stuff
      git
