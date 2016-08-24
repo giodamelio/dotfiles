@@ -30,6 +30,10 @@ fish_vi_key_bindings
 function fish_mode_prompt
 end function
 
-function fish_title
-  true
+# Some emacs specific configuration
+if test -n "$EMACS"
+  # Disable title since ansi-term cannot handle it
+  function fish_title
+    true
+  end
 end
