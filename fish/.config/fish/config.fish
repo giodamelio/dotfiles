@@ -11,6 +11,7 @@ set -x PATH $PATH /usr/local/bin/
 set -x PATH $PATH /usr/bin/core_perl/  # Append perl bin to path
 set -x GOPATH $HOME/Projects/go # Setup GOPATH
 set -x PATH $GOPATH/bin $PATH
+set -x PATH $HOME/.cargo/bin $PATH
 
 # Setup nvm wrapper
 source ~/.config/fish/nvm.fish
