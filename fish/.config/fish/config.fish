@@ -11,7 +11,11 @@ set -x PATH $PATH /usr/local/bin/
 set -x PATH $PATH /usr/bin/core_perl/  # Append perl bin to path
 set -x GOPATH $HOME/Projects/go # Setup GOPATH
 set -x PATH $GOPATH/bin $PATH
+
+# Setup rust and racer
 set -x PATH $HOME/.cargo/bin $PATH
+set -x RUST_SRC_PATH $HOME/Projects/forks/rust/src
+set -x CARGO_HOME $HOME/.cargo
 
 # Setup nvm wrapper
 source ~/.config/fish/nvm.fish
