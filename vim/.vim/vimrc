@@ -374,7 +374,7 @@ let g:sneak#s_next = 1
 
 "" Rust
 " Run rustfmt after save
-let g:rustfmt_autosave = 1
+" let g:rustfmt_autosave = 1
 
 "" Hardtime
 let g:hardtime_default_on = 1 " Enable in all buffers
