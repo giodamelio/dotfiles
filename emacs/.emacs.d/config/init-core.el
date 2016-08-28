@@ -10,5 +10,11 @@
    kept-old-versions 2
    version-control t)
 
-(provide 'init-core)
+;; Setup auto-save
+(setq
+  auto-save-file-name-transforms
+  `((".*" ,(concat dotemacs-cache-directory "auto-saves/") t))
+  auto-save-list-file-prefix
+  (concat dotemacs-cache-directory "auto-saves/saves-"))
 
+(provide 'init-core)
