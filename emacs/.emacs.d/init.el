@@ -11,6 +11,9 @@
   (setq package-enable-at-startup nil)
   (package-initialize)
 
+  ;; Run init-boot.el before we run the other scripts
+  (require 'init-boot (concat config-directory "init-boot.el"))
+
   ;; Load all the config scripts
   (cl-loop for file in (directory-files config-directory t)
            when (string-match "\\.el$" file)
