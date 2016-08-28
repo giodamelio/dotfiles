@@ -1,5 +1,8 @@
 (require 'cl)
 
+;; Set directory for cache things to go in
+(setq dotemacs-cache-directory (concat user-emacs-directory ".cache/"))
+
 (defun require-package (package)
   "Ensures that PACKAGE is installed."
   (unless (or (package-installed-p package)

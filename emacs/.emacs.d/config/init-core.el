@@ -1,0 +1,14 @@
+;; Setup backups
+(setq
+   backup-by-copying t      ; Backup by copying. Slower but safer
+
+   backup-directory-alist   ; Save all the backups to one place
+    `((".*" . ,(concat dotemacs-cache-directory "backups/")))
+
+   delete-old-versions t    ; Keep more backups
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)
+
+(provide 'init-core)
+
