@@ -2,4 +2,7 @@
   :ensure t
   :after evil-leader
   :config
-  (evil-mode))
+  (evil-mode)
+  (evil-leader/set-key
+    "c" 'comment-or-uncomment-region
+  ))
