@@ -11,5 +11,6 @@
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; Rebind tab to run persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; Make TAB work in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; List actions using C-z
+(global-set-key (kbd "M-y") 'helm-show-kill-ring) ; Show the kill-ring
 
 (provide 'init-helm)
