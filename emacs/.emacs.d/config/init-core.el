@@ -26,4 +26,7 @@
 
     ;; Setup recentf
     recentf-save-file (concat cache-directory "recentf")
+
+    ;; Disable some UI
+    tool-bar-mode nil
   ))
