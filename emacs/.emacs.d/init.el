@@ -1,23 +1,27 @@
 (require 'cl)
+
+;; Setup package.el
 (require 'package)
+(setq package-archives '(
+  ("melpa" . "http://melpa.org/packages/")
+  ("org" . "http://orgmode.org/elpa/")
+  ("gnu" . "http://elpa.gnu.org/packages/")))
+(setq package-enable-at-startup nil)
+(package-initialize)
 
-;; Define the directory to load config scripts from
-(let ((config-directory (concat user-emacs-directory "config/")))
+;; Make sure use-package is installed
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-  ;; Setup package manager
-  (setq package-archives '(("melpa" . "http://melpa.org/packages/")
-                           ("org" . "http://orgmode.org/elpa/")
-                           ("gnu" . "http://elpa.gnu.org/packages/")))
-  (setq package-enable-at-startup nil)
-  (package-initialize)
+(require 'use-package)
+(require 'diminish)
+(require 'bind-key)
 
-  ;; Run init-boot.el before we run the other scripts
-  (require 'init-boot (concat config-directory "init-boot.el"))
-
-  ;; Load all the config scripts
-  (cl-loop for file in (directory-files config-directory t)
-           when (string-match "\\.el$" file)
-           do (condition-case ex
-                  (load file)
-                ('error (with-current-buffer "*scratch*"
-                          (insert (format "[INIT ERROR]\n%s\n%s\n\n" file ex)))))))
+;; Load all elisp scripts from config/
+(cl-loop for file in (directory-files (concat user-emacs-directory "config/") t)
+          when (string-match "\\.el$" file)
+          do (condition-case ex
+                (load file)
+              ('error (with-current-buffer "*scratch*"
+                        (insert (format "[INIT ERROR]\n%s\n%s\n\n" file ex))))))

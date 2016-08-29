@@ -1,6 +1,5 @@
-(require-package 'monokai-theme)
-(require-package 'solarized-theme)
-
-(load-theme 'monokai t)
-
-(provide 'init-theme)
+(use-package theme
+  :ensure monokai-theme
+  :ensure solarized-theme
+  :init
+  (load-theme 'monokai t))
