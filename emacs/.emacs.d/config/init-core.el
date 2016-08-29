@@ -18,4 +18,9 @@
     auto-save-file-name-transforms
     `((".*" ,(concat cache-directory "auto-saves/") t))
     auto-save-list-file-prefix
-    (concat cache-directory "auto-saves/saves-")))
+    (concat cache-directory "auto-saves/saves-")
+
+    ;; Setup tabs
+    indent-tabs-mode nil ; Indent with spaces
+    tab-width 2 ; Indent 2 spaces
+  ))
