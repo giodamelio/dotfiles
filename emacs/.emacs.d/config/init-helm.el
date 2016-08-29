@@ -11,6 +11,7 @@
 (after 'evil-leader
     ;; Setup helm-mini
     (evil-leader/set-key "p" 'helm-mini)
+    (evil-leader/set-key "<SPC>" 'helm-mini)
     (setq helm-buffers-fuzzy-matching t
 	  helm-recentf-fuzzy-match    t))
 
