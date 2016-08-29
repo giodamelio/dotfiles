@@ -3,4 +3,4 @@ plugged/
 sessions/
 .backup/*
 .swap/*
-
+autoload/plug.vim.old
