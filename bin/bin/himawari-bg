@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Download latest images
+himawari -z 2 -p -o ~/.himawari-latest.png
+# himawari -z 2 -p -i -o ~/.himawari-infrared-latest.png
+
+# Add 75 pixel borders on the images
+convert ~/.himawari-latest.png -bordercolor Black -border 75x75 ~/.himawari-latest.png
+# convert ~/.himawari-infrared-latest.png -bordercolor Black -border 75x75 ~/.himawari-infrared-latest.png
+
+# Set as desktop backgrounds on both moniters
+feh --bg-max ~/.himawari-latest.png --bg-max ~/.himawari-latest.png
