@@ -23,4 +23,7 @@
     ;; Setup tabs
     indent-tabs-mode nil ; Indent with spaces
     tab-width 2 ; Indent 2 spaces
+
+    ;; Setup recentf
+    recentf-save-file (concat cache-directory "recentf")
   ))
