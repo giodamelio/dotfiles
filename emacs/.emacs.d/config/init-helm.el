@@ -6,11 +6,11 @@
 
   ;; Replace normal M-x with Helm's M-x
   (global-set-key (kbd "M-x") 'helm-M-x)
+  (evil-leader/set-key "<SPC>" 'helm-M-x)
   (setq helm-M-x-fuzzy-match t) ; Use fuzzy matching
 
   ;; Setup helm-mini
   (evil-leader/set-key "a" 'helm-mini)
-  (evil-leader/set-key "<SPC>" 'helm-mini)
   (setq helm-buffers-fuzzy-matching t
   helm-recentf-fuzzy-match    t)
 
