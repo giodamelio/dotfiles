@@ -26,4 +26,9 @@
 
     ;; Setup recentf
     recentf-save-file (concat cache-directory "recentf")
+
+    ;; Setup eww
+    url-configuration-directory (concat cache-directory "url/")
+    url-cache-directory (concat cache-directory "url/" "cache/")
+    url-cookie-file (concat cache-directory "url/" "cookies/")
   ))
