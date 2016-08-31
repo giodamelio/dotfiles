@@ -19,9 +19,6 @@
 (require 'bind-key)
 
 ;; Load all elisp scripts from config/
-(cl-loop for file in (directory-files (concat user-emacs-directory "config/") t)
-          when (string-match "\\.el$" file)
-          do (condition-case ex
-                (load file)
-              ('error (with-current-buffer "*scratch*"
-                        (insert (format "[INIT ERROR]\n%s\n%s\n\n" file ex))))))
+(mapc 'load (append
+	     (file-expand-wildcards (concat user-emacs-directory "config/*.el"))
+	     (file-expand-wildcards (concat user-emacs-directory "config/languages/*.el"))))
