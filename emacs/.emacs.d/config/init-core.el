@@ -31,4 +31,10 @@
     url-configuration-directory (concat cache-directory "url/")
     url-cache-directory (concat cache-directory "url/" "cache/")
     url-cookie-file (concat cache-directory "url/" "cookies/")
-  ))
+  )
+
+  ;; Disable emacs from automaticlly setting default-directory
+  (add-hook 'find-file-hook
+          (lambda ()
+            (setq default-directory command-line-default-directory)))
+  )
