@@ -1,2 +1,3 @@
 (use-package clojure
-  :ensure clojure-mode)
+  :ensure clojure-mode
+  :ensure cider)
