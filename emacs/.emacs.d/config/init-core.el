@@ -1,7 +1,7 @@
 (use-package core
   :diminish (auto-revert-mode undo-tree-mode linum-relative-mode)
   :init
-  (setq
+  (setq-default
     cache-directory (concat user-emacs-directory ".cache/")
 
     ;; Setup backups
