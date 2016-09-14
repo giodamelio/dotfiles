@@ -5,8 +5,8 @@
   (helm-mode 1) ; Enable helm mode to enhance common emacs commands
 
   ;; Replace normal M-x with Helm's M-x
-  (global-set-key (kbd "M-x") 'helm-M-x)
-  (evil-leader/set-key "<SPC>" 'helm-M-x)
+  ;; (global-set-key (kbd "M-x") 'helm-M-x)
+  ;; (evil-leader/set-key "<SPC>" 'helm-M-x)
   (setq helm-M-x-fuzzy-match t) ; Use fuzzy matching
 
   ;; Setup helm-mini

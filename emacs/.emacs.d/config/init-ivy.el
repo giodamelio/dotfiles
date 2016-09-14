@@ -12,4 +12,9 @@
 
 (use-package counsel
   :ensure t
-  :after ivy)
+  :after ivy
+  :after evil-leader
+  :config
+  ;; Replace default M-x with counsel-M-x
+  (global-set-key (kbd "M-x") 'counsel-M-x)
+  (evil-leader/set-key "<SPC>" 'counsel-M-x))
