@@ -1,8 +1,12 @@
 (use-package ivy
   :ensure t
   :diminish ivy-mode
+  :after evil-leader
   :config
   (ivy-mode)
+  ;; Swich between buffers easily
+  (evil-leader/set-key
+    "a" 'ivy-switch-buffer)
   ;; Make ivy display a few more items
   (setq ivy-height 10)
   ;; Configure ivy matching engine
@@ -13,7 +17,6 @@
 (use-package counsel
   :ensure t
   :after ivy
-  :after evil-leader
   :config
   ;; Replace default M-x with counsel-M-x
   (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -24,4 +27,5 @@
   :after counsel
   :after projectile
   :config
-  (evil-leader/set-key "p" 'counsel-projectile-find-file))
+  (evil-leader/set-key
+    "p" 'counsel-projectile-find-file))

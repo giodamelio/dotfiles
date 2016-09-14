@@ -7,12 +7,12 @@
   ;; Replace normal M-x with Helm's M-x
   ;; (global-set-key (kbd "M-x") 'helm-M-x)
   ;; (evil-leader/set-key "<SPC>" 'helm-M-x)
-  (setq helm-M-x-fuzzy-match t) ; Use fuzzy matching
+  ;; (setq helm-M-x-fuzzy-match t) ; Use fuzzy matching
 
   ;; Setup helm-mini
-  (evil-leader/set-key "a" 'helm-mini)
-  (setq helm-buffers-fuzzy-matching t
-  helm-recentf-fuzzy-match    t)
+  ;; (evil-leader/set-key "a" 'helm-mini)
+  ;; (setq helm-buffers-fuzzy-matching t
+  ;; helm-recentf-fuzzy-match    t)
 
   (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; Rebind tab to run persistent action
   (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; Make TAB work in terminal
