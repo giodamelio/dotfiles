@@ -7,7 +7,8 @@
   ;; Swich between buffers easily
   (evil-leader/set-key
     "a" 'ivy-switch-buffer
-    "r" 'ivy-resume)
+    "r" 'ivy-resume
+    "s" 'swiper)
   ;; Make ivy display a few more items
   (setq ivy-height 10)
   ;; Configure ivy matching engine
