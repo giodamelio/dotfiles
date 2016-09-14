@@ -1,5 +1,6 @@
 (use-package flycheck
   :ensure t
+  :diminish flycheck-mode
   :init
   (global-flycheck-mode)
   (flycheck-add-mode 'javascript-eslint 'js-mode)

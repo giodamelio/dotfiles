@@ -1,4 +1,5 @@
 (use-package core
+  :diminish (auto-revert-mode undo-tree-mode linum-relative-mode)
   :init
   (setq
     cache-directory (concat user-emacs-directory ".cache/")

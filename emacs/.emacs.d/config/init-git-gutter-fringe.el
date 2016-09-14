@@ -2,6 +2,7 @@
   :ensure git-gutter
   :ensure fringe-helper
   :ensure git-gutter-fringe
+  :diminish git-gutter-mode
   :after eyecandy
   :init
   (global-git-gutter-mode) ; Enable git-gutter everywhere
