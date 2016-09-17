@@ -27,6 +27,7 @@
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
   cdiff = diff --cached
+	rh = reset HEAD
 [push]
 	default = matching
 [color]
