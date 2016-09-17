@@ -1,9 +1,12 @@
 # Set out term to 256 colors
 set -x TERM "xterm-256color"
 
-# Set our editor
+# Set default editor
 set -x EDITOR "nvim"
 set -x VISUAL "gvim"
+
+# Set default browser
+set -x BROWSER "google-chrome"
 
 # Add a bunch of things to our path
 set -x PATH $PATH $HOME/bin  # Personal scripts
