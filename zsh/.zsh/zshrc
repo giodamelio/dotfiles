@@ -8,6 +8,9 @@ antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
   # Fish like autosuggestion
   zsh-users/zsh-autosuggestions
+
+  # Fish like syntax highlighting
+  zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 
 # Tell antigen that you're done.
