@@ -21,3 +21,8 @@ antigen apply
 
 # Load prompt
 source $ZSH_CONFIG_DIR/prompt.zsh
+
+# Load all my functions
+for file in $ZSH_CONFIG_DIR/functions/*.zsh; do
+  source $file
+done
