@@ -1,4 +1,5 @@
-source $PWD/.zsh/antigen/antigen.zsh
+ZSH_CONFIG_DIR="$PWD/.zsh/"
+source $ZSH_CONFIG_DIR/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -11,3 +12,6 @@ EOBUNDLES
 
 # Tell antigen that you're done.
 antigen apply
+
+# Load prompt
+source $ZSH_CONFIG_DIR/prompt.zsh
