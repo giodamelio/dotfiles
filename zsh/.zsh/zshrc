@@ -22,6 +22,11 @@ antigen apply
 # Load prompt
 source $ZSH_CONFIG_DIR/prompt.zsh
 
+# Load key bindings and completion from fzf
+# Fail silently if they do not exist
+source /usr/share/fzf/key-bindings.zsh &> /dev/null
+source /usr/share/fzf/completion.zsh &> /dev/null
+
 # Load all my functions
 for file in $ZSH_CONFIG_DIR/functions/*.zsh; do
   source $file
