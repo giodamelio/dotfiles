@@ -1,0 +1,9 @@
+source $PWD/.zsh/antigen/antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Load some plugins
+
+# Tell antigen that you're done.
+antigen apply
