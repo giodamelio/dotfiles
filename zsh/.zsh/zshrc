@@ -1,4 +1,4 @@
-ZSH_CONFIG_DIR="$PWD/.zsh/"
+ZSH_CONFIG_DIR="$HOME/.zsh/"
 source $ZSH_CONFIG_DIR/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
