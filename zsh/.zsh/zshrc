@@ -4,6 +4,10 @@ source $PWD/.zsh/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Load some plugins
+antigen bundles <<EOBUNDLES
+  # Fish like autosuggestion
+  zsh-users/zsh-autosuggestions
+EOBUNDLES
 
 # Tell antigen that you're done.
 antigen apply
