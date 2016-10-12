@@ -7,7 +7,7 @@
   (evil-ex-define-cmd "W" 'evil-write)
   ;; Add some leader keybindings
   (evil-leader/set-key
-    "c" 'comment-or-uncomment-region
+    "c" 'comment-line
     "k" 'kill-this-buffer
     "K" 'kill-buffer
   ))
