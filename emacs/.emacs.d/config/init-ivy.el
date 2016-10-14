@@ -23,7 +23,9 @@
   :config
   ;; Replace default M-x with counsel-M-x
   (global-set-key (kbd "M-x") 'counsel-M-x)
-  (evil-leader/set-key "<SPC>" 'counsel-M-x))
+  (evil-leader/set-key
+    "<SPC>" 'counsel-M-x
+    "f" 'counsel-ag))
 
 (use-package counsel-projectile
   :ensure t
