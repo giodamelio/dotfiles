@@ -5,6 +5,7 @@
   (global-flycheck-mode)
   (flycheck-add-mode 'javascript-eslint 'js-mode)
   (flycheck-add-mode 'javascript-eslint 'js2-mode)
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
 
   (defun my/use-eslint-from-node-modules ()
     (let* ((root (locate-dominating-file (or (buffer-file-name) default-directory) "node_modules"))
