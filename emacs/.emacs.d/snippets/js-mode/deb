@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+#name : deb
+# --
+debugger; // eslint-disable-line
