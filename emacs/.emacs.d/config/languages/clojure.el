@@ -1,5 +1,7 @@
 (use-package clojure-mode
-  :ensure t)
+  :ensure t
+  :init
+  (eldoc-mode))
 
 (use-package cider
   :ensure t
@@ -8,3 +10,7 @@
   :init
   (evil-leader/set-key-for-mode 'clojure-mode
     "d" 'cider-doc))
+
+  ;; Make cider-refresh after saving
+  (add-hook 'after-save-hook '(lambda ()
+                                (cider-refresh))))
