@@ -9,7 +9,8 @@
   :after evil-leader
   :init
   (evil-leader/set-key-for-mode 'clojure-mode
-    "d" 'cider-doc))
+    "d" 'cider-doc
+    "e" 'cider-eval-sexp-at-point
 
   ;; Make cider-refresh after saving
   (add-hook 'after-save-hook '(lambda ()
