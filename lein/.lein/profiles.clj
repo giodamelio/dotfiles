@@ -12,11 +12,17 @@
         :dependencies [;; Inject stuff into a namespace
                        [im.chit/lucid.core.inject "1.2.0"]
                        ;; Print stuff really pretty
-                       [aprint "0.1.3"]]
+                       [aprint "0.1.3"]
+                       ;; Extended docs
+                       [thalia "0.1.0"]]
         ;; Everything inside this will be evaluated before every lein task expect "jar" and "uberjar"
-        :injections [(use 'lucid.core.inject)
+        :injections [(use '[lucid.core.inject]
+                          '[thalia.doc])
                      ;; Inject some stuff so it will be accessable everywhere
                      (lucid.core.inject/in
                       clojure.core >
                       ;; aprint for pretty printing things
-                      [aprint.core aprint ap])]}}
+                      [aprint.core aprint ap])
+
+                     ;; Enable thalia extended docs
+                     (thalia.doc/add-extra-docs! :language "en_US")]}}
