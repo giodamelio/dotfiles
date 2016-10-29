@@ -14,7 +14,9 @@
                        ;; Print stuff really pretty
                        [aprint "0.1.3"]
                        ;; Extended docs
-                       [thalia "0.1.0"]]
+                       [thalia "0.1.0"]
+                       ;; Trace based debugging
+                       [spyscope "0.1.5"]]
         ;; Everything inside this will be evaluated before every lein task expect "jar" and "uberjar"
         :injections [(use '[lucid.core.inject]
                           '[thalia.doc])
@@ -22,7 +24,9 @@
                      (lucid.core.inject/in
                       clojure.core >
                       ;; aprint for pretty printing things
-                      [aprint.core aprint ap])
+                      [aprint.core aprint ap]
+                      ;; functions for trace based debugging
+                      [spyscope.core spy/p spy/d spy/t])
 
                      ;; Enable thalia extended docs
                      (thalia.doc/add-extra-docs! :language "en_US")]}}
