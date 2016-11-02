@@ -8,7 +8,9 @@
         :injections [(require '[clojure.tools.namespace.repl :refer [refresh]])]}
 
  ;; A profile to make my repl do all kinds of awesome stuff
- :repl {;; Dependencies used by the injections below
+ :repl {:plugins [;; Try new modules easily
+                  [lein-try "0.4.3"]]
+        ;; Dependencies used by the injections below
         :dependencies [;; Inject stuff into a namespace
                        [im.chit/lucid.core.inject "1.2.0"]
                        ;; Print stuff really pretty
