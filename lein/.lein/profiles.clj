@@ -22,13 +22,13 @@
         ;; Everything inside this will be evaluated before every lein task expect "jar" and "uberjar"
         :injections [(use '[lucid.core.inject]
                           '[thalia.doc])
+                     ;; Setup spyscope for trace based debugging
+                     (require 'spyscope.core)
                      ;; Inject some stuff so it will be accessable everywhere
                      (lucid.core.inject/in
                       clojure.core >
                       ;; aprint for pretty printing things
-                      [aprint.core aprint ap]
-                      ;; functions for trace based debugging
-                      [spyscope.core spy/p spy/d spy/t])
+                      [aprint.core aprint ap])
 
                      ;; Enable thalia extended docs
                      (thalia.doc/add-extra-docs! :language "en_US")]}}
