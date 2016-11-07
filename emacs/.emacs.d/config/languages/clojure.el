@@ -14,4 +14,5 @@
 
   ;; Make cider-refresh after saving
   (add-hook 'after-save-hook '(lambda ()
-                                (cider-refresh))))
+                                (when (eq major-mode 'clojure-mode)
+                                  (cider-refresh)))))
