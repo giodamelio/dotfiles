@@ -15,12 +15,10 @@ const commitMessages = child_process
 // Process commit messages
 const countByTypes = commitMessages
   .split('\n')
-  // Filter out messages without a proper tag
-  .filter(message => message.match(/^[a-zA-Z1-9]+:\ .+/))
-  // Convert into an object of tag/count pairs
+  // Convert into an object of tag/count pairs including untagged
   .reduce((acc, val) => {
-    const [rawTag, ...message] = val.split(':');
-    const tag = rawTag.trim().toLowerCase();
+    // Find the name of the tag if it exists otherwise mark it as 'untagged'
+    const tag = val.match(/^[a-zA-Z1-9]+:\ .+/) ? val.split(':')[0].trim().toLowerCase() : 'untagged';
     if (acc[tag]) {
       acc[tag]++;
     } else {
