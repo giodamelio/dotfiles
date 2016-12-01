@@ -36,6 +36,8 @@ console.log('=============\n');
 console.log(`Total commits: ${commitCount}`);
 console.log('Commits by tag:');
 Object.keys(countByTypes)
-      .sort((a, b) => countByTypes[b] - countByTypes[a])
-      .forEach((key) =>
-        console.log(`  ${key}: ${countByTypes[key]}`));
+  .sort((a, b) => countByTypes[b] - countByTypes[a])
+  .forEach((key) => {
+    const percent = ((countByTypes[key] / commitCount) * 100).toFixed(2);
+    console.log(`  ${key}: ${countByTypes[key]} (${percent}%)`)
+  });
