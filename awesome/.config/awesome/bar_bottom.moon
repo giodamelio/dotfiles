@@ -61,18 +61,6 @@ for s = 1, screen.count()
     volume_widget = wibox.widget.textbox()
     vicious.register(volume_widget, vicious.widgets.volume, "$1%", 2, "Master")
 
-    -- MPD widget
-    mpd_widget = wibox.widget.textbox()
-    vicious.register mpd_widget,
-      vicious.widgets.mpd,
-      ((mpdwidget, args) ->
-        return if args["{state}"] == "Stop"
-          "<span color='red'> - </span>"
-        else
-          args["{Artist}"] ..' - ' .. args["{Title}"]
-      ),
-      3
-
     -- Space widget
     -- space_widget = wibox.widget.textbox()
     -- vicious.register space_widget,
@@ -88,7 +76,6 @@ for s = 1, screen.count()
     right_layout = wibox.layout.fixed.horizontal()
 
     -- Add widgets left to right
-    right_layout\add(mpd_widget)
     right_layout\add(seperator)
     right_layout\add(volume_widget)
     right_layout\add(seperator)
