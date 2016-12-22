@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+#name : qrequire
+# --
+const $1 = require('gulp-${2:$1}');
