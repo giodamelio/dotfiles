@@ -15,4 +15,7 @@
    ;; Highlight current tag and column
    web-mode-enable-current-element-highlight t
    web-mode-enable-current-column-highlight t
+
+   ;; Use web-mode for jsx files
+   web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'"))
   ))
