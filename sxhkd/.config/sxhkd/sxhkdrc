@@ -1,0 +1,17 @@
+### BSPWM hotkeys ###
+# Exit BSPWM
+super + shift + q
+  bspc quit
+
+### WM independent hotkeys ###
+# Open a terminal
+super + Return
+  terminator
+
+# Launch a program
+super + d
+  rofi-colored -show run
+
+# Reload SXHKD config
+super + Escape
+  pkill -USR1 -x sxhkd
