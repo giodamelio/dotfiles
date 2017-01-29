@@ -1,4 +1,0 @@
-function top
-    htop
-end
-

@@ -3,6 +3,9 @@ ZSH_CONFIG_DIR="$HOME/.zsh/"
 # Load prompt
 source $ZSH_CONFIG_DIR/prompt.zsh
 
+# Load aliases
+source $ZSH_CONFIG_DIR/aliases.zsh
+
 # Load z
 # Quickly jump around directories based on frequencie
 source $ZSH_CONFIG_DIR/packages/z/z.sh
