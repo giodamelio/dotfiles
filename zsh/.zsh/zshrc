@@ -1,23 +1,4 @@
 ZSH_CONFIG_DIR="$HOME/.zsh/"
-source $ZSH_CONFIG_DIR/antigen/antigen.zsh
-
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
-
-# Load some plugins
-antigen bundles <<EOBUNDLES
-  # Quickly move around the filesystem
-  rupa/z
-
-  # Fish like autosuggestion
-  zsh-users/zsh-autosuggestions
-
-  # Fish like syntax highlighting
-  zsh-users/zsh-syntax-highlighting
-EOBUNDLES
-
-# Tell antigen that you're done.
-antigen apply
 
 # Load prompt
 source $ZSH_CONFIG_DIR/prompt.zsh
