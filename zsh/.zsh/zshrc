@@ -22,6 +22,10 @@ antigen apply
 # Load prompt
 source $ZSH_CONFIG_DIR/prompt.zsh
 
+# Setup NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # Load key bindings and completion from fzf
 # Fail silently if they do not exist
 source /usr/share/fzf/key-bindings.zsh &> /dev/null
