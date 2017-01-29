@@ -3,6 +3,10 @@ ZSH_CONFIG_DIR="$HOME/.zsh/"
 # Load prompt
 source $ZSH_CONFIG_DIR/prompt.zsh
 
+# Load z
+# Quickly jump around directories based on frequencie
+source $ZSH_CONFIG_DIR/packages/z/z.sh
+
 # Setup NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
