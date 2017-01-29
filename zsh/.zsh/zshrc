@@ -20,3 +20,9 @@ source /usr/share/fzf/completion.zsh &> /dev/null
 for file in $ZSH_CONFIG_DIR/functions/*.zsh; do
   source $file
 done
+
+# Setup fish shell like autocomplete
+# MUST be the last thing in the config file, see
+# https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
+source $ZSH_CONFIG_DIR/packages/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_CONFIG_DIR/packages/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

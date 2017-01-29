@@ -10,3 +10,9 @@
 [submodule "zsh/.zsh/packages/z"]
 	path = zsh/.zsh/packages/z
 	url = https://github.com/rupa/z
+[submodule "zsh/.zsh/packages/zsh-autosuggestions"]
+	path = zsh/.zsh/packages/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/.zsh/packages/zsh-syntax-highlighting"]
+	path = zsh/.zsh/packages/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
