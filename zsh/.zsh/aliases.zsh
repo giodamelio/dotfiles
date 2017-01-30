@@ -1,4 +1,5 @@
 # ls things
+alias ls='ls --color=always'
 alias la='ls -ah'
 alias ll='ls -lah'
 
