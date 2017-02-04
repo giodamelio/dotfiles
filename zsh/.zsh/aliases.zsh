@@ -10,3 +10,4 @@ alias top='htop'
 # Shortcuts
 alias r='ranger'
 alias dmesg='dmesg --color=always | less -r'
+alias npmbin='source npmbin'
