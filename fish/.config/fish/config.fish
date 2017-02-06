@@ -28,10 +28,6 @@ function fish_greeting
   end
 end
 
-# Remove the default fish vi prompt
-function fish_mode_prompt
-end function
-
 # Some emacs specific configuration
 if test -n "$EMACS"
   # Disable title since ansi-term cannot handle it
