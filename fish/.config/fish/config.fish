@@ -20,8 +20,8 @@ set -x PATH $HOME/.cargo/bin $PATH
 set -x RUST_SRC_PATH $HOME/Projects/forks/rust/src
 set -x CARGO_HOME $HOME/.cargo
 
-# Setup nvm wrapper
-source ~/.config/fish/nvm.fish
+# Setup nvm
+bass source ~/.nvm/nvm.sh --no-use
 
 # Use the fortune command as a greeting
 function fish_greeting
