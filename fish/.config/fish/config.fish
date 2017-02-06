@@ -20,6 +20,9 @@ set -x PATH $HOME/.cargo/bin $PATH
 set -x RUST_SRC_PATH $HOME/Projects/forks/rust/src
 set -x CARGO_HOME $HOME/.cargo
 
+# Setup nvm
+bass source ~/.nvm/nvm.sh --no-use
+
 # Use the fortune command as a greeting
 function fish_greeting
   # Only run fortune ~20% of the time
@@ -27,6 +30,9 @@ function fish_greeting
     fortune -as
   end
 end
+
+# Use new keybindings for fzf plugin
+set -U FZF_LEGACY_KEYBINDINGS 0
 
 # Some emacs specific configuration
 if test -n "$EMACS"
