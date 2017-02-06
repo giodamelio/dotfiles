@@ -1,0 +1,1 @@
+/home/giodamelio/.config/fisherman/nvm/npm.fish

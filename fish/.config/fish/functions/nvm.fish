@@ -1,3 +1,1 @@
-function nvm
-  bass source ~/.nvm/nvm.sh ';' nvm $argv
-end
+/home/giodamelio/.config/fisherman/nvm/nvm.fish
