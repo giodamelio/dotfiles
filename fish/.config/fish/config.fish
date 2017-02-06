@@ -34,9 +34,6 @@ end
 # Use new keybindings for fzf plugin
 set -U FZF_LEGACY_KEYBINDINGS 0
 
-# Enable fish vi mode
-fish_vi_key_bindings
-
 # Remove the default fish vi prompt
 function fish_mode_prompt
 end function
