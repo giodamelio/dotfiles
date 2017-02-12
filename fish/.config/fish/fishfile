@@ -4,5 +4,6 @@ fisherman/done
 giodamelio/fzf
 fisherman/get
 fisherman/getopts
+fisherman/humanize_duration
 fisherman/last_job_id
 fisherman/nvm

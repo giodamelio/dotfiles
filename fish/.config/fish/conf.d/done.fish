@@ -1,0 +1,1 @@
+/home/giodamelio/.config/fisherman/done/conf.d/done.fish
