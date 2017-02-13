@@ -1,1 +1,1 @@
-/home/giodamelio/.config/fisherman/nvm/npm.fish
+/home/giodamelio/.config/fisherman/fnm/functions/npm.fish

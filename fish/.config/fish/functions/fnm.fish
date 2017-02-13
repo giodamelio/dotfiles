@@ -1,0 +1,1 @@
+/home/giodamelio/.config/fisherman/fnm/functions/fnm.fish

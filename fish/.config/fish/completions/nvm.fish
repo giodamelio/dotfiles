@@ -1,1 +1,0 @@
-/home/giodamelio/.config/fisherman/nvm/completions/nvm.fish
