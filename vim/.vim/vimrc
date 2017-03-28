@@ -9,59 +9,59 @@ Plug 'sickill/vim-monokai'
 
 " Languages
 Plug 'sheerun/vim-polyglot'
-Plug 'ARM9/arm-syntax-vim', { 'for': 'arm' }
-Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja' }
-Plug 'cespare/vim-toml', { 'for': 'toml' }
-Plug 'dag/vim-fish', { 'for': 'fish' }
-Plug 'dag/vim2hs', { 'for': 'haskell' }
-Plug 'daveyarwood/vim-alda', { 'for': 'alda' }
-Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'elmcast/elm-vim', { 'for': 'elm' }
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'groenewege/vim-less', { 'for': 'less' }
+Plug 'ARM9/arm-syntax-vim',            { 'for': 'arm' }
+Plug 'Glench/Vim-Jinja2-Syntax',       { 'for': 'jinja' }
+Plug 'cespare/vim-toml',               { 'for': 'toml' }
+Plug 'dag/vim-fish',                   { 'for': 'fish' }
+Plug 'dag/vim2hs',                     { 'for': 'haskell' }
+Plug 'daveyarwood/vim-alda',           { 'for': 'alda' }
+Plug 'digitaltoad/vim-jade',           { 'for': 'jade' }
+Plug 'elixir-lang/vim-elixir',         { 'for': 'elixir' }
+Plug 'elmcast/elm-vim',                { 'for': 'elm' }
+Plug 'fatih/vim-go',                   { 'for': 'go' }
+Plug 'groenewege/vim-less',            { 'for': 'less' }
 Plug 'https://github.com/gf3/peg.vim', { 'for': 'peg' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-Plug 'leafo/moonscript-vim', { 'for': 'moonscript' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript', 'branch': 'develop' }
-Plug 'posva/vim-vue', { 'for': 'vue' }
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'wavded/vim-stylus', { 'for': 'stylus' }
-Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
+Plug 'kchmck/vim-coffee-script',       { 'for': 'coffee' }
+Plug 'leafgarland/typescript-vim',     { 'for': 'typescript' }
+Plug 'leafo/moonscript-vim',           { 'for': 'moonscript' }
+Plug 'mxw/vim-jsx',                    { 'for': 'javascript.jsx' }
+Plug 'pangloss/vim-javascript',        { 'for': 'javascript', 'branch': 'develop' }
+Plug 'posva/vim-vue',                  { 'for': 'vue' }
+Plug 'rust-lang/rust.vim',             { 'for': 'rust' }
+Plug 'wavded/vim-stylus',              { 'for': 'stylus' }
+Plug 'Quramy/tsuquyomi',               { 'for': 'typescript' }
 
-" Other
-Plug 'airblade/vim-gitgutter' " Shows git status for each line in the gutter
-Plug 'benekastah/neomake' " Syntax checking
-Plug 'bhurlow/vim-parinfer', { 'do': 'npm install' } " Parentheses inference for Lisp
-Plug 'bling/vim-airline' " Awesome tabline
-Plug 'christoomey/vim-sort-motion' " Add a sort motion
-Plug 'justinmk/vim-sneak' " Better movement the find
-Plug 'kabbAmine/zeavim.vim' " Access zeal documentation browser from inside vim
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install' } " Syntax aware auto completion for javascript
-Plug 'mattn/emmet-vim' " Make writing html so much better
-Plug 'moll/vim-bbye' " Better :bdelete
-Plug 'rhysd/clever-f.vim' " Better mappings for finding things
-Plug 'shougo/unite.vim' " Fuzzy finder of things
-Plug 'shougo/vimproc.vim', { 'do': 'make' } " Interactace process exacution to help other plugins
-Plug 'sirver/ultisnips' " Snippets
-Plug 'terryma/vim-expand-region' " Quick modification of visual selections
-Plug 'tpope/vim-commentary' " Handle comments
-Plug 'tpope/vim-eunuch' " Misc helper commands
-Plug 'tpope/vim-fugitive' " Git plugin
-Plug 'tpope/vim-repeat' " Repeat plugin maps
-Plug 'tpope/vim-surround' " Deals with surroundings
-Plug 'valloric/MatchTagAlways' " Highlight matching HTML/XML tags
+                                                        " Other
+Plug 'airblade/vim-gitgutter'                           " Shows git status for each line in the gutter
+Plug 'benekastah/neomake'                               " Syntax checking
+Plug 'bhurlow/vim-parinfer', { 'do': 'npm install' }    " Parentheses inference for Lisp
+Plug 'bling/vim-airline'                                " Awesome tabline
+Plug 'christoomey/vim-sort-motion'                      " Add a sort motion
+Plug 'justinmk/vim-sneak'                               " Better movement the find
+Plug 'kabbAmine/zeavim.vim'                             " Access zeal documentation browser from inside vim
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }    " Syntax aware auto completion for javascript
+Plug 'mattn/emmet-vim'                                  " Make writing html so much better
+Plug 'moll/vim-bbye'                                    " Better :bdelete
+Plug 'rhysd/clever-f.vim'                               " Better mappings for finding things
+Plug 'shougo/unite.vim'                                 " Fuzzy finder of things
+Plug 'shougo/vimproc.vim', { 'do': 'make' }             " Interactace process exacution to help other plugins
+Plug 'sirver/ultisnips'                                 " Snippets
+Plug 'terryma/vim-expand-region'                        " Quick modification of visual selections
+Plug 'tpope/vim-commentary'                             " Handle comments
+Plug 'tpope/vim-eunuch'                                 " Misc helper commands
+Plug 'tpope/vim-fugitive'                               " Git plugin
+Plug 'tpope/vim-repeat'                                 " Repeat plugin maps
+Plug 'tpope/vim-surround'                               " Deals with surroundings
+Plug 'valloric/MatchTagAlways'                          " Highlight matching HTML/XML tags
 Plug 'valloric/YouCompleteMe', { 'do': './install.sh' } " Auto complete
-Plug 'wellle/targets.vim', " Add more text objects
-Plug 'xolox/vim-misc' " Misc helper functions for plugins
-Plug 'xolox/vim-session' " Session management
-Plug 'terryma/vim-expand-region' " Cool visual mode expansion and shrinking
-Plug 'takac/vim-hardtime' " Disable lots of arrow key and hjkl keys
-Plug 'luochen1990/rainbow' " Make the parens rainbow!
-Plug 'tpope/vim-fireplace' " Awesome clojure REPL
-Plug 'junegunn/vim-easy-align' " Align things
+Plug 'wellle/targets.vim',                              " Add more text objects
+Plug 'xolox/vim-misc'                                   " Misc helper functions for plugins
+Plug 'xolox/vim-session'                                " Session management
+Plug 'terryma/vim-expand-region'                        " Cool visual mode expansion and shrinking
+Plug 'takac/vim-hardtime'                               " Disable lots of arrow key and hjkl keys
+Plug 'luochen1990/rainbow'                              " Make the parens rainbow!
+Plug 'tpope/vim-fireplace'                              " Awesome clojure REPL
+Plug 'junegunn/vim-easy-align'                          " Align things
 
 call plug#end()
 
@@ -98,11 +98,11 @@ set noshowmode
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab       " Use spaces instead of tabs
-set smarttab        " Let's tab key insert 'tab stops', and bksp deletes tabs
-set shiftround      " Tab/shifting moves to closest tabstop
-set autoindent      " Match indents on new lines
-set smartindent     " InPlugin 'sickill/vim-monokai'tellegently dedent/indent new lines based on rules
+set expandtab   " Use spaces instead of tabs
+set smarttab    " Let's tab key insert 'tab stops', and bksp deletes tabs
+set shiftround  " Tab/shifting moves to closest tabstop
+set autoindent  " Match indents on new lines
+set smartindent " InPlugin 'sickill/vim-monokai'tellegently dedent/indent new lines based on rules
 
 " Autoreload changed files without asking
 set autoread
@@ -111,12 +111,12 @@ set autoread
 set backspace=indent,eol,start
 
 " Make search better
-set ignorecase  " Case insensitive search
-set smartcase   " If there are uppercase letters, become case-sensitive
-set incsearch   " Live incremental searching
-set showmatch   " Live match highlighting
-set hlsearch    " Highlight matches
-set gdefault    " Use the `g` flag by default
+set ignorecase " Case insensitive search
+set smartcase  " If there are uppercase letters, become case-sensitive
+set incsearch  " Live incremental searching
+set showmatch  " Live match highlighting
+set hlsearch   " Highlight matches
+set gdefault   " Use the `g` flag by default
 
 " Set Leader Key
 let mapleader = "\<Space>"
@@ -375,7 +375,7 @@ let g:sneak#s_next = 1
 
 "" Hardtime
 let g:hardtime_default_on = 1 " Enable in all buffers
-let g:hardtime_maxcount = 2 " Allow two presses before enforcing timeout
+let g:hardtime_maxcount = 2   " Allow two presses before enforcing timeout
 
 "" Rainbow parens
 let g:rainbow_active = 1
