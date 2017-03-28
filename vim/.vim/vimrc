@@ -5,14 +5,11 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " Color themes
-Plug 'altercation/vim-colors-solarized'
 Plug 'sickill/vim-monokai'
-Plug 'wellsjo/wells-colorscheme.vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'morhetz/gruvbox'
 
 " Languages
-Plug 'ARM9/arm-syntax-vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'ARM9/arm-syntax-vim', { 'for': 'arm' }
 Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'dag/vim-fish', { 'for': 'fish' }
@@ -31,7 +28,6 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript', 'branch': 'develop' }
 Plug 'posva/vim-vue', { 'for': 'vue' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'sheerun/vim-polyglot'
 Plug 'wavded/vim-stylus', { 'for': 'stylus' }
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
