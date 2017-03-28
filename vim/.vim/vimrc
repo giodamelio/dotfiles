@@ -61,6 +61,7 @@ Plug 'terryma/vim-expand-region' " Cool visual mode expansion and shrinking
 Plug 'takac/vim-hardtime' " Disable lots of arrow key and hjkl keys
 Plug 'luochen1990/rainbow' " Make the parens rainbow!
 Plug 'tpope/vim-fireplace' " Awesome clojure REPL
+Plug 'junegunn/vim-easy-align' " Align things
 
 call plug#end()
 
@@ -378,6 +379,13 @@ let g:hardtime_maxcount = 2 " Allow two presses before enforcing timeout
 
 "" Rainbow parens
 let g:rainbow_active = 1
+
+"" Easy Align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
