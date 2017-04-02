@@ -31,37 +31,32 @@ Plug 'rust-lang/rust.vim',             { 'for': 'rust' }
 Plug 'wavded/vim-stylus',              { 'for': 'stylus' }
 Plug 'Quramy/tsuquyomi',               { 'for': 'typescript' }
 
-                                                        " Other
-Plug 'airblade/vim-gitgutter'                           " Shows git status for each line in the gutter
-Plug 'benekastah/neomake'                               " Syntax checking
-Plug 'bhurlow/vim-parinfer', { 'do': 'npm install' }    " Parentheses inference for Lisp
-Plug 'bling/vim-airline'                                " Awesome tabline
-Plug 'christoomey/vim-sort-motion'                      " Add a sort motion
-Plug 'justinmk/vim-sneak'                               " Better movement the find
-Plug 'kabbAmine/zeavim.vim'                             " Access zeal documentation browser from inside vim
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }    " Syntax aware auto completion for javascript
-Plug 'mattn/emmet-vim'                                  " Make writing html so much better
-Plug 'moll/vim-bbye'                                    " Better :bdelete
-Plug 'rhysd/clever-f.vim'                               " Better mappings for finding things
-Plug 'shougo/unite.vim'                                 " Fuzzy finder of things
-Plug 'shougo/vimproc.vim', { 'do': 'make' }             " Interactace process exacution to help other plugins
-Plug 'sirver/ultisnips'                                 " Snippets
-Plug 'terryma/vim-expand-region'                        " Quick modification of visual selections
-Plug 'tpope/vim-commentary'                             " Handle comments
-Plug 'tpope/vim-eunuch'                                 " Misc helper commands
-Plug 'tpope/vim-fugitive'                               " Git plugin
-Plug 'tpope/vim-repeat'                                 " Repeat plugin maps
-Plug 'tpope/vim-surround'                               " Deals with surroundings
-Plug 'valloric/MatchTagAlways'                          " Highlight matching HTML/XML tags
-Plug 'valloric/YouCompleteMe', { 'do': './install.sh' } " Auto complete
-Plug 'wellle/targets.vim',                              " Add more text objects
-Plug 'xolox/vim-misc'                                   " Misc helper functions for plugins
-Plug 'xolox/vim-session'                                " Session management
-Plug 'terryma/vim-expand-region'                        " Cool visual mode expansion and shrinking
-Plug 'takac/vim-hardtime'                               " Disable lots of arrow key and hjkl keys
-Plug 'luochen1990/rainbow'                              " Make the parens rainbow!
-Plug 'tpope/vim-fireplace'                              " Awesome clojure REPL
-Plug 'junegunn/vim-easy-align'                          " Align things
+" Other
+Plug 'airblade/vim-gitgutter'                                             " Shows git status for each line in the gutter
+Plug 'benekastah/neomake'                                                 " Syntax checking
+Plug 'bhurlow/vim-parinfer', { 'do': 'npm install' }                      " Parentheses inference for Lisp
+Plug 'bling/vim-airline'                                                  " Awesome tabline
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' } " Syntax aware auto completion for javascript
+Plug 'mattn/emmet-vim', { 'for': 'html' }                                 " Make writing html so much better
+Plug 'moll/vim-bbye'                                                      " Better :bdelete
+Plug 'rhysd/clever-f.vim'                                                 " Better mappings for finding things
+Plug 'shougo/unite.vim'                                                   " Fuzzy finder of things
+Plug 'shougo/vimproc.vim', { 'do': 'make' }                               " Interactace process exacution to help other plugins
+Plug 'sirver/ultisnips'                                                   " Snippets
+Plug 'tpope/vim-commentary'                                               " Handle comments
+Plug 'tpope/vim-eunuch'                                                   " Misc helper commands
+Plug 'tpope/vim-fugitive'                                                 " Git plugin
+Plug 'tpope/vim-repeat'                                                   " Repeat plugin maps
+Plug 'tpope/vim-surround'                                                 " Deals with surroundings
+Plug 'valloric/MatchTagAlways'                                            " Highlight matching HTML/XML tags
+Plug 'valloric/YouCompleteMe', { 'do': './install.sh' }                   " Auto complete
+Plug 'wellle/targets.vim',                                                " Add more text objects
+Plug 'xolox/vim-misc'                                                     " Misc helper functions for plugins
+Plug 'xolox/vim-session'                                                  " Session management
+Plug 'takac/vim-hardtime'                                                 " Disable lots of arrow key and hjkl keys
+Plug 'luochen1990/rainbow'                                                " Make the parens rainbow!
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }                          " Awesome clojure REPL
+Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign' }              " Align things
 
 call plug#end()
 
