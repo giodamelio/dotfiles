@@ -33,7 +33,7 @@ Plug 'Quramy/tsuquyomi',               { 'for': 'typescript' }
 
 " Other
 Plug 'airblade/vim-gitgutter'                                             " Shows git status for each line in the gutter
-Plug 'benekastah/neomake'                                                 " Syntax checking
+Plug 'w0rp/ale'                                                           " Syntax checking
 Plug 'bhurlow/vim-parinfer', { 'do': 'npm install' }                      " Parentheses inference for Lisp
 Plug 'bling/vim-airline'                                                  " Awesome tabline
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' } " Syntax aware auto completion for javascript
@@ -351,16 +351,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-"" Neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
-
-" Make neomake load the local copy of eslint and flow if aviable
-let s:eslint_path = system('PATH=$(npm bin 2> /dev/null):$PATH && which eslint')
-let g:neomake_javascript_eslint_exe = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-
-" Run after save on javascript files
-autocmd! BufWritePost *.js Neomake
-
 "" Sneak
 let g:sneak#s_next = 1
 
@@ -381,6 +371,10 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+"" Ale
+" Make sure the sign column sticks around
+let g:ale_sign_column_always = 1
 
 """"" Color Scheme """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Set our colorscheme to solorized dark
