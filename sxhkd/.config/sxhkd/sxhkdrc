@@ -12,6 +12,10 @@ super + {_,shift + }c
 super + g
 	bspc node -s biggest
 
+# Set window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
 ## Focus and Swap windows
 
 # Change focused window and move window
