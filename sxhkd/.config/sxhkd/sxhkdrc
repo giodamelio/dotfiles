@@ -1,7 +1,22 @@
 ### BSPWM hotkeys ###
 # Exit BSPWM
 super + shift + q
+  pkill -x sxhkd && \
   bspc quit
+
+# Close or kill a window
+super + {_,shift + }c
+	bspc node -{c,k}
+
+# Swap current window with the biggest window
+super + g
+	bspc node -s biggest
+
+## Focus and Swap windows
+
+# Change focused window and move window
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
 
 ### WM independent hotkeys ###
 # Open a terminal
@@ -14,4 +29,5 @@ super + d
 
 # Reload SXHKD config
 super + Escape
+  echo "Reloading sxhkd" && \
   pkill -USR1 -x sxhkd
