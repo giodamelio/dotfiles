@@ -10,7 +10,7 @@ super + {_,shift + }c
 
 # Swap current window with the biggest window
 super + g
-	bspc node -s biggest
+	bspc node -s biggest.local
 
 # Set window state
 super + {t,shift + t,s,f}
