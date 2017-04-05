@@ -1,7 +1,15 @@
-#! /bin/sh
+#!/bin/bash
 
 # Start sxhkd for key board shortcuts
 SXHKD_SHELL=bash sxhkd &
+
+# Start the status bars on all enabled moniters
+MONITORS=$(xrandr | grep -Eo "^\S+ connected" | cut -d " " -f 1)
+for MONITOR in $MONITORS
+do
+    MONITOR=$MONITOR polybar top &
+    MONITOR=$MONITOR polybar bottom &
+done
 
 # Make the borders look nice
 bspc config border_width        2
