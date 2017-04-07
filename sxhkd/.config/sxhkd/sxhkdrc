@@ -32,6 +32,14 @@ super + {1-9}
   D={1-9}; \
   bspc desktop -f "$(bspc query -D -m | sed -n "$D p")"
 
+# Move node to next monitor
+super + o
+  bspc node -m next
+
+# Switch active monitor
+super + ctrl + {h,j,k,l}
+  bspc monitor -f {west,south,north,east}
+
 ## Mouse bindings
 
 # Focus windows
