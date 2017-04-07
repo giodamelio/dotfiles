@@ -16,11 +16,21 @@ super + g
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-## Focus and Swap windows
+## Focus and Swap windows and desktops
 
 # Change focused window and move window
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
+
+# Send window to desktop on active monitor
+super + shift + {1-9}
+  D={1-9}; \
+  bspc node -d "$(bspc query -D -m | sed -n "$D p")"
+
+# Focus desktop on active monitor
+super + {1-9}
+  D={1-9}; \
+  bspc desktop -f "$(bspc query -D -m | sed -n "$D p")"
 
 ### WM independent hotkeys ###
 # Open a terminal
