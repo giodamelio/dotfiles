@@ -32,6 +32,16 @@ super + {1-9}
   D={1-9}; \
   bspc desktop -f "$(bspc query -D -m | sed -n "$D p")"
 
+## Mouse bindings
+
+# Focus windows
+~button1
+  bspc pointer -g focus
+
+# Move and resize windows
+super + button{1-3}
+  bspc pointer -g {move,resize_side,resize_corner}
+
 ### WM independent hotkeys ###
 # Open a terminal
 super + Return
