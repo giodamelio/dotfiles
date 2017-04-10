@@ -171,19 +171,16 @@ format-disconnected-underline = ${colors.red}
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
-date =
-date-alt = " %Y-%m-%d"
+date = "%A %B %d, "
+date-alt = "%A %B %d, "
 
-time = %H:%M
-time-alt = %H:%M:%S
-
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+time = "%I:%M %p"
+time-alt = "%I:%M:%S %d"
 
 label = %date% %time%
+format-prefix = " "
 
 [module/volume]
 type = internal/volume
