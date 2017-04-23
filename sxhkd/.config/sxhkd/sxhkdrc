@@ -64,3 +64,10 @@ super + d
 super + Escape
   echo "Reloading sxhkd" && \
   pkill -USR1 -x sxhkd
+
+# Audio Controls
+XF86Audio{Prev,Play,Next}
+  playerctl {previous,play-pause,next}
+
+XF86Launch{6,7,8}
+  playerctl {previous,play-pause,next}
