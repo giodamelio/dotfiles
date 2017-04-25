@@ -66,7 +66,7 @@ super + shift + d
 
 # Reload SXHKD config
 super + Escape
-  echo "Reloading sxhkd" && \
+  notify-send "Reloading sxhkd config" && \
   pkill -USR1 -x sxhkd
 
 # Audio Controls
