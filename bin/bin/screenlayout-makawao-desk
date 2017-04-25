@@ -1,0 +1,4 @@
+#!/bin/sh
+# xrandr --output HDMI1 --mode 1600x900 --pos 1366x0 --rotate right --output VIRTUAL1 --off --output eDP1 --mode 1366x768 --pos 0x832 --rotate normal
+xrandr --output eDP1 --mode 1366x768 --pos 0x832 --rotate normal
+xrandr --output HDMI1 --mode 1600x900 --pos 1366x0 --rotate right
