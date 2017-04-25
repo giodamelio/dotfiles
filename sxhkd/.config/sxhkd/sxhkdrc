@@ -60,6 +60,10 @@ super + Return
 super + d
   rofi-colored -show run
 
+# Switch to window
+super + shift + d
+  rofi-colored -show window
+
 # Reload SXHKD config
 super + Escape
   echo "Reloading sxhkd" && \
