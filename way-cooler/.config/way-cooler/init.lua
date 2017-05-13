@@ -73,9 +73,10 @@ local key = way_cooler.key
 
 local keys = {
   -- Open dmenu
-  key({ mod }, "d", util.program.spawn_once("dmenu_run")),
+  key({ mod }, "d", util.program.spawn_once("rofi-colored -show run")),
+
   -- Open terminal
-  key({ mod }, "return", util.program.spawn_once("weston-terminal")),
+  key({ mod }, "return", util.program.spawn_once("terminator")),
 
   -- Lua methods can be bound as well
   key({ mod, "Shift" }, "h", function () print("Hello world!") end),
