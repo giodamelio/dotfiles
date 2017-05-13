@@ -66,7 +66,7 @@ way_cooler.mouse = {
 -- waiting until the keys are released to run again.
 
 -- Modifier key used in keybindings. Mod3 = Alt, Mod4 = Super/Logo key
-mod = "Alt"
+mod = "Super"
 
 -- Aliases to save on typing
 local key = way_cooler.key
