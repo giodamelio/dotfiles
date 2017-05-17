@@ -9,7 +9,7 @@
   :ensure t
   :after clojure-mode
   :after evil-leader
-  :init
+  :config
   (evil-leader/set-key-for-mode 'clojure-mode
     "d" 'cider-doc
     "e" 'cider-eval-sexp-at-point

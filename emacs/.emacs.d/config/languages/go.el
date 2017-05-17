@@ -4,7 +4,7 @@
   :ensure godoctor
   :ensure company-go
   :after company
-  :init
+  :config
   ; Use goimports instead of go-fmt
   (setq gofmt-command "goimports")
 

@@ -5,7 +5,7 @@
   :ensure t
   :after elixir-mode
   :after evil-leader
-  :init
+  :config
   (evil-leader/set-key-for-mode 'elixir-mode
     "d" 'alchemist-help-search-at-point
     ; Evaluate either the current line

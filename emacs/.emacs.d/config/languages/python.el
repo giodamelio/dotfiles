@@ -4,7 +4,7 @@
   :ensure py-yapf
   :diminish importmagic-mode
   :after company
-  :init
+  :config
   ;; Add jedi backend to company
   (add-to-list 'company-backends 'company-jedi)
   ;; Setup import magic
