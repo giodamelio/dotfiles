@@ -1,7 +1,9 @@
 (use-package clojure-mode
   :ensure t
-  :init
-  (eldoc-mode))
+  :ensure rainbow-delimiters
+  :config
+  (eldoc-mode)
+  (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode))
 
 (use-package cider
   :ensure t
