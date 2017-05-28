@@ -32,14 +32,14 @@
                   [lein-ancient "0.6.10"]
 
                   ;; Try new modules easily
-                  [lein-try "0.4.3"]]
+                  [lein-try "0.4.3"]
+
+                  ;; Easy repl shorthands
+                  [com.palletops/lein-shorthand "0.4.0"]]
 
         ;; Dependencies used by the injections below
         :dependencies [;; Manage namespaces (mostly for refresh)
                        [org.clojure/tools.namespace "0.3.0-alpha3"]
-
-                       ;; Inject stuff into a namespace
-                       [im.chit/lucid.core.inject "1.3.6"]
 
                        ;; Extended docs
                        [thalia "0.1.0"]
@@ -51,32 +51,30 @@
         :injections [;; Setup spyscope
                      (require 'spyscope.core)
 
-                     ;; Load some deps
-                     (use ['lucid.core.inject]
-                          ['thalia.doc])
-
-                     ;; Inject some functions into some namespaces
-                     (lucid.core.inject/in
-                      ;; Inject into clojure.core so it is aviable everywhere
-                      clojure.core
-
-                      ;; Make sure doc and source are always aviable
-                      [clojure.repl doc source]
-
-                      ;; Inject into > namespace
-                      >
-
-                      ;; Easy namespace refresh
-                      [clojure.tools.namespace.repl refresh [refresh r]]
-
-                      ;; Colorful printing
-                      [puget.printer pprint [pprint pp] cprint [cprint cp]]
-
-                      ;; Easly run shell commands
-                      [clojure.java.shell sh])
+                     ;; Load thalia
+                     (use 'thalia.doc)
 
                      ;; Enable thalia extended docs
                      (thalia.doc/add-extra-docs! :language "en_US")] 
+
+        ;; Shorthands avaible in the repl
+        :shorthand {;; Load into clojure.core so it is aviable everywhere
+                    clojure.core {doc    clojure.repl/doc
+                                  source clojure.repl/source}
+
+                    ;; Load into . namespace for easy access in the repl
+                    . {;; Pretty printing
+                       pprint puget.printer/pprint
+                       pp     puget.printer/pprint
+                       cprint puget.printer/cprint
+                       cp     puget.printer/cprint
+
+                       ;; Easy namespace refresh
+                       r       clojure.tools.namespace.repl/refresh
+                       refresh clojure.tools.namespace.repl/refresh
+
+                       ;; Quick shell command
+                       sh clojure.java.shell/sh}}
 
         ;; Create some aliaes
         :aliases {"omni-check" ["do" ["clean"] ["ancient"] ["kibit"] ["bikeshed"]]}}}
