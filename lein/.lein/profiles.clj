@@ -35,7 +35,10 @@
                   [lein-try "0.4.3"]
 
                   ;; Easy repl shorthands
-                  [com.palletops/lein-shorthand "0.4.0"]]
+                  [com.palletops/lein-shorthand "0.4.0"]
+
+                  ;; Auto formatting
+                  [lein-cljfmt "0.5.6"]]
 
         ;; Dependencies used by the injections below
         :dependencies [;; Manage namespaces (mostly for refresh)
