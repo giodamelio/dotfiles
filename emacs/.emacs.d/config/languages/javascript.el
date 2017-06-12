@@ -3,5 +3,6 @@
   :init
   (setq
    ; Configure prettier mode
-   prettier-js--prettier-args '("--single-quote" "--trailing-comma" "es5"))
-  (add-hook 'js-mode-hook 'prettier-mode))
+   prettier-js-args '("--single-quote" "--trailing-comma" "es5"))
+  (add-hook 'js-mode-hook 'prettier-js-mode)
+  (require 'prettier-js))

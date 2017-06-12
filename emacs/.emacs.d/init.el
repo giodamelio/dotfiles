@@ -18,6 +18,9 @@
 (require 'diminish)
 (require 'bind-key)
 
+;; Load prettier. Stop gap until branch `prettier-js-prettify-region` is merged and on melpa
+(add-to-list 'load-path "~/.emacs.d/files")
+
 ;; Load all elisp scripts from config/
 (mapc 'load (append
 	     (file-expand-wildcards (concat user-emacs-directory "config/*.el"))
