@@ -31,11 +31,10 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
+     ;; Language layers
+     javascript
+
+     ;; Misc layers
      helm
      ;; auto-completion
      better-defaults
@@ -301,7 +300,13 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
- (setq-default evil-escape-key-sequence "jk"))
+  (setq-default
+   ;; Exit insert mode with jk
+   evil-escape-key-sequence "jk"
+
+   ;; Set indent level for JS and JSON
+   js2-basic-offset 2
+   js-indent-level 2))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
