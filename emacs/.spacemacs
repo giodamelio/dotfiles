@@ -38,7 +38,7 @@ values."
      ;; ----------------------------------------------------------------
      helm
      ;; auto-completion
-     ;; better-defaults
+     better-defaults
      emacs-lisp
      git
      ;; markdown
