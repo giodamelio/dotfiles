@@ -48,6 +48,9 @@ values."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
+
+     ;; Private layers
+     spacemacs-prettier
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -306,7 +309,10 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
    ;; Set indent level for JS and JSON
    js2-basic-offset 2
-   js-indent-level 2))
+   js-indent-level 2
+
+   ;; Set options for prettier
+   prettier-js-args '("--single-quote" "--trailing-comma" "es5")))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -315,7 +321,8 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  )
+  ;; Make prettier run when a JS file is saved
+  (add-hook 'js2-mode-hook 'prettier-js-mode))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
