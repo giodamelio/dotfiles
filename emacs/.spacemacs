@@ -40,6 +40,9 @@ values."
      better-defaults
      emacs-lisp
      git
+     (evil-snipe :variables
+                 evil-snipe-enable-alternate-f-and-t-behaviors t)
+
      ;; markdown
      ;; org
      ;; (shell :variables
