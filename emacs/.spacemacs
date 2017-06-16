@@ -33,10 +33,14 @@ values."
    '(
      ;; Language layers
      javascript
+     node
+     clojure
+     rust
+     python
 
      ;; Misc layers
      helm
-     ;; auto-completion
+     auto-completion
      better-defaults
      emacs-lisp
      git
@@ -49,7 +53,7 @@ values."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     ;; syntax-checking
+     syntax-checking
      ;; version-control
 
      ;; Private layers
