@@ -18,7 +18,7 @@ const countByTypes = commitMessages
   // Convert into an object of tag/count pairs including untagged
   .reduce((acc, val) => {
     // Find the name of the tag if it exists otherwise mark it as 'untagged'
-    const tag = val.match(/^[a-zA-Z1-9]+:\ .+/) ? val.split(':')[0].trim().toLowerCase() : 'untagged';
+    const tag = val.match(/^[a-zA-Z1-9\-]+:\ .+/) ? val.split(':')[0].trim().toLowerCase() : 'untagged';
     if (acc[tag]) {
       acc[tag]++;
     } else {
