@@ -1,0 +1,3 @@
+_rofi () {
+    rofi -i -no-auto-select -kb-accept-entry "!Return" "$@"
+}
