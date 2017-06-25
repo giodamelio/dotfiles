@@ -37,6 +37,8 @@ values."
      clojure
      rust
      python
+     racket
+     markdown
 
      ;; Misc layers
      helm
