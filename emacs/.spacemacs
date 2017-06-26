@@ -333,5 +333,8 @@ you should place your code here."
   ;; Make prettier run when a JS file is saved
   (add-hook 'js2-mode-hook 'prettier-js-mode))
 
+  ;; ALlow saving files with ":W"
+  (evil-ex-define-cmd "W" 'evil-write))
+
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
