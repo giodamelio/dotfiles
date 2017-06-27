@@ -57,6 +57,7 @@ Plug 'takac/vim-hardtime'                                                 " Disa
 Plug 'luochen1990/rainbow'                                                " Make the parens rainbow!
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }                          " Awesome clojure REPL
 Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign' }              " Align things
+Plug 'christoomey/vim-tmux-navigator'                                     " Seamless navigation between tmux pains
 
 call plug#end()
 
