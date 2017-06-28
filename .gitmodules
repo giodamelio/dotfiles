@@ -28,3 +28,6 @@
 [submodule "tmux/.tmux/plugins/vim-tmux-navigator"]
 	path = tmux/.tmux/plugins/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule "tmux/.tmux/plugins/tmux-copycat"]
+	path = tmux/.tmux/plugins/tmux-copycat
+	url = https://github.com/tmux-plugins/tmux-copycat
