@@ -19,3 +19,6 @@
 [submodule "emacs/.spacemacs.d"]
 	path = emacs/.spacemacs.d
 	url = git@github.com:syl20bnr/spacemacs.git
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
