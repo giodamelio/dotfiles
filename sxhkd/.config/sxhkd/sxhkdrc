@@ -47,6 +47,20 @@ super + shift + o
 super + ctrl + {h,j,k,l}
   bspc monitor -f {west,south,north,east}
 
+## Preselect
+
+# Preselect the direction
+super + alt + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# Preselect the ratio
+super + alt + {1-9}
+	bspc node -o 0.{1-9}
+
+# Cancel the preselection for the focused node
+super + alt + space
+	bspc node -p cancel
+
 ## Mouse bindings
 
 # Focus windows
