@@ -17,11 +17,17 @@ super + g
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
+# Set layout mode
+super + {m,shift + m}
+  bspc desktop -l {monocle,tiled}
+
 ## Focus and Swap windows and desktops
 
 # Change focused window and move window
 super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}.local
+  LAYOUT=$(bspc query -T -d | jq -r .layout); \
+  [[ "$LAYOUT" == "tiled" ]] && bspc node -{f,s} {west,south,north,east}.local; \
+  [[ "$LAYOUT" == "monocle" ]] && bspc node -{f,s} {prev,next,prev,next}.local
 
 # Send window to desktop on active monitor
 super + shift + {1-9}
