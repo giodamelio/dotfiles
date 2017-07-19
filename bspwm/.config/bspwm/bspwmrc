@@ -5,6 +5,7 @@ SXHKD_SHELL=bash sxhkd &
 ./.screenlayout/makawao-dual-right.sh
 
 # Start the status bars on all enabled moniters
+killall polybar
 MONITORS=$(xrandr | grep -Eo "^\S+ connected" | cut -d " " -f 1)
 for MONITOR in $MONITORS
 do
