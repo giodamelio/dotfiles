@@ -13,8 +13,8 @@ do
     MONITOR=$MONITOR polybar bottom &
 done
 
-# Make the borders look nice
-bspc config border_width        2
+bspc config border_width 2 # Make the borders look nice
+bspc config window_gap 2 # Make the window gaps just right
 
 # Default settings, not sure what they all do
 bspc config split_ratio         0.52
