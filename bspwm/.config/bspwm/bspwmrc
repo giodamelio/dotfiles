@@ -2,6 +2,7 @@
 
 # Start sxhkd for key board shortcuts
 SXHKD_SHELL=bash sxhkd &
+./.screenlayout/makawao-dual-right.sh
 
 # Start the status bars on all enabled moniters
 MONITORS=$(xrandr | grep -Eo "^\S+ connected" | cut -d " " -f 1)
