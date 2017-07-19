@@ -15,6 +15,7 @@ done
 
 bspc config border_width 2 # Make the borders look nice
 bspc config window_gap 2 # Make the window gaps just right
+bspc config click_to_focus button1 # Allow focusing of windows with mouse
 
 # Default settings, not sure what they all do
 bspc config split_ratio         0.52
