@@ -37,6 +37,12 @@ super + {1-9}
 super + o
   bspc node -m next
 
+# Move node to next monitor and follow focus
+super + shift + o
+  NODE=$(bspc query -N -n); \
+  bspc node $NODE -m next; \
+  bspc node -f $NODE
+
 # Switch active monitor
 super + ctrl + {h,j,k,l}
   bspc monitor -f {west,south,north,east}
