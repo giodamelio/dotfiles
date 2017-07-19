@@ -92,9 +92,13 @@ super + shift + d
   rofi-colored -show window
 
 # Reload SXHKD config
-super + Escape
+super + shift + Escape
   notify-send "Reloading sxhkd config" && \
   pkill -USR1 -x sxhkd
+
+# Lock computer
+super + Escape
+  lock
 
 # Audio Controls
 XF86Audio{Prev,Play,Next}
