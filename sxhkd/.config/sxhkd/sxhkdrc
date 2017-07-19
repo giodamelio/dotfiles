@@ -71,6 +71,13 @@ super + alt + space
 super + button{1-3}
   bspc pointer -g {move,resize_side,resize_corner}
 
+## Misc bindings
+
+# Make the gaps bigger and smaller
+super + {KP_Add,KP_Subtract,KP_Multiply}
+  CURRENT_SIZE=$(bspc config window_gap); \
+  bspc config window_gap {$((CURRENT_SIZE + 2)),$((CURRENT_SIZE - 2)),2}
+
 ### WM independent hotkeys ###
 # Open a terminal
 super + Return
