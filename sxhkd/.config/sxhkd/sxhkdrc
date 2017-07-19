@@ -21,7 +21,7 @@ super + {t,shift + t,s,f}
 
 # Change focused window and move window
 super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+	bspc node -{f,s} {west,south,north,east}.local
 
 # Send window to desktop on active monitor
 super + shift + {1-9}
