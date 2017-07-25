@@ -20,6 +20,9 @@ set -x PATH $HOME/.cargo/bin $PATH
 set -x RUST_SRC_PATH $HOME/Projects/forks/rust/src
 set -x CARGO_HOME $HOME/.cargo
 
+# Stop virtualenv from messing with my prompt
+set -x VIRTUAL_ENV_DISABLE_PROMPT 1
+
 # Load aliases
 source ~/.config/fish/aliases.fish
 
