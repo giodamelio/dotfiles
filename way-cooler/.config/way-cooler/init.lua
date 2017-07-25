@@ -78,38 +78,35 @@ local keys = {
   -- Open terminal
   key({ mod }, "return", util.program.spawn_once("terminator")),
 
-  -- Lua methods can be bound as well
-  key({ mod, "Shift" }, "h", function () print("Hello world!") end),
-
-  -- Some Lua dmenu stuff
-  key({ mod }, "l", "dmenu_eval"),
-  key({ mod, "Shift" }, "l", "dmenu_lua_dofile"),
-
   -- Move focus
-  key({ mod }, "left", "focus_left"),
-  key({ mod }, "right", "focus_right"),
-  key({ mod }, "up", "focus_up"),
-  key({ mod }, "down", "focus_down"),
+  key({ mod }, "h", "focus_left"),
+  key({ mod }, "l", "focus_right"),
+  key({ mod }, "k", "focus_up"),
+  key({ mod }, "j", "focus_down"),
 
   -- Move active container
-  key({ mod, "Shift" }, "left", "move_active_left"),
-  key({ mod, "Shift" }, "right", "move_active_right"),
-  key({ mod, "Shift" }, "up", "move_active_up"),
-  key({ mod, "Shift" }, "down", "move_active_down"),
+  key({ mod, "Shift" }, "h", "move_active_left"),
+  key({ mod, "Shift" }, "l", "move_active_right"),
+  key({ mod, "Shift" }, "k", "move_active_up"),
+  key({ mod, "Shift" }, "j", "move_active_down"),
 
   -- Split containers
-  key({ mod }, "h", "split_horizontal"),
+  -- key({ mod }, "h", "split_horizontal"),
   key({ mod }, "v", "split_vertical"),
   key({ mod }, "e", "horizontal_vertical_switch"),
   key({ mod }, "f", "fullscreen_toggle"),
-  key({ mod, "Shift" }, "q", "close_window"),
   key({ mod, "Shift" }, "space", "toggle_float_active"),
   key({ mod }, "space", "toggle_float_focus"),
+
+  -- Close window
+  key({ mod }, "q", "close_window"),
+
+  -- Restart
   key({ mod, "Shift" }, "r", "way_cooler_restart"),
 
   -- Quitting way-cooler is hardcoded to Alt+Shift+Esc.
   -- If rebound, then this keybinding is cleared.
-  --key({ mod, "Shift" }, "escape", "way_cooler_quit"),
+  key({ mod, "Shift" }, "q", "way_cooler_quit"),
 }
 
 -- Add Mod + X bindings to switch to workspace X, Mod+Shift+X send active to X
