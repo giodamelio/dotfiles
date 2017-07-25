@@ -1,7 +1,7 @@
 [user]
 	name = Gio d'Amelio
 	email = giodamelio@gmail.com
-	signingkey = B0D2B57F
+  signingkey = 6075E7089B8F6F0F9CCA8AB72D809F20AC4041C9
 [core]
 	editor = $EDITOR
 	excludesfile = ~/.gitignore
