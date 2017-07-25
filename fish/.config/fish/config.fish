@@ -37,6 +37,9 @@ end
 # Use new keybindings for fzf plugin
 set -U FZF_LEGACY_KEYBINDINGS 0
 
+# Setup virtualfish
+eval (python -m virtualfish)
+
 # Some emacs specific configuration
 if test -n "$EMACS"
   # Disable title since ansi-term cannot handle it
