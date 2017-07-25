@@ -4,3 +4,6 @@ alias et "emacsclient -t"
 function ee
   emacsclient -c . $argv &
 end
+
+# For when I type too fast
+alias gti git
