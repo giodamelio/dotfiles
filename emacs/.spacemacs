@@ -30,8 +30,7 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
-     ;; Language layers
+   '(;; Language layers
      javascript
      node
      clojure
@@ -39,6 +38,8 @@ values."
      python
      racket
      markdown
+     asciidoc
+     html
 
      ;; Misc layers
      helm
