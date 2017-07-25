@@ -5,7 +5,7 @@
 [core]
 	editor = $EDITOR
 	excludesfile = ~/.gitignore
-	pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -XFR
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
 	ci = commit
 	st = status
