@@ -38,7 +38,10 @@
                   [com.palletops/lein-shorthand "0.4.0"]
 
                   ;; Auto formatting
-                  [lein-cljfmt "0.5.6"]]
+                  [lein-cljfmt "0.5.6"]
+
+                  ;; Execute clojure script directly (for use in hashbangs)
+                  [lein-exec "0.3.6"]]
 
         ;; Dependencies used by the injections below
         :dependencies [;; Manage namespaces (mostly for refresh)
