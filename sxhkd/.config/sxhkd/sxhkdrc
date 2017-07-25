@@ -27,7 +27,7 @@ super + {m,shift + m}
 super + {_,shift + }{h,j,k,l}
   LAYOUT=$(bspc query -T -d | jq -r .layout); \
   [[ "$LAYOUT" == "tiled" ]] && bspc node -{f,s} {west,south,north,east}.local; \
-  [[ "$LAYOUT" == "monocle" ]] && bspc node -{f,s} {prev,next,prev,next}.local
+  [[ "$LAYOUT" == "monocle" ]] && bspc node $(bspc query -N -d | head -n 1) -C {backward,forward,backward,forward}
 
 # Send window to desktop on active monitor
 super + shift + {1-9}
