@@ -1,2 +1,4 @@
 elpa/
 .cache/
+.python-environments/
+projectile.cache
