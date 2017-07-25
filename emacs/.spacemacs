@@ -332,7 +332,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; Make prettier run when a JS file is saved
-  (add-hook 'js2-mode-hook 'prettier-js-mode))
+  (add-hook 'js2-mode-hook 'prettier-js-mode)
+
+  ;; Disable smart parens by default
+  (remove-hook 'prog-mode-hook #'smartparens-mode)
 
   ;; ALlow saving files with ":W"
   (evil-ex-define-cmd "W" 'evil-write))
