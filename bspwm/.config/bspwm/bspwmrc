@@ -16,6 +16,12 @@ done
 bspc config border_width 2 # Make the borders look nice
 bspc config window_gap 2 # Make the window gaps just right
 
+# Setup mouse
+bspc config pointer_modifier mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action1 resize_corner
+
 # Default settings, not sure what they all do
 bspc config split_ratio         0.52
 bspc config borderless_monocle  true
