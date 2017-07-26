@@ -1,3 +1,6 @@
+# Shorthands
+alias t task
+
 # Emacs aliases
 alias e  "emacsclient -c"
 alias et "emacsclient -t"
