@@ -1,3 +1,8 @@
+# Quickly edit my aliases
+function aliasedit
+  eval $EDITOR ~/dotfiles/fish/.config/fish/aliases.fish
+end
+
 # Shorthands
 alias g git
 alias t task
