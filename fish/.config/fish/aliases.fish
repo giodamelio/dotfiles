@@ -1,4 +1,5 @@
 # Shorthands
+alias g git
 alias t task
 
 # Emacs aliases
