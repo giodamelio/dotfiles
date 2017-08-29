@@ -2,6 +2,7 @@
 alias g git
 alias t task
 alias pe path-extractor
+alias rr "env EDITOR=nvim roamer"
 
 # Emacs aliases
 alias e  "emacsclient -c"
