@@ -1,6 +1,7 @@
 # Shorthands
 alias g git
 alias t task
+alias pe path-extractor
 
 # Emacs aliases
 alias e  "emacsclient -c"
