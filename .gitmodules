@@ -31,3 +31,6 @@
 [submodule "tmux/.tmux/plugins/tmux-copycat"]
 	path = tmux/.tmux/plugins/tmux-copycat
 	url = https://github.com/tmux-plugins/tmux-copycat
+[submodule "tmux/.tmux/plugins/tmux-yank"]
+	path = tmux/.tmux/plugins/tmux-yank
+	url = https://github.com/tmux-plugins/tmux-yank
