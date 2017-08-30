@@ -40,6 +40,8 @@ values."
      markdown
      asciidoc
      html
+     common-lisp
+     elixir
 
      ;; Misc layers
      helm
