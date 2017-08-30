@@ -235,7 +235,7 @@ format-full-underline = ${colors.green}
 
 [module/spotify]
 type = custom/script
-exec = printf "%s - %s" (playerctl metadata "xesam:title") (playerctl metadata "xesam:artist")
+exec = printf '%s - %s' "$(playerctl metadata 'xesam:title')" "$(playerctl metadata 'xesam:artist')"
 format-underline = ${colors.green}
 format-prefix = " "
 click-left = playerctl play-pause
