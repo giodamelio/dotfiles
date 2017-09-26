@@ -222,8 +222,17 @@ vnoremap <Leader>rc y:%s/<C-r>"/
 " Show whitespace at the end of the line
 set list listchars=trail:·
 
-" Disable folding
-set nofoldenable
+" Setup folding
+augroup vimrc
+  " Set method to indent so indent folds are autocreated
+  au BufReadPre * setlocal foldmethod=indent
+
+  " Change the method to manual so folds can be created manually
+  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+
+  " Set the foldlevel to the max level of fold depth so all the folds start open
+  au BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
+augroup END
 
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
