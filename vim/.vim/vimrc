@@ -53,7 +53,6 @@ Plug 'valloric/YouCompleteMe', { 'do': './install.sh' }                   " Auto
 Plug 'wellle/targets.vim',                                                " Add more text objects
 Plug 'xolox/vim-misc'                                                     " Misc helper functions for plugins
 Plug 'xolox/vim-session'                                                  " Session management
-Plug 'takac/vim-hardtime'                                                 " Disable lots of arrow key and hjkl keys
 Plug 'luochen1990/rainbow'                                                " Make the parens rainbow!
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }                          " Awesome clojure REPL
 Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign' }              " Align things
@@ -358,10 +357,6 @@ let g:sneak#s_next = 1
 "" Rust
 " Run rustfmt after save
 " let g:rustfmt_autosave = 1
-
-"" Hardtime
-let g:hardtime_default_on = 1 " Enable in all buffers
-let g:hardtime_maxcount = 2   " Allow two presses before enforcing timeout
 
 "" Rainbow parens
 let g:rainbow_active = 1
