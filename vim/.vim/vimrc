@@ -33,11 +33,7 @@ Plug 'Quramy/tsuquyomi',               { 'for': 'typescript' }
 
 " Other
 Plug 'airblade/vim-gitgutter'                                             " Shows git status for each line in the gutter
-Plug 'w0rp/ale'                                                           " Syntax checking
-Plug 'bhurlow/vim-parinfer', { 'do': 'npm install' }                      " Parentheses inference for Lisp
 Plug 'bling/vim-airline'                                                  " Awesome tabline
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install', 'for': 'javascript' } " Syntax aware auto completion for javascript
-Plug 'mattn/emmet-vim', { 'for': 'html' }                                 " Make writing html so much better
 Plug 'moll/vim-bbye'                                                      " Better :bdelete
 Plug 'rhysd/clever-f.vim'                                                 " Better mappings for finding things
 Plug 'shougo/unite.vim'                                                   " Fuzzy finder of things
@@ -45,16 +41,11 @@ Plug 'shougo/vimproc.vim', { 'do': 'make' }                               " Inte
 Plug 'sirver/ultisnips'                                                   " Snippets
 Plug 'tpope/vim-commentary'                                               " Handle comments
 Plug 'tpope/vim-eunuch'                                                   " Misc helper commands
-Plug 'tpope/vim-fugitive'                                                 " Git plugin
 Plug 'tpope/vim-repeat'                                                   " Repeat plugin maps
 Plug 'tpope/vim-surround'                                                 " Deals with surroundings
 Plug 'valloric/MatchTagAlways'                                            " Highlight matching HTML/XML tags
-Plug 'valloric/YouCompleteMe', { 'do': './install.sh' }                   " Auto complete
 Plug 'wellle/targets.vim',                                                " Add more text objects
 Plug 'luochen1990/rainbow'                                                " Make the parens rainbow!
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }                          " Awesome clojure REPL
-Plug 'junegunn/vim-easy-align', { 'on': '<Plug>(EasyAlign' }              " Align things
-Plug 'christoomey/vim-tmux-navigator'                                     " Seamless navigation between tmux pains
 
 call plug#end()
 
