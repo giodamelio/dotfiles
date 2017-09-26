@@ -238,7 +238,7 @@ noremap <Leader>d :call ToggleDebuggerStatement()<cr>
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Gitgutter
 " Always show the gitgutter sign column
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 
 " Run diffs sync to fix error with typescript
 " https://github.com/Quramy/tsuquyomi/issues/55
