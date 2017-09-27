@@ -43,6 +43,7 @@ values."
      common-lisp
      elixir
      lua
+     sql
 
      ;; Misc layers
      helm
