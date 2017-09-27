@@ -62,15 +62,12 @@ values."
      ;; spell-checking
      syntax-checking
      ;; version-control
-
-     ;; Private layers
-     spacemacs-prettier
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(prettier-js)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -329,7 +326,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
    custom-file "~/.spacemacs.d/private/custom.el"
 
    ;; Set options for prettier
-   prettier-js-args '("--single-quote" "--trailing-comma" "es5"))
+   prettier-js-args '("--single-quote"))
 
   ;; Load emacs custom file
   (load-file custom-file 'noerror))
@@ -343,6 +340,9 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; Make prettier run when a JS file is saved
   (add-hook 'js2-mode-hook 'prettier-js-mode)
+
+  ;; Diminish prettier mode
+  (spacemacs|diminish prettier-js-mode "ⓟ" "P")
 
   ;; Disable smart parens by default
   (remove-hook 'prog-mode-hook #'smartparens-mode)
