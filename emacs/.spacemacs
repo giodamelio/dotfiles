@@ -67,7 +67,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(prettier-js)
+   dotspacemacs-additional-packages '(prettier-js dash)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -348,4 +348,17 @@ you should place your code here."
   (remove-hook 'prog-mode-hook #'smartparens-mode)
 
   ;; ALlow saving files with ":W"
-  (evil-ex-define-cmd "W" 'evil-write))
+  (evil-ex-define-cmd "W" 'evil-write)
+
+  ;; Quick function to kill all code buffers
+  (defun kill-code-buffers ()
+    (interactive)
+    (->> (buffer-list)
+         ;; Transform into a list of (buffer . major-mode) cons
+         (--map (cons it (buffer-local-value 'major-mode it)))
+
+         ;; Filter only buffers whos major mode is derived from prog-mode
+         (--filter (spacemacs/derived-mode-p (cdr it) 'prog-mode))
+
+         ;; Kill buffers
+         (--map (kill-buffer (car it))))))
