@@ -51,6 +51,7 @@ values."
      better-defaults
      emacs-lisp
      git
+     dash
      (evil-snipe :variables
                  evil-snipe-enable-alternate-f-and-t-behaviors t)
 
