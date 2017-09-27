@@ -32,20 +32,20 @@ Plug 'wavded/vim-stylus',              { 'for': 'stylus' }
 Plug 'Quramy/tsuquyomi',               { 'for': 'typescript' }
 
 " Other
-Plug 'airblade/vim-gitgutter'                                             " Shows git status for each line in the gutter
-Plug 'bling/vim-airline'                                                  " Awesome tabline
-Plug 'moll/vim-bbye'                                                      " Better :bdelete
-Plug 'rhysd/clever-f.vim'                                                 " Better mappings for finding things
-Plug 'shougo/unite.vim'                                                   " Fuzzy finder of things
-Plug 'shougo/vimproc.vim', { 'do': 'make' }                               " Interactace process exacution to help other plugins
-Plug 'sirver/ultisnips'                                                   " Snippets
-Plug 'tpope/vim-commentary'                                               " Handle comments
-Plug 'tpope/vim-eunuch'                                                   " Misc helper commands
-Plug 'tpope/vim-repeat'                                                   " Repeat plugin maps
-Plug 'tpope/vim-surround'                                                 " Deals with surroundings
-Plug 'valloric/MatchTagAlways'                                            " Highlight matching HTML/XML tags
-Plug 'wellle/targets.vim',                                                " Add more text objects
-Plug 'luochen1990/rainbow'                                                " Make the parens rainbow!
+Plug 'airblade/vim-gitgutter'                 " Shows git status for each line in the gutter
+Plug 'bling/vim-airline'                      " Awesome tabline
+Plug 'moll/vim-bbye'                          " Better :bdelete
+Plug 'rhysd/clever-f.vim'                     " Better mappings for finding things
+Plug 'shougo/unite.vim'                       " Fuzzy finder of things
+Plug 'shougo/vimproc.vim', { 'do': 'make' }   " Interactace process exacution to help other plugins
+Plug 'sirver/ultisnips'                       " Snippets
+Plug 'tpope/vim-commentary'                   " Handle comments
+Plug 'tpope/vim-eunuch'                       " Misc helper commands
+Plug 'tpope/vim-repeat'                       " Repeat plugin maps
+Plug 'tpope/vim-surround'                     " Deals with surroundings
+Plug 'valloric/MatchTagAlways'                " Highlight matching HTML/XML tags
+Plug 'wellle/targets.vim',                    " Add more text objects
+Plug 'luochen1990/rainbow'                    " Make the parens rainbow!
 
 call plug#end()
 
