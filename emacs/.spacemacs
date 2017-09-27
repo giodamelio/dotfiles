@@ -324,8 +324,14 @@ before packages are loaded. If you are unsure, you should try in setting them in
    js2-basic-offset 2
    js-indent-level 2
 
+   ;; Set custom file path
+   custom-file "~/.spacemacs.d/private/custom.el"
+
    ;; Set options for prettier
-   prettier-js-args '("--single-quote" "--trailing-comma" "es5")))
+   prettier-js-args '("--single-quote" "--trailing-comma" "es5"))
+
+  ;; Load emacs custom file
+  (load-file custom-file 'noerror))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -342,6 +348,3 @@ you should place your code here."
 
   ;; ALlow saving files with ":W"
   (evil-ex-define-cmd "W" 'evil-write))
-
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
