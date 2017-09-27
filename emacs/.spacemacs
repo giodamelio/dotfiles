@@ -42,6 +42,7 @@ values."
      html
      common-lisp
      elixir
+     lua
 
      ;; Misc layers
      helm
