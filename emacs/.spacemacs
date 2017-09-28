@@ -330,7 +330,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
    prettier-js-args '("--single-quote"))
 
   ;; Load emacs custom file
-  (load-file custom-file 'noerror))
+  (when (file-exists-p custom-file)
+    (load-file custom-file)))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
