@@ -7,7 +7,7 @@ end
 alias g git
 alias t task
 alias pe path-extractor
-alias rr "env EDITOR=nvim roamer"
+alias rr roamer
 
 # Emacs aliases
 alias e  "emacsclient -c"
