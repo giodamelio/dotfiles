@@ -4,12 +4,20 @@
 SXHKD_SHELL=bash sxhkd &
 
 # Start the status bars on all enabled moniters
-killall polybar
+killall polybar # Kill any existing bars
+
+# Read a list of the active monitors
 readarray -t MONITORS < <(xrandr | grep -Eo "^\S+ connected" | cut -d " " -f 1)
-for MONITOR in "${MONITORS[@]}"
+
+## Start the bars on the primary monitor
+MONITOR="${MONITORS[0]}" polybar top-primary &
+MONITOR="${MONITORS[0]}" polybar bottom-primary &
+
+# Start the secondary bars on all the other monitors
+for MONITOR in "${MONITORS[@]:1}"
 do
-    MONITOR=$MONITOR polybar top &
-    MONITOR=$MONITOR polybar bottom &
+    MONITOR=$MONITOR polybar top-secondary &
+    MONITOR=$MONITOR polybar bottom-secondary &
 done
 
 bspc config border_width 2 # Make the borders look nice
