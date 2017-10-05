@@ -35,8 +35,8 @@ silver  = #DDDDDD
 gray    = #AAAAAA
 black   = #111111
 
-[bar/top]
-monitor = ${env:MONITOR}
+; Basic bar settings that the others inherit from
+[section/bar-base]
 width = 100%
 height = 20
 offset-x = 0
@@ -62,51 +62,28 @@ module-margin-right = 2
 font-0 = FontAwesome:size=12;0
 font-1 = Inconsolata:size=12;0
 font-2 = unifont:size=6:heavy:fontformat=truetype;-2
-
-modules-left = bspwm xwindow
 
 tray-position = right
 tray-padding = 2
 
 wm-restack = bspwm
 
-[bar/bottom]
+[bar/top]
+inherit = section/bar-base
+
 monitor = ${env:MONITOR}
-width = 100%
-height = 20
-offset-x = 0
-offset-y = 0
+
+modules-left = bspwm xwindow
+
+[bar/bottom]
+inherit = section/bar-base
+
+monitor = ${env:MONITOR}
 bottom = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-overline-size = 2
-overline-color = #f00
-underline-size = 2
-underline-color = #00f
-
-border-bottom = 2
-border-bottom-color = #333
-
-spacing = 1
-padding-left = 0
-padding-right = 2
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = FontAwesome:size=12;0
-font-1 = Inconsolata:size=12;0
-font-2 = unifont:size=6:heavy:fontformat=truetype;-2
 
 modules-left = spotify
 modules-center = 
 modules-right = volume memory cpu wlan eth battery date
-
-tray-position = right
-tray-padding = 2
-
-wm-restack = bspwm
 
 [module/xwindow]
 type = internal/xwindow
