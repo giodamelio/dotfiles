@@ -352,6 +352,9 @@ you should place your code here."
   ;; ALlow saving files with ":W"
   (evil-ex-define-cmd "W" 'evil-write)
 
+  ;; Make centered-point-mode on by default
+  (spacemacs/toggle-centered-point-globally-on)
+
   ;; Quick function to kill all code buffers
   (defun kill-code-buffers ()
     (interactive)
