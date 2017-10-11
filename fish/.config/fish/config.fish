@@ -26,6 +26,11 @@ set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 # Load aliases
 source ~/.config/fish/aliases.fish
 
+# Load plugins
+fundle plugin 'tuvistavie/fish-nvm'
+
+fundle init
+
 # Use the fortune command as a greeting
 function fish_greeting
   # Only run fortune ~20% of the time
