@@ -50,6 +50,9 @@ end
 
 # Mac specific configs
 if test (uname) = "Darwin"
+  # Prepend python local to the PATH to overwrite system python
+  set -x PATH /usr/local/opt/python/libexec/bin $PATH
+
   # iTerm shell integration
   test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 end
