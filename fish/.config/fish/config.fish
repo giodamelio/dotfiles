@@ -37,9 +37,6 @@ end
 # Use new keybindings for fzf plugin
 set -U FZF_LEGACY_KEYBINDINGS 0
 
-# Setup virtualfish
-eval (python -m virtualfish)
-
 # Some emacs specific configuration
 if test -n "$EMACS"
   # Disable title since ansi-term cannot handle it
@@ -56,4 +53,7 @@ if test (uname) = "Darwin"
   # iTerm shell integration
   test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 end
+
+# Setup virtualfish
+eval (python -m virtualfish)
 
