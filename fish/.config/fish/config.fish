@@ -10,8 +10,8 @@ set -x BROWSER "google-chrome"
 
 # Add a bunch of things to our path
 set -x PATH $PATH $HOME/bin  # Personal scripts
-set -x PATH $PATH /usr/local/bin/
-set -x PATH $PATH /usr/bin/core_perl/  # Append perl bin to path
+set -x PATH $PATH /usr/local/bin
+set -x PATH $PATH /usr/bin/core_perl  # Append perl bin to path
 set -x GOPATH $HOME/Projects/go # Setup GOPATH
 set -x PATH $GOPATH/bin $PATH
 
