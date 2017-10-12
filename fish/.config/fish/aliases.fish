@@ -4,7 +4,6 @@ function aliasedit
 end
 
 # Shorthands
-alias g git
 alias t task
 alias pe path-extractor
 alias rr roamer
