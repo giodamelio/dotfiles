@@ -23,14 +23,14 @@ set -x CARGO_HOME $HOME/.cargo
 # Stop virtualenv from messing with my prompt
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
-# Load aliases
-source ~/.config/fish/aliases.fish
-
 # Load plugins
 fundle plugin 'tuvistavie/fish-nvm'
 fundle plugin 'fishgretel/fasd'
 
 fundle init
+
+# Load aliases
+source ~/.config/fish/aliases.fish
 
 # Use the fortune command as a greeting
 function fish_greeting
