@@ -8,6 +8,7 @@ alias g git
 alias t task
 alias pe path-extractor
 alias rr roamer
+alias tf terraform
 
 # Emacs aliases
 alias e  "emacsclient -c"
