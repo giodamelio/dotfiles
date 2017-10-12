@@ -32,6 +32,9 @@ fundle init
 # Load aliases
 source ~/.config/fish/aliases.fish
 
+# Load functions that need to overwrite plugins
+source $HOME/.config/fish/functions/zz.fish
+
 # Use the fortune command as a greeting
 function fish_greeting
   # Only run fortune ~20% of the time
