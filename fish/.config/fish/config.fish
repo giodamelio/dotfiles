@@ -28,6 +28,7 @@ source ~/.config/fish/aliases.fish
 
 # Load plugins
 fundle plugin 'tuvistavie/fish-nvm'
+fundle plugin 'fishgretel/fasd'
 
 fundle init
 
