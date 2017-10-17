@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: it block
+# key: it
+# --
+it('$1', () => {
+  expect.assertions(-1);
+
+  $2
+});

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: log pretty
+# key: logd
+# --
+console.dir($1, { depth: null, colors: true });

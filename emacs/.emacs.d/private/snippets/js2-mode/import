@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: import default
+# key: import
+# --
+import $1 from '${2:$1}';
