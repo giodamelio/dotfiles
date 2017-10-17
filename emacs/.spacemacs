@@ -324,7 +324,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
    js-indent-level 2
 
    ;; Set custom file path
-   custom-file "~/.spacemacs.d/private/custom.el"
+   custom-file "~/.emacs.d/private/custom.el"
 
    ;; Set options for prettier
    prettier-js-args '("--single-quote"))
