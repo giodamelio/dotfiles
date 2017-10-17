@@ -1,4 +1,0 @@
-# -*- mode: snippet -*-
-#name : grequire
-# --
-const $1 = require('gulp-${2:$1}');
