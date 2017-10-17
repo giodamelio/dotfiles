@@ -58,3 +58,5 @@ end
 # Setup virtualfish
 eval (python -m virtualfish)
 
+# Make sure nvm loaded
+nvm > /dev/null
