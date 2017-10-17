@@ -356,6 +356,9 @@ you should place your code here."
   (spacemacs/toggle-centered-point-globally-on)       ;; Make centered-point-mode on by default
   (spacemacs/toggle-highlight-long-lines-globally-on) ;; Hightlight lines longer then 80 chars
 
+  ;; Override yas-snippet location so only our custom snippets are loaded
+  (setq-default yas-snippet-dirs '("~/.emacs.d/private/snippets"))
+
   ;; Quick function to kill all code buffers
   (defun kill-code-buffers ()
     (interactive)
