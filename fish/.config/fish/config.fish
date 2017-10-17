@@ -46,14 +46,6 @@ end
 # Use new keybindings for fzf plugin
 set -U FZF_LEGACY_KEYBINDINGS 0
 
-# Some emacs specific configuration
-if test -n "$EMACS"
-  # Disable title since ansi-term cannot handle it
-  function fish_title
-    true
-  end
-end
-
 # Mac specific configs
 if test (uname) = "Darwin"
   # Prepend python local to the PATH to overwrite system python
