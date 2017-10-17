@@ -16,9 +16,6 @@
 [submodule "zsh/.zsh/packages/zsh-syntax-highlighting"]
 	path = zsh/.zsh/packages/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
-[submodule "emacs/.spacemacs.d"]
-	path = emacs/.spacemacs.d
-	url = git@github.com:syl20bnr/spacemacs.git
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
