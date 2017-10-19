@@ -324,7 +324,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
    js-indent-level 2
 
    ;; Set custom file path
-   custom-file "~/.emacs.d/private/custom.el"
+   custom-file "~/.spacemacs.d/custom.el"
 
    ;; Set options for prettier
    prettier-js-args '("--single-quote"))
@@ -357,7 +357,7 @@ you should place your code here."
   (spacemacs/toggle-highlight-long-lines-globally-on) ;; Hightlight lines longer then 80 chars
 
   ;; Override yas-snippet location so only our custom snippets are loaded
-  (setq-default yas-snippet-dirs '("~/.emacs.d/private/snippets"))
+  (setq-default yas-snippet-dirs '("~/.spacemacs.d/snippets"))
 
   ;; Quick function to kill all code buffers
   (defun kill-code-buffers ()
