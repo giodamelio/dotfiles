@@ -32,7 +32,6 @@ values."
    dotspacemacs-configuration-layers
    '(;; Language layers
      javascript
-     node
      clojure
      rust
      python
