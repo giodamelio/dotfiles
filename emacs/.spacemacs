@@ -44,6 +44,8 @@ values."
      ;; elixir ;; temporarly removed because of issue with org-plus-contrib
      lua
      sql
+     shell-scripts
+     terraform
 
      ;; Misc layers
      helm
