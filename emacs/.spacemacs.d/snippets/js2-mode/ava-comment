@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: avalara copywrite comment
+# key: ava-comment
+# --
+/*
+ * Avalara © `(format-time-string "%Y")`
+ * file: `(file-relative-name buffer-file-name (projectile-project-root))`
+ */
