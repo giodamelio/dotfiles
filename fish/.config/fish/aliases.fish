@@ -13,7 +13,7 @@ alias tf terraform
 alias e  "emacsclient -c"
 alias et "emacsclient -t"
 function ee
-  emacsclient -c . $argv &
+  emacsclient -c $argv &
 end
 
 # For when I type too fast
