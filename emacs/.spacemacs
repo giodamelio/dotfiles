@@ -54,11 +54,9 @@ values."
      git
      dash
      syntax-checking
+     parinfer
      (evil-snipe :variables
-                 evil-snipe-enable-alternate-f-and-t-behaviors t)
-
-     ;; Custom layers
-     lispy)
+                 evil-snipe-enable-alternate-f-and-t-behaviors t))
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
