@@ -23,6 +23,7 @@ cdiff = diff --cached
 rh = reset HEAD
 rm-deleted = !git ls-files --deleted -z | xargs -0 git rm
 cb = rev-parse --abbrev-ref HEAD
+count = rev-list --count
 
 # Legit alias'
 switch = !legit switch \"$@\"
