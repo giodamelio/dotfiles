@@ -1,0 +1,9 @@
+* Taken from [[https://github.com/sp3ctum/spacemacs/tree/mika/private/lispy][here]]
+
+This layer adds evil-friendly structural editing commands to enhance lisp
+coding. It allows using powerful editing commands in ~evil-lispy-mode~ and
+~lispy-mode~.
+
+* Quick start
+Start by reading the [[https://github.com/sp3ctum/evil-lispy][evil-lispy-mode]] readme.
+Add ~lispy~ to your ~dotspacemacs-configuration-layers~ list.

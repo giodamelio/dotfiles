@@ -27,7 +27,7 @@ values."
    ;; If non-nil layers with lazy install support are lazy installed.
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers/")
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(;; Language layers
@@ -56,7 +56,10 @@ values."
      dash
      syntax-checking
      (evil-snipe :variables
-                 evil-snipe-enable-alternate-f-and-t-behaviors t))
+                 evil-snipe-enable-alternate-f-and-t-behaviors t)
+
+     ;; Custom layers
+     lispy)
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
