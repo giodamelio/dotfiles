@@ -83,7 +83,7 @@ bottom = true
 
 modules-left = spotify
 modules-center = 
-modules-right = volume memory cpu wlan eth battery date
+modules-right = volume memory cpu vpn wlan eth battery date
 
 [bar/top-secondary]
 inherit = section/bar-base
@@ -233,5 +233,14 @@ exec = printf '%s - %s' "$(playerctl metadata 'xesam:title')" "$(playerctl metad
 format-underline = ${colors.green}
 format-prefix = " "
 click-left = playerctl play-pause
+
+[module/vpn]
+type = custom/script
+exec = pgrep openvpn
+interval = 5
+label = vpn
+format-underline = ${colors.green}
+format-prefix = " "
+format-prefix-foreground = ${colors.gray}
 
 ; vim:ft=dosini
