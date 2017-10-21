@@ -14,6 +14,7 @@ alias e  "emacsclient -c"
 alias et "emacsclient -t"
 function ee
   emacsclient -c $argv &
+  disown
 end
 
 # For when I type too fast
