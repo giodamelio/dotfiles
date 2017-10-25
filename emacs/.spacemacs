@@ -45,6 +45,7 @@ values."
      sql
      shell-scripts
      terraform
+     elm
 
      ;; Misc layers
      helm
