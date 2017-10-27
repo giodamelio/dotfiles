@@ -40,7 +40,7 @@ values."
      asciidoc
      html
      common-lisp
-     ;; elixir ;; temporarly removed because of issue with org-plus-contrib
+     elixir
      lua
      sql
      shell-scripts
