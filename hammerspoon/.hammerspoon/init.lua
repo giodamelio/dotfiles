@@ -2,32 +2,47 @@
 menu = hs.menubar.new()
 menu:setTitle("HS")
 
-toggles = {
-  yubikeySleep = "on"
+settings = {
+  yubikeySleep = {
+    text = "Sleep/Wake on Yubikey",
+    type = "toggle",
+    value = true
+  }
 }
 
-
 menu:setMenu(function()
-  return {
-    {
-      title = "Sleep/Wake on Yubikey",
-      state = toggles.yubikeySleep,
-      fn = function(modifiers, item)
-        if (toggles.yubikeySleep == "on") then
-          toggles.yubikeySleep = "off"
-        else
-          toggles.yubikeySleep = "on"
-        end
-        print("Toggling, yubikeySleep is now '" .. toggles.yubikeySleep .. "'")
-        item.state = toggles.yubikeySleep
-      end
+  menuItems = {}
+
+  for name, setting in pairs(settings) do
+    menuItem = {
+      title = setting.text
     }
-  }
+
+    -- Handle menu items that are boolean toggles
+    if (setting.type == "toggle") then
+      -- Set the state based on the setting value
+      if (settings[name].value) then
+        menuItem.state = "on"
+      else
+        menuItem.state = "off"
+      end
+
+      -- Toggle the value when the menu item is clicked
+      menuItem.fn = function()
+        settings[name].value = not settings[name].value
+        print("Settings: toggling '" .. name .. "' to '" .. tostring(settings[name].value) .. "'")
+      end
+    end
+
+    table.insert(menuItems, menuItem)
+  end
+
+  return menuItems
 end)
 
 -- Sleep when my yubikey is removed
 watcher = hs.usb.watcher.new(function (event)
-  if (toggles.yubikeySleep == "on") then
+  if (settings.yubikeySleep.value) then
     if (event.productName == "Yubikey 4 OTP+U2F+CCID" and event.productID == 1031) then
       if (event.eventType == "removed") then
         print("Yubikey removed, sleeping")
