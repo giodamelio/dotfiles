@@ -312,6 +312,10 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; Set the default shell used
   (setq shell-file-name "/bin/bash")
 
+  ;; TODO: remove this
+  ;; Load tramp to stop error. See https://github.com/syl20bnr/spacemacs/issues/9563
+  (require 'tramp)
+
   (setq-default
    ;; Exit insert mode with jk
    evil-escape-key-sequence "jk"
