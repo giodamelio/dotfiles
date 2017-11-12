@@ -330,7 +330,13 @@ before packages are loaded. If you are unsure, you should try in setting them in
    custom-file "~/.spacemacs.d/custom.el"
 
    ;; Set options for prettier
-   prettier-js-args '("--single-quote"))
+   prettier-js-args '("--single-quote")
+
+   ;; Autoformat rust files on save
+   rust-format-on-save t
+
+   ;; Work around problems with nightly rustfmt
+   rust-rustfmt-bin "~/bin/rustfmt.sh")
 
   ;; Load emacs custom file
   (when (file-exists-p custom-file)
