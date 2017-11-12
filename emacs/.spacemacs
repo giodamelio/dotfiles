@@ -47,6 +47,7 @@ values."
      terraform
      elm
      groovy
+     go
 
      ;; Misc layers
      helm
