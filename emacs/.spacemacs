@@ -48,6 +48,7 @@ values."
      elm
      groovy
      go
+     yaml
 
      ;; Misc layers
      helm
