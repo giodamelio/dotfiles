@@ -34,3 +34,9 @@
 [submodule "tmux/.tmux/plugins/extrakto"]
 	path = tmux/.tmux/plugins/extrakto
 	url = https://github.com/laktak/extrakto.git
+[submodule "tmux/.tmux/plugins/tmux-resurrect"]
+	path = tmux/.tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
+[submodule "tmux/.tmux/plugins/tmux-continuum"]
+	path = tmux/.tmux/plugins/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum
