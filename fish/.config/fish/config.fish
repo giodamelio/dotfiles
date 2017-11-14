@@ -2,7 +2,7 @@
 set -x TERM "xterm-256color"
 
 # Set default editor
-set -x EDITOR "emacsclient -t"
+set -x EDITOR "nvim"
 set -x VISUAL "emacsclient -c"
 
 # Set default browser
