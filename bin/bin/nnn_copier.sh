@@ -1,3 +1,7 @@
-#!/bin/sh
-echo -n "$1" | xsel --clipboard --input
-
+#!/bin/bash
+platform=$(uname)
+if [[ $platform == 'Darwin' ]]; then
+  echo -n "$1" | pbcopy
+else
+  echo -n "$1" | xsel --clipboard --input
+fi
