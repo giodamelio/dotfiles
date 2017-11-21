@@ -49,6 +49,7 @@ values."
      groovy
      go
      yaml
+     vue
 
      ;; Misc layers
      helm
