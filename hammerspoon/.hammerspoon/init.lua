@@ -7,9 +7,15 @@ settings = {
     text = "Sleep/Wake on Yubikey",
     type = "toggle",
     value = true
+  },
+  postureReminder = {
+    text = "Posture reminder",
+    type = "toggle",
+    value = true
   }
 }
 
+-- Dynamically generate menu based on settings
 menu:setMenu(function()
   menuItems = {}
 
@@ -56,3 +62,15 @@ watcher = hs.usb.watcher.new(function (event)
 end)
 watcher:start()
 
+-- Remind me to have good posture
+function createPostureNotification()
+  return hs.notify.show('Posture', 'Remember to have good posture', '');
+end
+
+notification = createPostureNotification()
+hs.timer.doEvery(hs.timer.minutes(5), function()
+  if (settings.postureReminder.value) then
+    notification:withdraw();
+    notification = createPostureNotification()
+  end
+end)
