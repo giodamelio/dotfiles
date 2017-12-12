@@ -2,4 +2,4 @@
 # name: log pretty
 # key: logd
 # --
-console.dir($1, { depth: null, colors: true });
+console.log('$1:\n' + require('util').inspect($1, { depth: null, colors: true }));
