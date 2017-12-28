@@ -363,6 +363,9 @@ you should place your code here."
   ;; ALlow saving files with ":W"
   (evil-ex-define-cmd "W" 'evil-write)
 
+  ;; Define some evil keybindings
+  (define-key evil-normal-state-map (kbd "Q") (kbd "@@")) ;; Make Q repeat the last macro
+
   ;; Enable some toggles by default
   (spacemacs/toggle-centered-point-globally-on)       ;; Make centered-point-mode on by default
   (spacemacs/toggle-highlight-long-lines-globally-on) ;; Hightlight lines longer then 80 chars
