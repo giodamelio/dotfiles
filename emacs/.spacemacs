@@ -320,6 +320,11 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; Load tramp to stop error. See https://github.com/syl20bnr/spacemacs/issues/9563
   (require 'tramp)
 
+  ;; Add some ex commands for when I hold shift a tiny bit too long
+  (evil-ex-define-cmd "Q[uit]" 'evil-quit-all)
+  (evil-ex-define-cmd "W[rite]" 'evil-write)
+  (evil-ex-define-cmd "Wq" 'evil-save-and-quit)
+
   (setq-default
    ;; Exit insert mode with jk
    evil-escape-key-sequence "jk"
