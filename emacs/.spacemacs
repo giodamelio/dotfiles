@@ -50,6 +50,7 @@ values."
      go
      yaml
      vue
+     react
 
      ;; Misc layers
      helm
