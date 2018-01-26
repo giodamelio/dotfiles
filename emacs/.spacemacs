@@ -334,6 +334,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
    js2-basic-offset 2
    js-indent-level 2
 
+   ;; Disable some js2-mode errors
+   js2-strict-inconsistent-return-warning nil
+
    ;; Set custom file path
    custom-file "~/.spacemacs.d/custom.el"
 
