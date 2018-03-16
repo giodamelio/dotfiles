@@ -1,21 +1,14 @@
 # dotfiles
 
-Here are my dotfiles. To install them you need a bunch of stuff.
+All the config files that make my computer run happily.
 
- - vim or gvim
- - Node.js
- - tmux
- - fish
- - Dunst
+## Install dotfiles
 
-On Arch
+Make sure you have GNU Stow installed.
 
-    packer -Sy vim nodejs tmux fish-shell-git dunst-git
-
-When you have all the dependencies, just run
-
-    cd ~
-    git clone git@github.com:giodamelio/dotfile.git
-    cd ~/dotfiles
-    ./install.sh
-
+```shell
+cd ~
+git clone git@github.com:giodamelio/dotfile.git
+cd ~/dotfiles
+./install.sh
+```
