@@ -1,16 +1,27 @@
-#!/bin/bash
+#!/bin/sh
+
+print_line() {
+    seq  -f "-" -s '' $COLUMNS
+}
+export -f print_line
 
 print_git_status() {
   clear
   git -c color.status=always --no-pager diff --shortstat
   git -c color.status=always status --short | sed "s/^/  /"
+  print_line
+  git log \
+      --color \
+      --graph \
+      --pretty=format:'%Cred%h%Creset %G? - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+      --abbrev-commit \
+      --date=relative \
+      "$1"
 }
+export -f print_git_status
 
 # Get the files from git
-cd $(git rev-parse --show-toplevel)
+cd "$(git rev-parse --show-toplevel)" || exit
 
-print_git_status
-while inotifywait -r --quiet -e modify,move,create,delete *; do
-  print_git_status
-done
-
+# Print the data every two seconds
+watch --color --no-title print_git_status "$1"
