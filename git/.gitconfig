@@ -40,6 +40,10 @@
   publish = !legit publish \"$@\"
   graft = !legit graft \"$@\"
 
+  # Hub aliases
+  pull-request = !hub pull-request \"$@\"
+  pr = !hub pull-request \"$@\"
+
 [push]
   default = matching
 
