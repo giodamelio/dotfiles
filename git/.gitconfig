@@ -22,6 +22,7 @@ amend = commit --amend
 remove-last = reset --soft HEAD~1
 remove-last-hard = reset --hard HEAD~1
 cdiff = diff --cached
+ldiff = diff HEAD~1 HEAD
 rh = reset HEAD
 rm-deleted = !git ls-files --deleted -z | xargs -0 git rm
 cb = rev-parse --abbrev-ref HEAD
