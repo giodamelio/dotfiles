@@ -43,3 +43,6 @@
 [submodule "tmux/.tmux/plugins/tmux-pain-control"]
 	path = tmux/.tmux/plugins/tmux-pain-control
 	url = https://github.com/tmux-plugins/tmux-pain-control
+[submodule "tmux/.tmux/plugins/tmux-sessionist"]
+	path = tmux/.tmux/plugins/tmux-sessionist
+	url = https://github.com/tmux-plugins/tmux-sessionist
