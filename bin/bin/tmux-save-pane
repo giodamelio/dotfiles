@@ -1,0 +1,8 @@
+#!/bin/bash
+TMPFILE=$(mktemp /tmp/tmux-pane.XXXXXXXX)
+tmux capture-pane -S -
+tmux save-buffer "$TMPFILE"
+tmux delete-buffer
+echo "Tmux pain saved to '$TMPFILE'"
+FILELENGTH=$(wc -l "$TMPFILE" | tr -s "[:blank:]" | cut -d " " -f 2)
+printf "File is %s lines long" "$FILELENGTH"
