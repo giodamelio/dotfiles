@@ -13,7 +13,7 @@ print_git_status() {
   git log \
       --color \
       --graph \
-      --pretty=format:'%Cred%h%Creset %G? - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+      --pretty=format:'%Cred%h%Creset %G? - %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' \
       --abbrev-commit \
       --date=relative \
       "$1"
