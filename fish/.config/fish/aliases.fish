@@ -19,4 +19,5 @@ end
 
 # For when I type too fast
 alias gti git
+alias gup git
 alias ipa "ip a"
