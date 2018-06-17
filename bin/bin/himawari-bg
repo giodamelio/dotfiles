@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Download latest images
 himawari -z 2 -p -o ~/.himawari-latest.png

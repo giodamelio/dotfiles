@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 scrot /tmp/lock.png
 convert -blur 0x8 /tmp/lock.png /tmp/lock.png
 i3lock -i /tmp/lock.png

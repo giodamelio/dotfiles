@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 LAST_UPDATE=$(cat /var/log/pacman.log | grep -P "\-Syu" | cut -d " " -f 1 | cut -c 2- | tail -n 1)
 DAYS_SINCE=$(( ( $(date -u +'%s') - $(date -ud $LAST_UPDATE +'%s') )/60/60/24 ))
 echo "$DAYS_SINCE days since last update"

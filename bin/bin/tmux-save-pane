@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 TMPFILE=$(mktemp /tmp/tmux-pane.XXXXXXXX)
 tmux capture-pane -S -
 tmux save-buffer "$TMPFILE"

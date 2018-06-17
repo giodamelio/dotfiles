@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 if [ -d "./node_modules/.bin" ]; then
   echo "Adding local npm bin to path"
   export PATH=$(realpath "./node_modules/.bin/"):$PATH

@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/usr/bin/env bash
 export USE_SPACEMACS=true
 emacs "$@"
