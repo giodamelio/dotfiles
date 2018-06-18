@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Start sxhkd for key board shortcuts
 SXHKD_SHELL=bash sxhkd &
