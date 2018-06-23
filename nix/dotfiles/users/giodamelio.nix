@@ -6,6 +6,6 @@ with lib; {
     description = "Gio d'Amelio";
     home = "/home/giodamelio";
     shell = "/run/current-system/sw/bin/fish";
-    extraGroups = ["wheel"];
+    extraGroups = ["wheel" "docker"];
   };
 }
