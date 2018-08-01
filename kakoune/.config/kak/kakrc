@@ -1,1 +1,4 @@
 colorscheme solarized-dark
+
+# Get rid of clippy
+set-option global ui_options ncurses_assistant=none
