@@ -2,3 +2,9 @@ colorscheme solarized-dark
 
 # Get rid of clippy
 set-option global ui_options ncurses_assistant=none
+
+# Exit insert mode with 'jk'
+hook global InsertChar k %{ try %{
+  exec -draft hH <a-k>jk<ret> d
+  exec <esc>
+}}
