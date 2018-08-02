@@ -2,6 +2,7 @@ export NNN_TMPFILE="/tmp/nnn"
 export NNN_COPIER="$HOME/bin/nnn_copier.sh"
 
 function n --description 'nnn shortcut with cd capibility'
+  set -e VISUAL
   nnn $argv
 
   if test -e $NNN_TMPFILE
