@@ -315,7 +315,7 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   ;; Set the default shell used
-  (setq shell-file-name "/bin/bash")
+  (setq shell-file-name "bash")
 
   ;; TODO: remove this
   ;; Load tramp to stop error. See https://github.com/syl20bnr/spacemacs/issues/9563
