@@ -6,6 +6,7 @@
     ../packages/base.nix
     ../packages/unfree.nix
     ../packages/misc.nix
+    ../packages/games.nix
     ../packages/fonts.nix
     ../modules/bspwm.nix
   ];
