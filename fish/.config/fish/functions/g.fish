@@ -1,7 +1,7 @@
 function g
   # Make sure there is exactly one argument
   if test (count $argv) -ne 1
-    fzf | read input
+    fd . | fzf | read input
   else
     set input $argv[1]
   end
