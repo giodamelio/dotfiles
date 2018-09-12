@@ -8,5 +8,6 @@
     git
     sudo
     tree
+    avahi
   ];
 }
