@@ -8,15 +8,26 @@ set -x VISUAL "emacsclient -c"
 # Set default browser
 set -x BROWSER "google-chrome"
 
+# Quick function to add a directory to the PATH if it exists
+function add_to_path_if_directory_exists
+  if test -d $argv[1]
+    switch $argv[2]
+      case 'start'
+        set -x PATH $argv[1] $PATH
+      case 'end'
+      case '*'
+        set -x PATH $PATH $argv[1]
+    end
+  end
+end
+
 # Add a bunch of things to our path
-set -x PATH $PATH $HOME/bin  # Personal scripts
-set -x PATH $PATH /usr/local/bin
-set -x PATH $PATH /usr/bin/core_perl  # Append perl bin to path
-set -x GOPATH $HOME/Projects/go # Setup GOPATH
-set -x PATH $GOPATH/bin $PATH
+add_to_path_if_directory_exists $HOME/bin "start" # Person scripts
+add_to_path_if_directory_exists /usr/local/bin "end"
+add_to_path_if_directory_exists /usr/bin/core_perl "end" # Perl bin path
 
 # Setup rust and racer
-set -x PATH $HOME/.cargo/bin $PATH
+add_to_path_if_directory_exists $HOME/.cargo/bin "end" # Cargo bin
 set -x RUST_SRC_PATH $HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src
 set -x CARGO_HOME $HOME/.cargo
 
