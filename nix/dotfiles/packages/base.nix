@@ -9,5 +9,6 @@
     sudo
     tree
     avahi
+    exfat
   ];
 }
