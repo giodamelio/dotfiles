@@ -35,7 +35,6 @@ set -x CARGO_HOME $HOME/.cargo
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
 # Load plugins
-fundle plugin 'tuvistavie/fish-nvm'
 fundle plugin 'fishgretel/fasd'
 
 fundle init
@@ -65,9 +64,3 @@ if test (uname) = "Darwin"
   # iTerm shell integration
   test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 end
-
-# Setup virtualfish
-eval (python -m virtualfish)
-
-# Make sure nvm loaded
-nvm > /dev/null
