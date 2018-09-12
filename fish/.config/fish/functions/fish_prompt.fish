@@ -21,6 +21,21 @@ function fish_prompt
         printf "] ─ ["
     end
 
+    # Show nix-shell if we are in one
+    if set -q IN_NIX_SHELL; or set -q QUICK_NIX_PACKAGE_NAME
+        set_color green
+        printf "nix-shell"
+        if set -q QUICK_NIX_PACKAGE_NAME
+          set_color blue
+          printf ":"
+          set_color green
+          set colored_comma (printf "%s,%s" (set_color blue) (set_color green))
+          printf "%s" (string trim -- $QUICK_NIX_PACKAGE_NAME | sed "s/ /$colored_comma/g")
+        end
+        set_color blue
+        printf "] ─ ["
+    end
+
     # Working directory
     set_color green
     printf "%s" (prompt_pwd)
