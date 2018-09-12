@@ -77,5 +77,8 @@
 [icdiff]
   options = --line-numbers
 
+[branch]
+  sort = -authordate
+
 [include]
   path = .gitconfig_local
