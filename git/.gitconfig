@@ -74,5 +74,8 @@
 [commit]
   gpgsign = true
 
+[icdiff]
+  options = --line-numbers
+
 [include]
   path = .gitconfig_local
