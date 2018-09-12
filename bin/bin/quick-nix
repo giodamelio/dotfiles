@@ -4,12 +4,12 @@
 nix search -u &> /dev/null &
 
 # Have the user pick the package
-PACKAGE_NAME=$(nix search --json 2>/dev/null | # List all the nixos packages in JSON format \
+export QUICK_NIX_PACKAGE_NAME=$(nix search --json 2>/dev/null | # List all the nixos packages in JSON format \
   jq --raw-output '. | keys[]' | # Get just the keys \
-  fzf --multi --preview "nix search '^{}\$'" | # Interactivaly allow the user to select one or more packages\
+  fzf --multi --preview "nix search '^{}\$'" | # Interactivaly allow the user to select one or more packages \
   tr '\n' ' ') # Replace all the newlines with spaces
 
 # Open a shell with the package avilable
-echo "Opening shell with ${PACKAGE_NAME}avialable"
-nix run $PACKAGE_NAME --command $SHELL
+echo "Opening shell with ${QUICK_NIX_PACKAGE_NAME}avialable"
+nix run $QUICK_NIX_PACKAGE_NAME --command $SHELL
 
