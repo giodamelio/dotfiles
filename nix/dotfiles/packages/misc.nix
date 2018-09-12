@@ -5,6 +5,7 @@
     wget
     terminator
     fish
+    fortune
     neovim
     psmisc
     jq
