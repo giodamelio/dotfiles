@@ -67,7 +67,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(prettier-js dash)
+   dotspacemacs-additional-packages '(prettier-js dash disable-mouse)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -381,6 +381,11 @@ you should place your code here."
 
   ;; Override yas-snippet location so only our custom snippets are loaded
   (setq-default yas-snippet-dirs '("~/.spacemacs.d/snippets"))
+
+  ;; Disable mouse all over the place
+  (global-disable-mouse-mode)
+  (define-key evil-motion-state-map [down-mouse-1] 'ignore)
+  (define-key evil-motion-state-map [mouse-1] 'ignore)
 
   ;; Quick function to kill all code buffers
   (defun kill-code-buffers ()
