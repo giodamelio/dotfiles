@@ -4,8 +4,8 @@ from collections import defaultdict
 from re import match
 
 # Get some data from git
-commit_count = check_output(['git', 'rev-list', '--all', '--count']) # Commit count
-commit_messages = check_output(['git', 'log', '--format=%s']) # Commit messages
+commit_count = check_output(['git', 'rev-list', '--all', '--count']).decode('utf8') # Commit count
+commit_messages = check_output(['git', 'log', '--format=%s']).decode('utf8') # Commit messages
 
 # Get the tag from a commit message
 def get_tag(message):
