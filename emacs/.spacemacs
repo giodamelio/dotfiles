@@ -51,6 +51,7 @@ values."
      yaml
      vue
      react
+     typescript
 
      ;; Misc layers
      helm
@@ -332,6 +333,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
    ;; Disable some js2-mode errors
    js2-strict-inconsistent-return-warning nil
 
+   ;; Set indent level for TypeSript
+   typescript-indent-level 2
+
    ;; Set custom file path
    custom-file "~/.spacemacs.d/custom.el"
 
@@ -355,8 +359,9 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  ;; Make prettier run when a JS file is saved
+  ;; Make prettier run when a JS and TypeScript file is saved
   (add-hook 'js2-mode-hook 'prettier-js-mode)
+  (add-hook 'typescript-mode-hook 'prettier-js-mode)
 
   ;; Diminish prettier mode
   (spacemacs|diminish prettier-js-mode "ⓟ" "P")
