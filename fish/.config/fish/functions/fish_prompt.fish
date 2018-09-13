@@ -13,6 +13,14 @@ function fish_prompt
     set_color blue
     printf "] ─ ["
 
+    # Show shell level if it is more then 2 (for terminal multiplexers)
+    if test $SHLVL -gt 2
+        set_color green
+        printf "SHLVL%s:%s%s" (set_color blue) (set_color green) $SHLVL
+        set_color blue
+        printf "] ─ ["
+    end
+
     # Show virtualenv if we are in one
     if set -q VIRTUAL_ENV
         set_color green
