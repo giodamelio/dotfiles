@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+import subprocess
+import re
+import sys
+
+# Get the current git branch
+result = subprocess.run(["git", "symbolic-ref", "--short", "HEAD"], stdout=subprocess.PIPE)
+git_branch = result.stdout.decode("utf-8")
+
+# Get the ticket name out of it
+ticket = re.search(r"FENG-\d+", git_branch)
+if ticket:
+    subprocess.call(["open", f"https://jira.avalara.com/browse/{ticket.group()}"])
+else:
+    print("No ticket name found")
+    sys.exit(1)
