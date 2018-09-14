@@ -5,5 +5,6 @@
     inconsolata
     google-fonts
     font-awesome_4
+    iosevka
   ];
 }

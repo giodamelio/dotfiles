@@ -10,5 +10,6 @@
     tree
     avahi
     exfat
+    kitty
   ];
 }
