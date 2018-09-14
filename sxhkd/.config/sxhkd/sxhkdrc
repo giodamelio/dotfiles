@@ -87,7 +87,7 @@ super + {KP_Add,KP_Subtract,KP_Multiply}
 ### WM independent hotkeys ###
 # Open a terminal
 super + Return
-  terminator
+  kitty
 
 # Launch a program
 super + d
