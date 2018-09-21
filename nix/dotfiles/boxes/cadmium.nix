@@ -36,6 +36,9 @@
   services.xserver = {
     enable = true;
     layout = "us";
+    displayManager.slim = {
+      enable = true;
+    };
   };
 
   # Enable Docker
