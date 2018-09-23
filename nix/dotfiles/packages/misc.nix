@@ -17,5 +17,6 @@
     gitAndTools.diff-so-fancy
     ripgrep
     python
+    firefox-devedition-bin
   ];
 }

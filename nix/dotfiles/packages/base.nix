@@ -11,5 +11,7 @@
     avahi
     exfat
     kitty
+    gnupg
+    emacs
   ];
 }
