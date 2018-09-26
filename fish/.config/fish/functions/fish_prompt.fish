@@ -57,7 +57,7 @@ function fish_prompt
     printf "└─["
     set_color magenta
     if git rev-parse --is-inside-work-tree > /dev/null
-      printf "%s" (git name-rev --name-only HEAD)
+      printf "%s" (git rev-parse --abbrev-ref HEAD)
     end
     set_color blue
     printf "]─"
