@@ -52,15 +52,16 @@ function fish_prompt
     echo
 
     #### Second line ####
+    printf "└─"
 
     # Display git branch if we are in a repo
-    printf "└─["
-    set_color magenta
-    if git rev-parse --is-inside-work-tree > /dev/null
+    if git rev-parse --is-inside-work-tree >/dev/null ^/dev/null
+      printf "["
+      set_color magenta
       printf "%s" (git rev-parse --abbrev-ref HEAD)
+      set_color blue
+      printf "]─"
     end
-    set_color blue
-    printf "]─"
 
     # Regular user or root
     set_color blue
