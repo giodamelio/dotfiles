@@ -7,7 +7,7 @@ export -f print_line
 
 print_git_status() {
   clear
-  printf "Current branch: %s\n" $(git rev-parse --abbrev-ref HEAD)
+  printf "Current branch: %s, commit count: %s\n" $(git rev-parse --abbrev-ref HEAD) $(git rev-list --count "$1")
   print_line
   git -c color.status=always --no-pager diff --shortstat
   git -c color.status=always status --short | sed "s/^/  /"
