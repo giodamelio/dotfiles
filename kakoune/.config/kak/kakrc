@@ -3,8 +3,29 @@ colorscheme solarized-dark
 # Get rid of clippy
 set-option global ui_options ncurses_assistant=none
 
+# Keybindings
+# ───────────
+
 # Exit insert mode with 'jk'
 hook global InsertChar k %{ try %{
   exec -draft hH <a-k>jk<ret> d
   exec <esc>
 }}
+
+
+# System clipboard handling
+# ─────────────────────────
+%sh{
+  case $(uname) in
+    Linux) copy="xclip -i"; paste="xclip -o" ;;
+    Darwin)  copy="pbcopy"; paste="pbpaste" ;;
+  esac
+
+  #printf "map global user -docstring 'paste (after) from clipboard' p '!%s<ret>'\n" "$paste"
+  #printf "map global user -docstring 'paste (before) from clipboard' P '<a-!>%s<ret>'\n" "$paste"
+  #printf "map global user -docstring 'yank to clipboard' y '<a-|>%s<ret>:echo -markup %%{{Information}copied selection to X11 clipboard}<ret>'\n" "$copy"
+  #printf "map global user -docstring 'replace from clipboard' R '|%s<ret>'\n" "$paste"
+  hook global NormalKey y|d|c %{ nop %sh{
+    printf %s "$kak_reg_dquote" | eval $copy
+  }}
+}
