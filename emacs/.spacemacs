@@ -375,6 +375,7 @@ you should place your code here."
   ;; Make prettier run when a JS and TypeScript file is saved
   (add-hook 'js2-mode-hook 'prettier-js-mode)
   (add-hook 'typescript-mode-hook 'prettier-js-mode)
+  (add-hook 'react-mode-hook 'prettier-js-mode)
 
   ;; Diminish prettier mode
   (spacemacs|diminish prettier-js-mode "ⓟ" "P")
