@@ -1,5 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
+# Print a line of '-' as wide as the terminal
 print_line() {
     seq  -f "-" -s '' $COLUMNS
 }
@@ -7,11 +8,17 @@ export -f print_line
 
 print_git_status() {
   clear
+
+  # Print an overview including the current branch and the count of commits on the branch
   printf "Current branch: %s, commit count: %s\n" $(git rev-parse --abbrev-ref HEAD) $(git rev-list --count "$1")
   print_line
+
+  # Print the status of the repo
   git -c color.status=always --no-pager diff --shortstat
   git -c color.status=always status --short | sed "s/^/  /"
   print_line
+
+  # Print Commits in a concise format
   git log \
       --color \
       --graph \
@@ -22,7 +29,7 @@ print_git_status() {
 }
 export -f print_git_status
 
-# Get the files from git
+# Change director to the top level of the git repo
 cd "$(git rev-parse --show-toplevel)" || exit
 
 # Print the data every two seconds
