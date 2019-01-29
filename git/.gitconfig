@@ -28,6 +28,7 @@
   count = rev-list --count
   up = pull --rebase --autostash
   ignored = status --ignored
+  fixup = commit --amend -C HEAD
 
   # Legit aliases
   switch = !legit switch \"$@\"
