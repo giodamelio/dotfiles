@@ -26,6 +26,7 @@ end
 add_to_path_if_directory_exists $HOME/bin "start" # Person scripts
 add_to_path_if_directory_exists /usr/local/bin "end"
 add_to_path_if_directory_exists /usr/bin/core_perl "end" # Perl bin path
+add_to_path_if_directory_exists $HOME/go/bin "start" # Go bin path
 
 # Setup rust and racer
 add_to_path_if_directory_exists $HOME/.cargo/bin "end" # Cargo bin
