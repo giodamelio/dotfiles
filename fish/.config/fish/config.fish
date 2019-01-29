@@ -15,8 +15,9 @@ function add_to_path_if_directory_exists
       case 'start'
         set -x PATH $argv[1] $PATH
       case 'end'
-      case '*'
         set -x PATH $PATH $argv[1]
+      case '*'
+        printf "add to path: You need to specify a start or end for %s\n" $argv[1]
     end
   end
 end
