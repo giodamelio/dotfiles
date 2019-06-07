@@ -73,7 +73,7 @@
   algorithm = patience
 
 [commit]
-  gpgsign = true
+  #gpgsign = true
 
 [icdiff]
   options = --line-numbers
