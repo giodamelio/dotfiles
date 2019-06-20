@@ -36,6 +36,9 @@ set -x CARGO_HOME $HOME/.cargo
 # Stop virtualenv from messing with my prompt
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
+# Start with statusmode off
+set statusmode 0
+
 # Load plugins
 fundle plugin 'fishgretel/fasd'
 fundle plugin 'edc/bass'

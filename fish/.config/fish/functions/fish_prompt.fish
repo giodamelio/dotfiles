@@ -2,6 +2,16 @@ function fish_prompt
     # Save the status of the last command
     set -l last_status $status
 
+    # If we are in statusmode show the exist status of the last command
+    if test $statusmode -ne 0
+      if test $last_status -eq 0
+        set statuscolor "green"
+      else
+        set statuscolor "red"
+      end
+      printf "%s===%s Last status: %s%s %s===\n" (set_color blue) (set_color normal) (set_color $statuscolor) $last_status (set_color blue)
+    end
+
     #### First line ####
     set_color blue
     printf "┌─["
