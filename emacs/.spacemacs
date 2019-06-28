@@ -63,6 +63,7 @@ values."
      syntax-checking
      parinfer
      github
+     tmux
      (evil-snipe :variables
                  evil-snipe-enable-alternate-f-and-t-behaviors t))
    ;; List of additional packages that will be installed without being
