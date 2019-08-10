@@ -23,6 +23,7 @@ function add_to_path_if_directory_exists
 end
 
 # Add a bunch of things to our path
+add_to_path_if_directory_exists $HOME/.local/bin "start" # Local bin
 add_to_path_if_directory_exists $HOME/bin "start" # Person scripts
 add_to_path_if_directory_exists /usr/local/bin "end"
 add_to_path_if_directory_exists /usr/bin/core_perl "end" # Perl bin path
