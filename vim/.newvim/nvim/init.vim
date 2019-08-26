@@ -84,6 +84,9 @@ set clipboard=unnamedplus
 " Show whitespace at the end of the line
 set list listchars=trail:·
 
+" Make the cursor stay in the center of the screen when possable
+set scrolloff=9999
+
 """" Bindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Leader Key
 let mapleader = "\<Space>"
