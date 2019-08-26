@@ -30,6 +30,7 @@ Plug 'tpope/vim-eunuch' " Unix command helper
 Plug 'tpope/vim-repeat' " Allow . repeat to work with supported plugins
 Plug 'tpope/vim-surround' " Easily manipulate surrounding things
 Plug 'valloric/MatchTagAlways' " Highlight matching HTML/XML tags
+Plug 'wellle/targets.vim' " Add more text objects
 
 call plug#end()
 
