@@ -58,6 +58,9 @@ set shiftround      " Tab/shifting moves to closest tabstop
 set autoindent      " Match indents on new lines
 set smartindent     " Auto indent when needed
 
+" Autoreload changed files without asking
+set autoread
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
