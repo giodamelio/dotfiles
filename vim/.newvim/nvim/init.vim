@@ -108,6 +108,9 @@ map <leader><tab> <C-^>
 " ROT13 Madness
 map <F5> ggg?G``
 
+" Text operator for entire file
+onoremap af :<C-u>normal! ggVG<CR>
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
