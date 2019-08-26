@@ -132,6 +132,20 @@ noremap Y y$
 vnoremap < <gv
 vnoremap > >gv
 
+" Whichkey binding names
+let g:which_key_map = {}
+let g:which_key_map['e'] = {
+      \ 'name': '+errors',
+      \ 'n': ['ALENextWrap', 'Next error'],
+      \ 'p': ['ALEPreviousWrap', 'Previous error'],
+      \ 'd': ['ALEDetail', 'Detailed error'],
+      \ 't': ['ALEToggle', 'Enable/Disable (toggle)'],
+      \ 'b': ['ALEToggleBuffer', 'Enable/Disable for buffer (toggle)'],
+      \ '=': ['ALEFix', 'Run fixer']
+      \}
+
+call which_key#register('<Space>', "g:which_key_map")
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
