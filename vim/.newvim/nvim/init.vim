@@ -64,6 +64,14 @@ set autoread
 " Sane backspace
 set backspace=indent,eol,start
 
+" Make search better
+set ignorecase " Case insensitive search
+set smartcase  " If there are uppercase letters, become case-sensitive
+set incsearch  " Live incremental searching
+set showmatch  " Live match highlighting
+set hlsearch   " Highlight matches
+set gdefault   " Use the `g` flag by default
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
