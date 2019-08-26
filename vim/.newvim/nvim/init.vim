@@ -35,7 +35,8 @@ Plug 'luochen1990/rainbow' " Make the parens rainbow!
 Plug 'christoomey/vim-tmux-navigator' " Easily navigate within tmux
 Plug 'justinmk/vim-sneak' " Add a motion to quickly jump to text
 Plug 'janko/vim-test' " Quickly and easily run unit tests
-Plug 'benmills/vimux' "Easily run a command in a small tmux pane
+Plug 'benmills/vimux' " Easily run a command in a small tmux pane
+Plug 'dense-analysis/ale' " Run linters
 
 call plug#end()
 
