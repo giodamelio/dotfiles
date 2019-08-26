@@ -34,6 +34,7 @@ Plug 'wellle/targets.vim' " Add more text objects
 Plug 'luochen1990/rainbow' " Make the parens rainbow!
 Plug 'christoomey/vim-tmux-navigator' " Easily navigate within tmux
 Plug 'justinmk/vim-sneak' " Add a motion to quickly jump to text
+Plug 'janko/vim-test' " Quickly and easily run unit tests
 
 call plug#end()
 
