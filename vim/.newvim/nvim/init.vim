@@ -81,6 +81,9 @@ set modeline
 " Use system clipboard by defautl
 set clipboard=unnamedplus
 
+" Show whitespace at the end of the line
+set list listchars=trail:·
+
 """" Bindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Leader Key
 let mapleader = "\<Space>"
