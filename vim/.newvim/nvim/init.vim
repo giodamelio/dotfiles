@@ -31,6 +31,7 @@ Plug 'tpope/vim-repeat' " Allow . repeat to work with supported plugins
 Plug 'tpope/vim-surround' " Easily manipulate surrounding things
 Plug 'valloric/MatchTagAlways' " Highlight matching HTML/XML tags
 Plug 'wellle/targets.vim' " Add more text objects
+Plug 'luochen1990/rainbow' " Make the parens rainbow!
 
 call plug#end()
 
@@ -59,6 +60,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 let g:UltiSnipsRemoveSelectModeMappings = 0
+
+"" Rainbow parens
+let g:rainbow_active = 1 " Enable globally
 
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
