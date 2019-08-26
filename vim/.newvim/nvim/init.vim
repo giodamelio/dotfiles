@@ -72,6 +72,10 @@ set showmatch  " Live match highlighting
 set hlsearch   " Highlight matches
 set gdefault   " Use the `g` flag by default
 
+"""" Bindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set Leader Key
+let mapleader = "\<Space>"
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
