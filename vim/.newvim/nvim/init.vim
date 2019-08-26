@@ -37,6 +37,7 @@ Plug 'justinmk/vim-sneak' " Add a motion to quickly jump to text
 Plug 'janko/vim-test' " Quickly and easily run unit tests
 Plug 'benmills/vimux' " Easily run a command in a small tmux pane
 Plug 'dense-analysis/ale' " Run linters
+Plug 'liuchengxu/vim-which-key' " Interactive keybinding help
 
 call plug#end()
 
@@ -93,7 +94,10 @@ set scrolloff=9999
 
 """" Bindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Leader Key
-let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ','
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
 " Bind jk to esc to exit insert mode faster
 inoremap jk <esc>
