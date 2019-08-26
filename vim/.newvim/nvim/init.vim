@@ -102,6 +102,9 @@ imap <Esc> <NOP>
 " Toggle between current and previously edited file
 map <leader><tab> <C-^>
 
+" ROT13 Madness
+map <F5> ggg?G``
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
