@@ -35,6 +35,7 @@ Plug 'luochen1990/rainbow' " Make the parens rainbow!
 Plug 'christoomey/vim-tmux-navigator' " Easily navigate within tmux
 Plug 'justinmk/vim-sneak' " Add a motion to quickly jump to text
 Plug 'janko/vim-test' " Quickly and easily run unit tests
+Plug 'benmills/vimux' "Easily run a command in a small tmux pane
 
 call plug#end()
 
@@ -153,6 +154,13 @@ let g:rainbow_active = 1 " Enable globally
 
 "" Sneak
 let g:sneak#s_next = 1
+
+"" Test
+let test#strategy = {
+  \ 'nearest': 'vimux',
+  \ 'file':    'basic',
+  \ 'suite':   'basic',
+  \}
 
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
