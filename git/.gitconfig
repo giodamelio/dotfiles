@@ -16,7 +16,7 @@
   d = diff
   zco = !git checkout $(git branch | fzf | cut -c 3-)
   ca = commit -am
-  h = log --graph --pretty=format:'%Cred%h%Creset %G? -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  h = log --graph --pretty=format:'%Cred%h%Creset %G? -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset%n%-b' --abbrev-commit --date=relative
   amend = commit --amend
   remove-last = reset --soft HEAD~1
   remove-last-hard = reset --hard HEAD~1
