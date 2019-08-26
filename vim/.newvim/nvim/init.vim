@@ -83,6 +83,19 @@ let mapleader = "\<Space>"
 inoremap jk <esc>
 xnoremap jk <esc>
 
+" Disable Arrow keys
+map <Up> <NOP>
+map <Down> <NOP>
+map <Left> <NOP>
+map <Right> <NOP>
+imap <Up> <NOP>
+imap <Down> <NOP>
+imap <Left> <NOP>
+imap <Right> <NOP>
+
+" Disable escape key
+imap <Esc> <NOP>
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
