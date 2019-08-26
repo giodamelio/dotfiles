@@ -61,6 +61,9 @@ set smartindent     " Auto indent when needed
 " Autoreload changed files without asking
 set autoread
 
+" Sane backspace
+set backspace=indent,eol,start
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
