@@ -33,6 +33,7 @@ Plug 'valloric/MatchTagAlways' " Highlight matching HTML/XML tags
 Plug 'wellle/targets.vim' " Add more text objects
 Plug 'luochen1990/rainbow' " Make the parens rainbow!
 Plug 'christoomey/vim-tmux-navigator' " Easily navigate within tmux
+Plug 'justinmk/vim-sneak' " Add a motion to quickly jump to text
 
 call plug#end()
 
@@ -148,6 +149,9 @@ let g:UltiSnipsRemoveSelectModeMappings = 0
 
 "" Rainbow parens
 let g:rainbow_active = 1 " Enable globally
+
+"" Sneak
+let g:sneak#s_next = 1
 
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
