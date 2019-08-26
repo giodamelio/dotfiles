@@ -76,6 +76,10 @@ set gdefault   " Use the `g` flag by default
 " Set Leader Key
 let mapleader = "\<Space>"
 
+" Bind jk to esc to exit insert mode faster
+inoremap jk <esc>
+xnoremap jk <esc>
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
