@@ -15,6 +15,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify' " Shows version control status in sign column
 Plug 'itchyny/lightline.vim' " Awesome statusline
 Plug 'moll/vim-bbye' " Well behaved :bdelete
+Plug 'rhysd/clever-f.vim' " Better mappings for finding things
 
 call plug#end()
 
