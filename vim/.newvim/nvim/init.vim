@@ -29,6 +29,7 @@ Plug 'tomtom/tcomment_vim' " Handle comments
 Plug 'tpope/vim-eunuch' " Unix command helper
 Plug 'tpope/vim-repeat' " Allow . repeat to work with supported plugins
 Plug 'tpope/vim-surround' " Easily manipulate surrounding things
+Plug 'valloric/MatchTagAlways' " Highlight matching HTML/XML tags
 
 call plug#end()
 
