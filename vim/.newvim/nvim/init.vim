@@ -22,6 +22,9 @@ Plug 'ncm2/ncm2-bufword' " Complete words in the current buffer
 Plug 'ncm2/ncm2-path' " Complete paths from current buffer/cwd/root
 Plug 'ncm2/ncm2-tmux' " Complete text from adjacent tmux panes
 Plug 'filipekiss/ncm2-look.vim' " Complete words from the system dictionary
+Plug 'ncm2/ncm2-ultisnips' " Complete from utilsnips
+Plug 'SirVer/ultisnips' " Snippet framework
+Plug 'honza/vim-snippets' " A library of preexisting snippits
 
 
 call plug#end()
@@ -46,6 +49,11 @@ set completeopt=noinsert,menuone,noselect
 " Use <TAB> to select the popup menu:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Use c-j c-k for moving in snippet
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+let g:UltiSnipsRemoveSelectModeMappings = 0
 
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
