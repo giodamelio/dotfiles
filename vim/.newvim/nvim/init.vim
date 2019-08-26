@@ -78,6 +78,9 @@ set hidden
 " Allow modelines
 set modeline
 
+" Use system clipboard by defautl
+set clipboard=unnamedplus
+
 """" Bindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Leader Key
 let mapleader = "\<Space>"
