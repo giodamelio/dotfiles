@@ -111,6 +111,9 @@ map <F5> ggg?G``
 " Text operator for entire file
 onoremap af :<C-u>normal! ggVG<CR>
 
+" Make Y yank the rest of the line
+noremap Y y$
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
