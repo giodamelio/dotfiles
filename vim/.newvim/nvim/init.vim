@@ -75,6 +75,9 @@ set gdefault   " Use the `g` flag by default
 " Allow hidden buffers without and error
 set hidden
 
+" Allow modelines
+set modeline
+
 """" Bindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Leader Key
 let mapleader = "\<Space>"
