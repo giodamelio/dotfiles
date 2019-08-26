@@ -72,6 +72,9 @@ set showmatch  " Live match highlighting
 set hlsearch   " Highlight matches
 set gdefault   " Use the `g` flag by default
 
+" Allow hidden buffers without and error
+set hidden
+
 """" Bindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Leader Key
 let mapleader = "\<Space>"
