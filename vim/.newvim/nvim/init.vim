@@ -14,6 +14,7 @@ Plug 'sheerun/vim-polyglot'
 " Other
 Plug 'mhinz/vim-signify' " Shows version control status in sign column
 Plug 'itchyny/lightline.vim' " Awesome statusline
+Plug 'moll/vim-bbye' " Well behaved :bdelete
 
 call plug#end()
 
