@@ -187,7 +187,6 @@ function! CurrentBufferALEErrorsCount()
   return l:return_text
 endfunction
 
-
 "" ncm2
 " Enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
@@ -216,6 +215,17 @@ let test#strategy = {
   \ 'file':    'basic',
   \ 'suite':   'basic',
   \}
+
+"" ALE
+" Set the fixers for some filetypes
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
+\}
+
+" Run the fixers automatically on save
+let g:ale_fix_on_save = 1
 
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
