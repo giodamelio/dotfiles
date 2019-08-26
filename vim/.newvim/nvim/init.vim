@@ -134,15 +134,10 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'ale_errors', 'ale_ok' ] ]
+      \             [ 'readonly', 'filename', 'modified', 'ale_errors' ] ]
       \ },
-      \ 'component_expand': {
-      \   'ale_errors': 'CurrentBufferALEErrorsCount',
-      \   'ale_ok': 'CurrentBufferALEOk'
-      \ },
-      \ 'component_type': {
-      \   'ale_errors': 'error',
-      \   'ale_ok': 'warning'
+      \ 'component': {
+      \   'ale_errors': 'ALE: %#ALEErrorColor#%{CurrentBufferALEErrorsCount()}'
       \ }
       \ }
 
@@ -150,34 +145,28 @@ let g:lightline = {
 function! CurrentBufferALEErrorsCount()
   let l:counts = ale#statusline#Count(bufnr(''))
 
-  return l:counts.total == 0 ? '' : printf(
-    \ 'ALE: %d errors',
+  " Colors referenced from the lightline wombat theme directly
+  let l:colors = {
+        \'red': [
+        \   g:lightline#colorscheme#wombat#palette.normal.error[0][3],
+        \   g:lightline#colorscheme#wombat#palette.normal.error[0][1]
+        \],
+        \'green': [
+        \   g:lightline#colorscheme#wombat#palette.insert.left[0][3],
+        \   g:lightline#colorscheme#wombat#palette.insert.left[0][1],
+        \]}
+  let l:background = [
+        \ g:lightline#colorscheme#wombat#palette.visual.left[1][3],
+        \ g:lightline#colorscheme#wombat#palette.visual.left[1][1]
+        \]
+
+  let l:color = get(l:colors, l:counts.total == 0 ? 'green' : 'red')
+  exe printf('highlight ALEErrorColor ctermfg=%d ctermbg=%d guifg=%s guibg=%s term=bold cterm=bold', color[0], l:background[0], color[1], l:background[1])
+  return l:counts.total == 0 ? 'Ok' : printf(
+    \ '%d errors',
     \ l:counts.total
   \)
 endfunction
-
-" Get the count of the ALE errors of the current buffer
-function! CurrentBufferALEOk()
-  let l:counts = ale#statusline#Count(bufnr(''))
-
-  return l:counts.total == 0 ? 'ALE: Ok' : ''
-endfunction
-
-" Update the lightline if the plugin exists
-function! s:MaybeUpdateLightline()
-  if exists('#lightline')
-    call lightline#update()
-  end
-endfunction
-
-" Update the lightline when ALE does it's thing
-augroup _lightline
-  autocmd!
-  autocmd User ALEFixPre   call lightline#update()
-  autocmd User ALEFixPost  call lightline#update()
-  autocmd User ALELintPre  call lightline#update()
-  autocmd User ALELintPost call lightline#update()
-augroup END
 
 "" ncm2
 " Enable ncm2 for all buffers
