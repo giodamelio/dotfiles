@@ -25,7 +25,7 @@ Plug 'filipekiss/ncm2-look.vim' " Complete words from the system dictionary
 Plug 'ncm2/ncm2-ultisnips' " Complete from utilsnips
 Plug 'SirVer/ultisnips' " Snippet framework
 Plug 'honza/vim-snippets' " A library of preexisting snippits
-
+Plug 'tomtom/tcomment_vim' " Handle comments
 
 call plug#end()
 
