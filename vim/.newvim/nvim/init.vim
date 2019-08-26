@@ -132,7 +132,52 @@ vnoremap > >gv
 "" Lightline
 let g:lightline = {
       \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified', 'ale_errors', 'ale_ok' ] ]
+      \ },
+      \ 'component_expand': {
+      \   'ale_errors': 'CurrentBufferALEErrorsCount',
+      \   'ale_ok': 'CurrentBufferALEOk'
+      \ },
+      \ 'component_type': {
+      \   'ale_errors': 'error',
+      \   'ale_ok': 'warning'
       \ }
+      \ }
+
+" Get the count of the ALE errors of the current buffer
+function! CurrentBufferALEErrorsCount()
+  let l:counts = ale#statusline#Count(bufnr(''))
+
+  return l:counts.total == 0 ? '' : printf(
+    \ 'ALE: %d errors',
+    \ l:counts.total
+  \)
+endfunction
+
+" Get the count of the ALE errors of the current buffer
+function! CurrentBufferALEOk()
+  let l:counts = ale#statusline#Count(bufnr(''))
+
+  return l:counts.total == 0 ? 'ALE: Ok' : ''
+endfunction
+
+" Update the lightline if the plugin exists
+function! s:MaybeUpdateLightline()
+  if exists('#lightline')
+    call lightline#update()
+  end
+endfunction
+
+" Update the lightline when ALE does it's thing
+augroup _lightline
+  autocmd!
+  autocmd User ALEFixPre   call lightline#update()
+  autocmd User ALEFixPost  call lightline#update()
+  autocmd User ALELintPre  call lightline#update()
+  autocmd User ALELintPost call lightline#update()
+augroup END
 
 "" ncm2
 " Enable ncm2 for all buffers
