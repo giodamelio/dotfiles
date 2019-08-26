@@ -245,6 +245,12 @@ let g:ale_fixers = {
 " Run the fixers automatically on save
 let g:ale_fix_on_save = 1
 
+"" Which key
+" Hide the statusline
+autocmd! FileType which_key
+autocmd  FileType which_key set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
 colorscheme monokai
