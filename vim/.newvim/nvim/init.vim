@@ -154,19 +154,39 @@ function! CurrentBufferALEErrorsCount()
         \'green': [
         \   g:lightline#colorscheme#wombat#palette.insert.left[0][3],
         \   g:lightline#colorscheme#wombat#palette.insert.left[0][1],
+        \],
+        \'grey': [
+        \   g:lightline#colorscheme#wombat#palette.visual.left[1][2],
+        \   g:lightline#colorscheme#wombat#palette.visual.left[1][0],
         \]}
   let l:background = [
         \ g:lightline#colorscheme#wombat#palette.visual.left[1][3],
         \ g:lightline#colorscheme#wombat#palette.visual.left[1][1]
         \]
 
-  let l:color = get(l:colors, l:counts.total == 0 ? 'green' : 'red')
-  exe printf('highlight ALEErrorColor ctermfg=%d ctermbg=%d guifg=%s guibg=%s term=bold cterm=bold', color[0], l:background[0], color[1], l:background[1])
-  return l:counts.total == 0 ? 'Ok' : printf(
-    \ '%d errors',
-    \ l:counts.total
-  \)
+  if l:counts.total == 0
+    let l:color = get(l:colors, 'green')
+    let l:return_text = 'Ok'
+  else
+    let l:color = get(l:colors, 'red')
+    let l:return_text = printf(
+          \ '%d errors',
+          \ l:counts.total
+          \)
+  endif
+
+  " Display nothing if ALE hasn't linted this buffer
+  if !get(b:, 'ale_linted', v:null)
+    let l:color = get(l:colors, 'grey')
+    let l:return_text = 'Not run'
+  endif
+
+  " Set the colors
+  exe printf('highlight ALEErrorColor ctermfg=%d ctermbg=%d guifg=%s guibg=%s', color[0], l:background[0], color[1], l:background[1])
+
+  return l:return_text
 endfunction
+
 
 "" ncm2
 " Enable ncm2 for all buffers
