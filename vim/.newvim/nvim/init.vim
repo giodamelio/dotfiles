@@ -11,6 +11,9 @@ Plug 'crusoexia/vim-monokai'
 " Language support
 Plug 'sheerun/vim-polyglot'
 
+" Other
+Plug 'mhinz/vim-signify' " Shows version control status in sign column
+
 call plug#end()
 
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
