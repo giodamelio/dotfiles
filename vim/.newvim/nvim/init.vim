@@ -27,6 +27,7 @@ Plug 'SirVer/ultisnips' " Snippet framework
 Plug 'honza/vim-snippets' " A library of preexisting snippits
 Plug 'tomtom/tcomment_vim' " Handle comments
 Plug 'tpope/vim-eunuch' " Unix command helper
+Plug 'tpope/vim-repeat' " Allow . repeat to work with supported plugins
 
 call plug#end()
 
