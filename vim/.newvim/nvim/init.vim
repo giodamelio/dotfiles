@@ -36,7 +36,7 @@ Plug 'christoomey/vim-tmux-navigator' " Easily navigate within tmux
 
 call plug#end()
 
-"""" Vanilla Configs """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""" Options """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " No need to show the mode since lightline shows it in the statusbar
 set noshowmode
 
