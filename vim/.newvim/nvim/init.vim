@@ -8,6 +8,9 @@ call plug#begin('~/.newvim/nvim/plugged')
 " Color themes
 Plug 'crusoexia/vim-monokai'
 
+" Language support
+Plug 'sheerun/vim-polyglot'
+
 call plug#end()
 
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
