@@ -40,6 +40,10 @@ call plug#end()
 " No need to show the mode since lightline shows it in the statusbar
 set noshowmode
 
+" Turn on syntax and filetype detection
+syntax on
+filetype plugin indent on
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
