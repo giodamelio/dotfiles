@@ -13,8 +13,19 @@ Plug 'sheerun/vim-polyglot'
 
 " Other
 Plug 'mhinz/vim-signify' " Shows version control status in sign column
+Plug 'itchyny/lightline.vim' " Awesome statusline
 
 call plug#end()
+
+"""" Vanilla Configs """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" No need to show the mode since lightline shows it in the statusbar
+set noshowmode
+
+""""" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
