@@ -114,6 +114,10 @@ onoremap af :<C-u>normal! ggVG<CR>
 " Make Y yank the rest of the line
 noremap Y y$
 
+" Stay in visual move after indenting
+vnoremap < <gv
+vnoremap > >gv
+
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Lightline
 let g:lightline = {
