@@ -218,6 +218,14 @@ let g:which_key_map['r'] = {
       \ 'T': ['<plug>NormalModeSendToTmux', 'Send selection to tmux']
       \}
 
+" Testing
+let g:which_key_map['t'] = {
+      \ 'name': '+testing',
+      \ 't': ['TestFile', 'Run this file'],
+      \ 'n': ['TestNearest', 'Run the test nearest to the cursor'],
+      \ 'l': ['TestLast', 'Run the last test ran'],
+      \}
+
 call which_key#register('<Space>', "g:which_key_map")
 
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
