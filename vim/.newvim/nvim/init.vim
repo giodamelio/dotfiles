@@ -211,9 +211,9 @@ let g:which_key_map['p'] = {
       \ 'F': ['FzfGFiles?', 'Find files in git status']
       \}
 
-" Text
-let g:which_key_map['t'] = {
-      \ 'name': '+text',
+" Repl
+let g:which_key_map['r'] = {
+      \ 'name': '+repl',
       \ 't': ['<plug>SendSelectionToTmux', 'Send selection to tmux'],
       \ 'T': ['<plug>NormalModeSendToTmux', 'Send selection to tmux']
       \}
