@@ -227,9 +227,9 @@ let g:which_key_map['r'] = {
 " Testing
 let g:which_key_map['t'] = {
       \ 'name': '+testing',
-      \ 't': ['TestFile', 'Run this file'],
-      \ 'n': ['TestNearest', 'Run the test nearest to the cursor'],
-      \ 'l': ['TestLast', 'Run the last test ran'],
+      \ 't': ['WrapTestCommand("TestFile")', 'Run this file'],
+      \ 'n': ['WrapTestCommand("TestNearest")', 'Run the test nearest to the cursor'],
+      \ 'l': ['WrapTestCommand("TestLast")', 'Run the last test ran'],
       \ '<Tab>': ['A', 'Switch to matching test/code']
       \}
 
@@ -275,11 +275,7 @@ let g:sneak#s_next = 1
 
 "" Test
 " Set strategies
-let g:test#strategy = {
-  \ 'nearest': 'basic',
-  \ 'file':    'basic',
-  \ 'suite':   'basic',
-  \}
+let g:test#strategy = 'basic'
 
 " Define custom strategies
 " They will be added from withing their `plugin/` files because the functions
