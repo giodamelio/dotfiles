@@ -140,6 +140,8 @@ vnoremap > >gv
 
 " Whichkey binding names
 let g:which_key_map = {}
+
+" ALE Errors
 let g:which_key_map['e'] = {
       \ 'name': '+errors',
       \ 'n': ['ALENextWrap', 'Next error'],
@@ -148,6 +150,13 @@ let g:which_key_map['e'] = {
       \ 't': ['ALEToggle', 'Enable/Disable (toggle)'],
       \ 'b': ['ALEToggleBuffer', 'Enable/Disable for buffer (toggle)'],
       \ '=': ['ALEFix', 'Run fixer']
+      \}
+
+" Comments
+let g:which_key_map['c'] = {
+      \ 'name': '+comments',
+      \ 'l': ['TComment', 'Comment line'],
+      \ 'y': ['CopyAndComment', 'Copy and comment a selection']
       \}
 
 " Git operations
