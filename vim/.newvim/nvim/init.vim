@@ -165,10 +165,13 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'ale_errors' ] ]
+      \             [ 'readonly', 'filename', 'modified', 'git_info', 'ale_errors' ] ]
       \ },
       \ 'component': {
       \   'ale_errors': 'ALE: %#ALEErrorColor#%{CurrentBufferALEErrorsCount()}'
+      \ },
+      \ 'component_function': {
+      \   'git_info': 'fugitive#statusline'
       \ }
       \ }
 
