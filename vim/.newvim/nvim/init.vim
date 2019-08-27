@@ -38,6 +38,8 @@ Plug 'janko/vim-test' " Quickly and easily run unit tests
 Plug 'benmills/vimux' " Easily run a command in a small tmux pane
 Plug 'dense-analysis/ale' " Run linters
 Plug 'liuchengxu/vim-which-key' " Interactive keybinding help
+Plug 'tpope/vim-fugitive' " Git interface
+Plug 'tpope/vim-rhubarb' " Github plugin for fugitive
 
 call plug#end()
 
@@ -144,6 +146,14 @@ let g:which_key_map['e'] = {
       \ 't': ['ALEToggle', 'Enable/Disable (toggle)'],
       \ 'b': ['ALEToggleBuffer', 'Enable/Disable for buffer (toggle)'],
       \ '=': ['ALEFix', 'Run fixer']
+      \}
+
+" Git operations
+let g:which_key_map['g'] = {
+      \ 'name': '+git',
+      \ 'g': ['Gstatus', 'Git status window'],
+      \ 'b': ['Gblame', 'Git blame'],
+      \ 'o': ['Gbrowser', 'Open current file in browser']
       \}
 
 call which_key#register('<Space>', "g:which_key_map")
