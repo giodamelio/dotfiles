@@ -149,6 +149,12 @@ noremap Y y$
 vnoremap < <gv
 vnoremap > >gv
 
+" Neovim specific bindings
+if has('nvim')
+  " Easily go to normal mode from terminal mode
+  tmap <C-o> <C-\><C-n>
+endif
+
 " Whichkey binding names
 let g:which_key_map = {}
 
