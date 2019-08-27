@@ -153,8 +153,8 @@ let g:which_key_map['g'] = {
       \ 'g': ['Gstatus', 'Git status window'],
       \ 'b': ['Gblame', 'Git blame'],
       \ 'o': ['Gbrowser', 'Open current file in browser'],
-      \ 'n': ['<plug>(signify-next-hunk)', 'Next changed hunk'],
-      \ 'p': ['<plug>(signify-prev-hunk)', 'Previous changed hunk']
+      \ 'n': ['SignifyHunkNextWrap', 'Next changed hunk'],
+      \ 'p': ['SignifyHunkPrevWrap', 'Previous changed hunk']
       \}
 
 call which_key#register('<Space>', "g:which_key_map")
