@@ -181,15 +181,32 @@ let g:which_key_map['g'] = {
 " Buffers
 let g:which_key_map['b'] = {
       \ 'name': '+buffers',
-      \ 'b': ['Buffers', 'Switch buffers'],
+      \ 'b': ['FzfBuffers', 'Switch buffers'],
       \ 'd': ['Bdelete', 'Close a buffer'],
       \ 'n': ['enew', 'Create new buffer']
+      \}
+
+" Search
+let g:which_key_map['s'] = {
+      \ 'name': '+search',
+      \ 's': ['FzfLines', 'Search lines'],
+      \ 'S': ['FzfBLines', 'Search current buffer lines'],
+      \ 'm': ['FzfMarks', 'Search marks'],
+      \ 'u': ['FzfMarks', 'Search snippets'],
+      \ 'r': ['FzfHistory', 'Search recent files'],
+      \ 'f': ['FzfHistory/', 'Search search history'],
+      \ 'c': ['FzfHistory:', 'Search command history'],
+      \ 'g': ['FzfCommits', 'Search commit history'],
+      \ 'G': ['FzfBCommits', 'Search buffer commit history'],
+      \ 'h': ['FzfHelptags', 'Search helptags'],
+      \ 'k': ['FzfMaps', 'Search normal mode maps']
       \}
 
 " Project
 let g:which_key_map['p'] = {
       \ 'name': '+project',
-      \ 'f': ['FilesRg', 'Find files in project']
+      \ 'f': ['FzfGFiles', 'Find files in project'],
+      \ 'F': ['FzfGFiles?', 'Find files in git status']
       \}
 
 call which_key#register('<Space>', "g:which_key_map")
