@@ -63,7 +63,6 @@ set expandtab       " Use spaces instead of tabs
 set smarttab        " Let's tab key insert 'tab stops', and bksp deletes tabs
 set shiftround      " Tab/shifting moves to closest tabstop
 set autoindent      " Match indents on new lines
-set smartindent     " Auto indent when needed
 
 " Autoreload changed files without asking
 set autoread
