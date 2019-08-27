@@ -160,6 +160,13 @@ let g:which_key_map['g'] = {
       \ 'p': ['SignifyHunkPrevWrap', 'Previous changed hunk']
       \}
 
+" Buffers
+let g:which_key_map['b'] = {
+      \ 'name': '+buffers',
+      \ 'd': ['Bdelete', 'Close a buffer'],
+      \ 'n': ['enew', 'Create new buffer']
+      \}
+
 call which_key#register('<Space>', "g:which_key_map")
 
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
