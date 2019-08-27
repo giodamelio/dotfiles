@@ -93,6 +93,9 @@ set list listchars=trail:·
 " Make the cursor stay in the center of the screen when possable
 set scrolloff=9999
 
+" Highlight the current line
+set cursorline
+
 """" Bindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Leader Key
 let g:mapleader = "\<Space>"
