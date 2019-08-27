@@ -99,6 +99,10 @@ set cursorline
 " Completly disable mouse
 set mouse=
 
+" Disable auto comments on <enter> or `o`
+" see :help formatoptions? and :help fo-table
+autocmd FileType * setlocal formatoptions-=r formatoptions-=o
+
 """" Bindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Leader Key
 let g:mapleader = "\<Space>"
