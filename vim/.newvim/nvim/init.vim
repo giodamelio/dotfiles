@@ -40,6 +40,8 @@ Plug 'dense-analysis/ale' " Run linters
 Plug 'liuchengxu/vim-which-key' " Interactive keybinding help
 Plug 'tpope/vim-fugitive' " Git interface
 Plug 'tpope/vim-rhubarb' " Github plugin for fugitive
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -179,6 +181,7 @@ let g:which_key_map['g'] = {
 " Buffers
 let g:which_key_map['b'] = {
       \ 'name': '+buffers',
+      \ 'b': ['Buffers', 'Switch buffers'],
       \ 'd': ['Bdelete', 'Close a buffer'],
       \ 'n': ['enew', 'Create new buffer']
       \}
