@@ -43,6 +43,7 @@ Plug 'tpope/vim-rhubarb' " Github plugin for fugitive
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim' " Ultimate fuzzy finder
 Plug 'justinmk/vim-dirvish' " Simple directory viewer
+Plug 'jgdavey/tslime.vim' " Send text to tmux
 
 call plug#end()
 
@@ -208,6 +209,13 @@ let g:which_key_map['p'] = {
       \ 'name': '+project',
       \ 'f': ['FzfGFiles', 'Find files in project'],
       \ 'F': ['FzfGFiles?', 'Find files in git status']
+      \}
+
+" Text
+let g:which_key_map['t'] = {
+      \ 'name': '+text',
+      \ 't': ['<plug>SendSelectionToTmux', 'Send selection to tmux'],
+      \ 'T': ['<plug>NormalModeSendToTmux', 'Send selection to tmux']
       \}
 
 call which_key#register('<Space>', "g:which_key_map")
