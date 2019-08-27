@@ -44,6 +44,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim' " Ultimate fuzzy finder
 Plug 'justinmk/vim-dirvish' " Simple directory viewer
 Plug 'jgdavey/tslime.vim' " Send text to tmux
+Plug 'tpope/vim-projectionist' " Project configurations
 
 call plug#end()
 
@@ -230,6 +231,7 @@ let g:which_key_map['t'] = {
       \ 't': ['TestFile', 'Run this file'],
       \ 'n': ['TestNearest', 'Run the test nearest to the cursor'],
       \ 'l': ['TestLast', 'Run the last test ran'],
+      \ '<Tab>': ['A', 'Switch to matching test/code']
       \}
 
 call which_key#register('<Space>', "g:which_key_map")
