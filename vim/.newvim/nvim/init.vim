@@ -186,6 +186,12 @@ let g:which_key_map['b'] = {
       \ 'n': ['enew', 'Create new buffer']
       \}
 
+" Project
+let g:which_key_map['p'] = {
+      \ 'name': '+project',
+      \ 'f': ['FilesRg', 'Find files in project']
+      \}
+
 call which_key#register('<Space>', "g:which_key_map")
 
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
