@@ -96,6 +96,9 @@ set scrolloff=9999
 " Highlight the current line
 set cursorline
 
+" Completly disable mouse
+set mouse=
+
 """" Bindings """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Leader Key
 let g:mapleader = "\<Space>"
