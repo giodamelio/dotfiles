@@ -274,11 +274,17 @@ let g:rainbow_active = 1 " Enable globally
 let g:sneak#s_next = 1
 
 "" Test
-let test#strategy = {
-  \ 'nearest': 'vimux',
+" Set strategies
+let g:test#strategy = {
+  \ 'nearest': 'basic',
   \ 'file':    'basic',
   \ 'suite':   'basic',
   \}
+
+" Define custom strategies
+" They will be added from withing their `plugin/` files because the functions
+" must be defined before the dictionary is set
+let g:test#custom_strategies = {}
 
 "" ALE
 " Set the fixers for some filetypes
