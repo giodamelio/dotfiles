@@ -41,7 +41,8 @@ Plug 'liuchengxu/vim-which-key' " Interactive keybinding help
 Plug 'tpope/vim-fugitive' " Git interface
 Plug 'tpope/vim-rhubarb' " Github plugin for fugitive
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim' " Ultimate fuzzy finder
+Plug 'justinmk/vim-dirvish' " Simple directory viewer
 
 call plug#end()
 
