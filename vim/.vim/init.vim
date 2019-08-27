@@ -43,8 +43,8 @@ Plug 'tpope/vim-rhubarb' " Github plugin for fugitive
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim' " Ultimate fuzzy finder
 Plug 'justinmk/vim-dirvish' " Simple directory viewer
-Plug 'jgdavey/tslime.vim' " Send text to tmux
 Plug 'tpope/vim-projectionist' " Project configurations
+Plug 'christoomey/vim-tmux-runner' " Tmux integration
 
 call plug#end()
 
@@ -221,8 +221,7 @@ let g:which_key_map['p'] = {
 " Repl
 let g:which_key_map['r'] = {
       \ 'name': '+repl',
-      \ 't': ['<plug>SendSelectionToTmux', 'Send selection to tmux'],
-      \ 'T': ['<plug>NormalModeSendToTmux', 'Send selection to tmux']
+      \ 't': ['VtrSendLinesToRunner', 'Send selection to tmux']
       \}
 
 " Testing
