@@ -2,6 +2,16 @@ function fish_prompt
     # Save the status of the last command
     set -l last_status $status
 
+    # If we are in statusmode show the exist status of the last command
+    if test $statusmode -ne 0
+      if test $last_status -eq 0
+        set statuscolor "green"
+      else
+        set statuscolor "red"
+      end
+      printf "%s===%s Last status: %s%s %s===\n" (set_color blue) (set_color normal) (set_color $statuscolor) $last_status (set_color blue)
+    end
+
     #### First line ####
     set_color blue
     printf "┌─["
@@ -52,9 +62,19 @@ function fish_prompt
     echo
 
     #### Second line ####
+    printf "└─"
+
+    # Display git branch if we are in a repo
+    if git rev-parse --is-inside-work-tree >/dev/null ^/dev/null
+      printf "["
+      set_color magenta
+      printf "%s" (git rev-parse --abbrev-ref HEAD)
+      set_color blue
+      printf "]─"
+    end
+
     # Regular user or root
     set_color blue
-    printf "└─"
     if test (command whoami) = root
         printf "[%%] "
     else

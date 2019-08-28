@@ -63,6 +63,7 @@ values."
      syntax-checking
      parinfer
      github
+     tmux
      (evil-snipe :variables
                  evil-snipe-enable-alternate-f-and-t-behaviors t))
    ;; List of additional packages that will be installed without being
@@ -342,6 +343,13 @@ before packages are loaded. If you are unsure, you should try in setting them in
    ;; Set indent level for TypeSript
    typescript-indent-level 2
 
+   ;; Set indent level for web-mode
+   css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2
+
    ;; Set custom file path
    custom-file "~/.spacemacs.d/custom.el"
 
@@ -368,6 +376,7 @@ you should place your code here."
   ;; Make prettier run when a JS and TypeScript file is saved
   (add-hook 'js2-mode-hook 'prettier-js-mode)
   (add-hook 'typescript-mode-hook 'prettier-js-mode)
+  (add-hook 'react-mode-hook 'prettier-js-mode)
 
   ;; Diminish prettier mode
   (spacemacs|diminish prettier-js-mode "ⓟ" "P")

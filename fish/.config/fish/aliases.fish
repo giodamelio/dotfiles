@@ -13,7 +13,13 @@ alias tf terraform
 alias e  "emacsclient -c"
 alias et "emacsclient -t"
 function ee
-  emacsclient -c $argv &
+  if test (count $argv) -ge 1
+    set args $argv
+  else
+    set args "."
+  end
+
+  emacsclient -c $args &
   disown
 end
 

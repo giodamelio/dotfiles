@@ -1,6 +1,12 @@
 function network
     # Print network interfaces
-    ip -4 -o a | cut -d ' ' -f 2,7 | cut -d '/' -f 1 | column -t | little_boxes --title "Network Interfaces"
+    switch (uname)
+      case "Darwin"
+        echo "THIS IS TERRIBLE!!!"
+        ifconfig | grep "inet " | tr -d "\t" | cut -d " " -f 2
+      case "Linux"
+        ip -4 -o a | cut -d ' ' -f 2,7 | cut -d '/' -f 1 | column -t
+    end | little_boxes --title "Network Interfaces"
 
     # Print public ip addresses
     printf 'ipv4 %s\nipv6 %s\n' (curl --silent --ipv4 icanhazip.com) (curl --silent --ipv6 icanhazip.com)  | little_boxes --title "Public IP Address"

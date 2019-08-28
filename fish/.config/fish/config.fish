@@ -15,16 +15,19 @@ function add_to_path_if_directory_exists
       case 'start'
         set -x PATH $argv[1] $PATH
       case 'end'
-      case '*'
         set -x PATH $PATH $argv[1]
+      case '*'
+        printf "add to path: You need to specify a start or end for %s\n" $argv[1]
     end
   end
 end
 
 # Add a bunch of things to our path
+add_to_path_if_directory_exists $HOME/.local/bin "start" # Local bin
 add_to_path_if_directory_exists $HOME/bin "start" # Person scripts
 add_to_path_if_directory_exists /usr/local/bin "end"
 add_to_path_if_directory_exists /usr/bin/core_perl "end" # Perl bin path
+add_to_path_if_directory_exists $HOME/go/bin "start" # Go bin path
 
 # Setup rust and racer
 add_to_path_if_directory_exists $HOME/.cargo/bin "end" # Cargo bin
@@ -34,8 +37,13 @@ set -x CARGO_HOME $HOME/.cargo
 # Stop virtualenv from messing with my prompt
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
+# Start with statusmode off
+set statusmode 0
+
 # Load plugins
 fundle plugin 'fishgretel/fasd'
+fundle plugin 'edc/bass'
+fundle plugin 'FabioAntunes/fish-nvm'
 
 fundle init
 

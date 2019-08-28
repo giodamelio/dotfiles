@@ -16,7 +16,8 @@ function tm
     # TODO: check in on fzf-tmux
     # Uses fzf --height <half of terminal height> because fzf-tmux is really slow right now
     # See https://github.com/junegunn/fzf/issues/810
-    tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --height (math $LINES / 2) --select-1 --exit-0 | read -l session
+    set half_terminal_height (math --scale 0 "$LINES / 2")
+    tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --height $half_terminal_height --select-1 --exit-0 | read -l session
     tmux $change -t $session 2>/dev/null; or echo "No tmux sessions found"
   end
 end
