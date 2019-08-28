@@ -232,6 +232,7 @@ let g:which_key_map['t'] = {
       \ 'name': '+testing',
       \ 't': ['WrapTestCommand("TestFile")', 'Run this file'],
       \ 'n': ['WrapTestCommand("TestNearest")', 'Run the test nearest to the cursor'],
+      \ 's': ['WrapTestCommand("TestSuite")', 'Run the entire test suite'],
       \ 'l': ['WrapTestCommand("TestLast")', 'Run the last test ran'],
       \ '<Tab>': ['A', 'Switch to matching test/code']
       \}
