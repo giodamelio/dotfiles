@@ -40,13 +40,6 @@ set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 # Start with statusmode off
 set statusmode 0
 
-# Load plugins
-fundle plugin 'fishgretel/fasd'
-fundle plugin 'edc/bass'
-fundle plugin 'FabioAntunes/fish-nvm'
-
-fundle init
-
 # Load aliases
 source ~/.config/fish/aliases.fish
 
