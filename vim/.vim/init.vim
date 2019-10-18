@@ -104,6 +104,9 @@ set cursorline
 " Completly disable mouse
 set mouse=
 
+" Make the terminal use truecolor
+set termguicolors
+
 " Disable auto comments on <enter> or `o`
 " see :help formatoptions? and :help fo-table
 autocmd FileType * setlocal formatoptions-=r formatoptions-=o
