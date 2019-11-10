@@ -292,6 +292,7 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier'],
 \   'typescript': ['prettier'],
+\   'vue': ['prettier'],
 \}
 
 " Run the fixers automatically on save
