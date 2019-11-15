@@ -241,6 +241,15 @@ let g:which_key_map['t'] = {
       \ '<Tab>': ['A', 'Switch to matching test/code']
       \}
 
+" Language Server
+let g:which_key_map['l'] = {
+      \ 'name': '+lang-server',
+      \ 'l': ['LanguageClient_contextMenu()', 'Open context menu'],
+      \ 'd': ['LanguageClient#textDocument_definition()', 'Go do definition'],
+      \ 'r': ['LanguageClient#textDocument_references()', 'Show references'],
+      \ 'x': ['LanguageClient#textDocument_rename()', 'Rename symbol'],
+      \}
+
 call which_key#register('<Space>', "g:which_key_map")
 
 """"" Plugin Configs """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
