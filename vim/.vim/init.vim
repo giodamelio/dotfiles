@@ -307,6 +307,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'typescript': ['prettier'],
 \   'vue': ['prettier'],
+\   'rust': ['rustfmt'],
 \}
 
 " Run the fixers automatically on save
