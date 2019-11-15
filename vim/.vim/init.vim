@@ -25,6 +25,10 @@ Plug 'filipekiss/ncm2-look.vim' " Complete words from the system dictionary
 Plug 'ncm2/ncm2-ultisnips' " Complete from utilsnips
 Plug 'SirVer/ultisnips' " Snippet framework
 Plug 'honza/vim-snippets' " A library of preexisting snippits
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ } " Language server connection. Works with ncm2
 Plug 'tomtom/tcomment_vim' " Handle comments
 Plug 'tpope/vim-eunuch' " Unix command helper
 Plug 'tpope/vim-repeat' " Allow . repeat to work with supported plugins
@@ -258,6 +262,7 @@ let g:lightline = {
 "" ncm2
 " Enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
+autocmd TextChangedI * call ncm2#auto_trigger()
 
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
@@ -307,6 +312,17 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 "" FZF
 " Add a prefix to the commands
 let g:fzf_command_prefix = 'Fzf'
+
+"" Language Server
+" Setup the commands for the language servers
+    " \ 'rust': ['rls'],
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ }
+
+let g:LanguageClient_loggingFile = expand('~/tmp/LanguageClient.log')
+let g:LanguageClient_loggingLevel = 'DEBUG'
 
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
