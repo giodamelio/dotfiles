@@ -45,12 +45,12 @@ Plug 'dense-analysis/ale' " Run linters
 Plug 'liuchengxu/vim-which-key' " Interactive keybinding help
 Plug 'tpope/vim-fugitive' " Git interface
 Plug 'tpope/vim-rhubarb' " Github plugin for fugitive
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-Plug 'junegunn/fzf.vim' " Ultimate fuzzy finder
 Plug 'justinmk/vim-dirvish' " Simple directory viewer
 Plug 'tpope/vim-projectionist' " Project configurations
 Plug 'christoomey/vim-tmux-runner' " Tmux integration
 Plug 'kshenoy/vim-signature' " Show marks in signs
+Plug 'liuchengxu/vim-clap' " Generic finder
+Plug 'ncm2/float-preview.nvim' " Floating completion
 
 call plug#end()
 
@@ -199,7 +199,7 @@ let g:which_key_map['g'] = {
 " Buffers
 let g:which_key_map['b'] = {
       \ 'name': '+buffers',
-      \ 'b': ['FzfBuffers', 'Switch buffers'],
+      \ 'b': [':Clap buffers', 'Switch buffers'],
       \ 'd': ['Bdelete', 'Close a buffer'],
       \ 'n': ['enew', 'Create new buffer']
       \}
@@ -207,24 +207,21 @@ let g:which_key_map['b'] = {
 " Search
 let g:which_key_map['s'] = {
       \ 'name': '+search',
-      \ 's': ['FzfLines', 'Search lines'],
-      \ 'S': ['FzfBLines', 'Search current buffer lines'],
-      \ 'm': ['FzfMarks', 'Search marks'],
-      \ 'u': ['FzfMarks', 'Search snippets'],
-      \ 'r': ['FzfHistory', 'Search recent files'],
-      \ 'f': ['FzfHistory/', 'Search search history'],
-      \ 'c': ['FzfHistory:', 'Search command history'],
-      \ 'g': ['FzfCommits', 'Search commit history'],
-      \ 'G': ['FzfBCommits', 'Search buffer commit history'],
-      \ 'h': ['FzfHelptags', 'Search helptags'],
-      \ 'k': ['FzfMaps', 'Search normal mode maps']
+      \ 's': [':Clap blines', 'Search lines (current buffer)'],
+      \ 'S': [':Clap lines', 'Search lines (all buffers)'],
+      \ 'm': [':Clap marks', 'Search marks'],
+      \ 'r': [':Clap history', 'Search recent files'],
+      \ 'f': [':Clap files', 'Search files'],
+      \ 'c': [':Clap command', 'Search commands'],
+      \ 'C': [':Clap command_history', 'Search command history'],
+      \ 'g': [':Clap bcommit', 'Search commit history (current buffer)'],
+      \ 'G': [':Clap commits', 'Search commit history (all buffers)']
       \}
 
 " Project
 let g:which_key_map['p'] = {
       \ 'name': '+project',
-      \ 'f': ['FzfGFiles', 'Find files in project'],
-      \ 'F': ['FzfGFiles?', 'Find files in git status']
+      \ 'f': [':Clap gfiles', 'Find files in project (files tracked by git)']
       \}
 
 " Repl
@@ -326,10 +323,6 @@ let g:ale_fix_on_save = 1
 autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-
-"" FZF
-" Add a prefix to the commands
-let g:fzf_command_prefix = 'Fzf'
 
 "" Language Server
 " Setup the commands for the language servers
