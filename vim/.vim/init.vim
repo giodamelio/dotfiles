@@ -51,6 +51,7 @@ Plug 'christoomey/vim-tmux-runner' " Tmux integration
 Plug 'kshenoy/vim-signature' " Show marks in signs
 Plug 'liuchengxu/vim-clap' " Generic finder
 Plug 'ncm2/float-preview.nvim' " Floating completion
+Plug 'troydm/zoomwintab.vim' " Temporarly full screen a buffer
 
 call plug#end()
 
