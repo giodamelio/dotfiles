@@ -50,6 +50,7 @@ Plug 'junegunn/fzf.vim' " Ultimate fuzzy finder
 Plug 'justinmk/vim-dirvish' " Simple directory viewer
 Plug 'tpope/vim-projectionist' " Project configurations
 Plug 'christoomey/vim-tmux-runner' " Tmux integration
+Plug 'kshenoy/vim-signature' " Show marks in signs
 
 call plug#end()
 
