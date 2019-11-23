@@ -10,6 +10,7 @@ Plug 'crusoexia/vim-monokai'
 
 " Language support
 Plug 'sheerun/vim-polyglot'
+Plug 'Olical/conjure', { 'do': 'bin/compile' }
 
 " Other
 Plug 'mhinz/vim-signify' " Shows version control status in sign column
