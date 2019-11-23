@@ -310,6 +310,8 @@ let g:ale_fixers = {
 \   'typescript': ['prettier'],
 \   'vue': ['prettier'],
 \   'rust': ['rustfmt'],
+\   'elixir': ['mix_format']
+\}
 \}
 
 " Run the fixers automatically on save
