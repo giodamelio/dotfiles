@@ -312,6 +312,10 @@ let g:ale_fixers = {
 \   'rust': ['rustfmt'],
 \   'elixir': ['mix_format']
 \}
+
+" Set the linters for some filetypes
+let g:ale_linters = {
+\   'clojure': ['clj-kondo', 'joker']
 \}
 
 " Run the fixers automatically on save
