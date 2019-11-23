@@ -328,6 +328,11 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_loggingFile = expand('~/tmp/LanguageClient.log')
 let g:LanguageClient_loggingLevel = 'DEBUG'
 
+"" Conjure
+" Setup the log
+let g:conjure_log_direction="horizontal"
+let g:conjure_log_size_small=20
+
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
 colorscheme monokai
