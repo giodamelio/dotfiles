@@ -126,10 +126,6 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 vnoremap <silent> <leader>      :<c-u>WhichKeyVisual '<Space>'<CR>
 vnoremap <silent> <localleader> :<c-u>WhichKeyVisual ','<CR>
 
-" Bind jk to esc to exit insert mode faster
-inoremap jk <esc>
-xnoremap jk <esc>
-
 " Disable Arrow keys
 map <Up> <NOP>
 map <Down> <NOP>
@@ -139,9 +135,6 @@ imap <Up> <NOP>
 imap <Down> <NOP>
 imap <Left> <NOP>
 imap <Right> <NOP>
-
-" Disable escape key
-imap <Esc> <NOP>
 
 " Toggle between current and previously edited file
 map <leader><tab> <C-^>
