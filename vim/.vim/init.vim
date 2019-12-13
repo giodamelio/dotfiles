@@ -52,6 +52,7 @@ Plug 'kshenoy/vim-signature' " Show marks in signs
 Plug 'liuchengxu/vim-clap' " Generic finder
 Plug 'ncm2/float-preview.nvim' " Floating completion
 Plug 'troydm/zoomwintab.vim' " Temporarly full screen a buffer
+Plug 'rhysd/git-messenger.vim' " Show git commit under cursor
 
 call plug#end()
 
