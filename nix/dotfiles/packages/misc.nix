@@ -18,5 +18,10 @@
     ripgrep
     python
     firefox-devedition-bin
+    playerctl
+    mpv
+    vlc
+    youtube-dl
+    tmux
   ];
 }

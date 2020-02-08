@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    multimc
-    logmein-hamachi
+    virtualbox
   ];
 }

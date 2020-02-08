@@ -13,5 +13,12 @@
     kitty
     gnupg
     emacs
+    nnn
+    zip
+    unzip
+    exfat
+    xdg_utils
+    syncthing
+    zsh
   ];
 }
