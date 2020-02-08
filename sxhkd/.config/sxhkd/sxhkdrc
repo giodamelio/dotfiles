@@ -53,11 +53,18 @@ super + shift + o
 super + ctrl + {h,j,k,l}
   bspc monitor -f {west,south,north,east}
 
+## Resize windows
+super + alt + {h,j,k,l}
+    bspc window -e {left -10,down +10,up -10,right +10}
+
+super + alt + shift + {h,j,k,l}
+    bspc window -e {right -10,up +10,down -10,left +10}
+
 ## Preselect
 
 # Preselect the direction
-super + alt + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+# super + alt + {h,j,k,l}
+#     bspc node -p {west,south,north,east}
 
 # Preselect the ratio
 super + alt + {1-9}
