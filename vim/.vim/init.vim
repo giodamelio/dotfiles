@@ -10,7 +10,7 @@ Plug 'crusoexia/vim-monokai'
 
 " Language support
 Plug 'sheerun/vim-polyglot'
-Plug 'Olical/conjure', { 'do': 'bin/compile' }
+Plug 'Olical/conjure', { 'do': 'bin/compile' } " Clojure repl connection
 
 " Other
 Plug 'mhinz/vim-signify' " Shows version control status in sign column
@@ -53,6 +53,8 @@ Plug 'liuchengxu/vim-clap' " Generic finder
 Plug 'ncm2/float-preview.nvim' " Floating completion
 Plug 'troydm/zoomwintab.vim' " Temporarly full screen a buffer
 Plug 'rhysd/git-messenger.vim' " Show git commit under cursor
+Plug 'eraserhd/parinfer-rust', {'do':
+        \ 'nix-shell --run \"cargo build --release \"'} " Awesome lisp editing
 
 call plug#end()
 
@@ -334,6 +336,9 @@ let g:LanguageClient_loggingLevel = 'DEBUG'
 " Setup the log
 let g:conjure_log_direction="horizontal"
 let g:conjure_log_size_small=20
+
+" Add a custom binding to reload changed then eval the form at mark A
+autocmd FileType clojure nnoremap <localleader>ea :ConjureRefresh changed<cr>:ConjureEvalFormAtMark<cr>A
 
 """" Colorscheme """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
