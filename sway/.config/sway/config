@@ -73,6 +73,14 @@ output DP-2 resolution 2560x1440 position 4480,0
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Media keys
+    ## Previous
+    bindsym XF86Launch6 exec playerctl previous
+    # Pause/Play
+    bindsym XF86Launch7 exec playerctl play-pause
+    # Next
+    bindsym XF86Launch8 exec playerctl next
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
