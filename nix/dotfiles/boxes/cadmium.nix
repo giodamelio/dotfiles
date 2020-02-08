@@ -33,14 +33,8 @@
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 
-  # Enable X11
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    displayManager.slim = {
-      enable = true;
-    };
-  };
+  # Enable sway
+  programs.sway.enable = true;
 
   # Enable Docker
   virtualisation.docker.enable = true;
