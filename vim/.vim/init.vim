@@ -304,12 +304,19 @@ let g:ale_fixers = {
 \   'typescript': ['prettier'],
 \   'vue': ['prettier'],
 \   'rust': ['rustfmt'],
-\   'elixir': ['mix_format']
+\   'elixir': ['mix_format'],
+\   'python': ['black'],
 \}
+
+let g:ale_python_black_executable = 'poetry'
+let g:ale_python_black_options = 'run black'
+let g:ale_python_flake8_executable = 'poetry'
+let g:ale_python_flake8_options = 'run flake8'
 
 " Set the linters for some filetypes
 let g:ale_linters = {
-\   'clojure': ['clj-kondo', 'joker']
+\   'clojure': ['clj-kondo', 'joker'],
+\   'python': ['flake8'],
 \}
 
 " Run the fixers automatically on save
