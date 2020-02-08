@@ -8,6 +8,7 @@
     ../packages/misc.nix
     ../packages/games.nix
     ../packages/fonts.nix
+    # ../packages/virtualization.nix
     ../modules/bspwm.nix
   ];
 
@@ -54,6 +55,9 @@
     };
   };
 
+  # # Enable VirtualBox virtulization
+  # virtualisation.virtualbox.host.enable = true;
+  #
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
