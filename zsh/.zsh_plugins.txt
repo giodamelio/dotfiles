@@ -1,2 +1,5 @@
 # Additional ZSH completions
 zsh-users/zsh-completions
+
+# Save our command history to a sqlite file
+larkery/zsh-histdb
