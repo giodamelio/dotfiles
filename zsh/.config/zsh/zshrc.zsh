@@ -5,10 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#### Pre plugin settings ######################################################
-# Set the location of the history db into a Syncthing folder
-export HISTDB_FILE="$HOME/sync/zsh-history.db"
-
 #### Plugins ##################################################################
 # Load Antibody plugins
 source ~/.zsh_plugins.sh
