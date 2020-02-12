@@ -18,6 +18,9 @@ export PATH=$HOME/bin:$PATH
 # Load bins from nix
 if [ -e /home/giodamelio/.nix-profile/etc/profile.d/nix.sh ]; then . /home/giodamelio/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
+#### Settings #################################################################
+# Set our editor
+export EDITOR=nvim
 
 #### Histdb ###################################################################
 # Replace the reverse history finder with the one from histdb
