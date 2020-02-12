@@ -7,15 +7,6 @@
 [submodule "zsh/.zsh/antigen"]
 	path = zsh/.zsh/antigen
 	url = https://github.com/zsh-users/antigen.git
-[submodule "zsh/.zsh/packages/z"]
-	path = zsh-archive/.zsh/packages/z
-	url = https://github.com/rupa/z
-[submodule "zsh/.zsh/packages/zsh-autosuggestions"]
-	path = zsh-archive/.zsh/packages/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "zsh/.zsh/packages/zsh-syntax-highlighting"]
-	path = zsh-archive/.zsh/packages/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
