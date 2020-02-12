@@ -12,6 +12,9 @@ source ~/.zsh_plugins.sh
 # Load fasd
 eval "$(fasd --init auto)"
 
+# Load Direnv
+eval "$(direnv hook zsh)"
+
 # Load all files from functions/ directory
 # I should probably learn how to use ZSH autoloading at somepoint
 if [ -d $ZDOTDIR/functions ]; then
