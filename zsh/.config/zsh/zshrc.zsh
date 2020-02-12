@@ -12,6 +12,14 @@ source ~/.zsh_plugins.sh
 # Load fasd
 eval "$(fasd --init auto)"
 
+# Load all files from functions/ directory
+# I should probably learn how to use ZSH autoloading at somepoint
+if [ -d $ZDOTDIR/functions ]; then
+  for file in $ZDOTDIR/functions/*.zsh; do
+    source $file
+  done
+fi
+
 #### Source external files ####################################################
 source $ZDOTDIR/aliases.zsh # Include our aliases
 
