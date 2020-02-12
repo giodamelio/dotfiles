@@ -3,3 +3,6 @@ zsh-users/zsh-completions
 
 # Save our command history to a sqlite file
 larkery/zsh-histdb
+
+# Ping with a smaller output (mostly used for testing Antibody)
+rummik/zsh-ing
