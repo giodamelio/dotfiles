@@ -5,9 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#### Antibody #################################################################
+#### Plugins ##################################################################
 # Load Antibody plugins
 source ~/.zsh_plugins.sh
+
+# Load fasd
+eval "$(fasd --init auto)"
 
 #### Source external files ####################################################
 source $ZDOTDIR/aliases.zsh # Include our aliases
