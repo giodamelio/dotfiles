@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+#### Antibody #################################################################
+# Load Antibody plugins
+source ~/.zsh_plugins.sh
+
 #### Source external files ####################################################
 source $ZDOTDIR/aliases.zsh # Include our aliases
 
@@ -14,9 +18,6 @@ export PATH=$HOME/bin:$PATH
 # Load bins from nix
 if [ -e /home/giodamelio/.nix-profile/etc/profile.d/nix.sh ]; then . /home/giodamelio/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-#### Antibody #################################################################
-# Load Antibody plugins
-source ~/.zsh_plugins.sh
 
 #### Histdb ###################################################################
 # Replace the reverse history finder with the one from histdb
