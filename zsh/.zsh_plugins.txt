@@ -13,5 +13,8 @@ larkery/zsh-histdb
 # FZF keybindings
 junegunn/fzf path:shell
 
+# powerlevel10k theme
+romkatv/powerlevel10k
+
 # Ping with a smaller output (mostly used for testing Antibody)
 rummik/zsh-ing
