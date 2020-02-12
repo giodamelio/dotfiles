@@ -1,0 +1,2 @@
+# Additional ZSH completions
+zsh-users/zsh-completions
