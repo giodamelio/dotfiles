@@ -39,6 +39,10 @@ zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
 
+# Enable advanced completion
+autoload -U compinit
+compinit
+
 #### Histdb ###################################################################
 # Replace the reverse history finder with the one from histdb
 bindkey '^r' _histdb-isearch
