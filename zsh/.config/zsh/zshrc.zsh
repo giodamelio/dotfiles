@@ -22,6 +22,12 @@ if [ -e /home/giodamelio/.nix-profile/etc/profile.d/nix.sh ]; then . /home/gioda
 # Set our editor
 export EDITOR=nvim
 
+# Enable editing current command in $EDITOR
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
+
 #### Histdb ###################################################################
 # Replace the reverse history finder with the one from histdb
 bindkey '^r' _histdb-isearch
