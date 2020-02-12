@@ -1,3 +1,6 @@
+# Fish like auto completion
+zsh-users/zsh-autosuggestions
+
 # Additional ZSH completions
 zsh-users/zsh-completions
 
