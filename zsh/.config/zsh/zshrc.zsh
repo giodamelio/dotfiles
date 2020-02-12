@@ -33,10 +33,14 @@ if [ -e /home/giodamelio/.nix-profile/etc/profile.d/nix.sh ]; then . /home/gioda
 # Set our editor
 export EDITOR=nvim
 
+# Put the shell into vim mode
+bindkey -v
+
 # Enable editing current command in $EDITOR
 autoload -U edit-command-line
 zle -N edit-command-line
-bindkey '^xe' edit-command-line
+bindkey -M vicmd v edit-command-line # Vim style
+bindkey '^xe' edit-command-line # Emacs style
 bindkey '^x^e' edit-command-line
 
 # Enable advanced completion
