@@ -1,6 +1,9 @@
 # Fish like auto completion
 zsh-users/zsh-autosuggestions
 
+# Fish like command highlighting
+zsh-users/zsh-syntax-highlighting
+
 # Additional ZSH completions
 zsh-users/zsh-completions
 
