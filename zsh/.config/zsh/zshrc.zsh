@@ -5,16 +5,20 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+#### Source external files ####################################################
 source $ZDOTDIR/aliases.zsh # Include our aliases
 
-# Add some directories to the PATH
+#### PATH additions ###########################################################
+# Our personal bin
 export PATH=$HOME/bin:$PATH
 # Load bins from nix
 if [ -e /home/giodamelio/.nix-profile/etc/profile.d/nix.sh ]; then . /home/giodamelio/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
+#### Antibody #################################################################
 # Load Antibody plugins
 source ~/.zsh_plugins.sh
 
+#### Histdb ###################################################################
 # Replace the reverse history finder with the one from histdb
 bindkey '^r' _histdb-isearch
 
@@ -31,5 +35,6 @@ group by commands.argv order by count(*) desc limit 1"
 
 ZSH_AUTOSUGGEST_STRATEGY=(histdb_top_here completion)
 
+#### Prompt with p10k #########################################################
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
