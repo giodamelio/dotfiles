@@ -7,5 +7,8 @@ alias ll='ls -l --color=auto'
 alias vim='nvim'
 alias vimdiff='nvim -d'
 
-# Antigen
+# Refresh the Antibody plugins file
 alias antibody-refresh='antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh'
+
+# Misc
+alias tf=terraform
