@@ -1,6 +1,7 @@
 # ls
-alias la='ls -ah'
-alias ll='ls -l'
+alias ls='ls --color=auto'
+alias la='ls -ah --color=auto'
+alias ll='ls -l --color=auto'
 
 # Make Vim point to Neovim
 alias vim='nvim'
