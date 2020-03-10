@@ -12,3 +12,10 @@ alias antibody-refresh='antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
 # Misc
 alias tf=terraform
+
+# Improved version of core commands
+alias cat=bat
+alias fd=fdfind
+alias help=tldr
+alias ping='prettyping --nolegend'
+alias top=htop
