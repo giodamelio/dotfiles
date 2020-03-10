@@ -46,6 +46,9 @@ autoload -U compinit
 compinit
 
 #### Histdb ###################################################################
+# Save the timing and output status
+add-zsh-hook precmd histdb-update-outcome
+
 # Replace the reverse history finder with the one from histdb
 bindkey '^r' _histdb-isearch
 
