@@ -2,6 +2,10 @@
 " This is not necessary with Neovim, but it still here incase this config ever needs to be loaded with vim
 set nocompatible
 
+" Ensure the python providers are coming from the global python, not from Nix
+let g:python_host_prog  = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python3'
+
 """" Load plugins with vim-plug """"""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
