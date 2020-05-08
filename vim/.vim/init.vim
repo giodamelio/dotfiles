@@ -22,18 +22,8 @@ Plug 'itchyny/lightline.vim' " Awesome statusline
 Plug 'moll/vim-bbye' " Well behaved :bdelete
 Plug 'rhysd/clever-f.vim' " Better mappings for finding things
 Plug 'roxma/nvim-yarp' " A remote plugin framework used by other plugins
-Plug 'ncm2/ncm2' " Completion framework
-Plug 'ncm2/ncm2-bufword' " Complete words in the current buffer
-Plug 'ncm2/ncm2-path' " Complete paths from current buffer/cwd/root
-Plug 'ncm2/ncm2-tmux' " Complete text from adjacent tmux panes
-Plug 'filipekiss/ncm2-look.vim' " Complete words from the system dictionary
-Plug 'ncm2/ncm2-ultisnips' " Complete from utilsnips
 Plug 'SirVer/ultisnips' " Snippet framework
 Plug 'honza/vim-snippets' " A library of preexisting snippits
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ } " Language server connection. Works with ncm2
 Plug 'tomtom/tcomment_vim' " Handle comments
 Plug 'tpope/vim-eunuch' " Unix command helper
 Plug 'tpope/vim-repeat' " Allow . repeat to work with supported plugins
@@ -54,7 +44,6 @@ Plug 'tpope/vim-projectionist' " Project configurations
 Plug 'christoomey/vim-tmux-runner' " Tmux integration
 Plug 'kshenoy/vim-signature' " Show marks in signs
 Plug 'liuchengxu/vim-clap' " Generic finder
-Plug 'ncm2/float-preview.nvim' " Floating completion
 Plug 'troydm/zoomwintab.vim' " Temporarly full screen a buffer
 Plug 'rhysd/git-messenger.vim' " Show git commit under cursor
 Plug 'eraserhd/parinfer-rust', {'do':
@@ -267,23 +256,6 @@ let g:lightline = {
       \   'git_info': 'fugitive#statusline'
       \ }
       \ }
-
-"" ncm2
-" Enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
-autocmd TextChangedI * call ncm2#auto_trigger()
-
-" IMPORTANT: :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
-
-" Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Use c-j c-k for moving in snippet
-let g:UltiSnipsJumpForwardTrigger = "<c-j>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
-let g:UltiSnipsRemoveSelectModeMappings = 0
 
 "" Rainbow parens
 let g:rainbow_active = 1 " Enable globally
