@@ -22,8 +22,6 @@ Plug 'itchyny/lightline.vim' " Awesome statusline
 Plug 'moll/vim-bbye' " Well behaved :bdelete
 Plug 'rhysd/clever-f.vim' " Better mappings for finding things
 Plug 'roxma/nvim-yarp' " A remote plugin framework used by other plugins
-Plug 'SirVer/ultisnips' " Snippet framework
-Plug 'honza/vim-snippets' " A library of preexisting snippits
 Plug 'tomtom/tcomment_vim' " Handle comments
 Plug 'tpope/vim-eunuch' " Unix command helper
 Plug 'tpope/vim-repeat' " Allow . repeat to work with supported plugins
@@ -48,6 +46,7 @@ Plug 'troydm/zoomwintab.vim' " Temporarly full screen a buffer
 Plug 'rhysd/git-messenger.vim' " Show git commit under cursor
 Plug 'eraserhd/parinfer-rust', {'do':
         \ 'nix-shell --run \"cargo build --release \"'} " Awesome lisp editing
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intellisense
 
 call plug#end()
 
