@@ -3,7 +3,7 @@
 	url = https://github.com/Alex7Kom/nvm-fish
 [submodule "awesome/.config/awesome/vicious"]
 	path = awesome/.config/awesome/vicious
-	url = git@github.com:Mic92/vicious.git
+	url = https://github.com/vicious-widgets/vicious.git
 [submodule "zsh/.zsh/antigen"]
 	path = zsh/.zsh/antigen
 	url = https://github.com/zsh-users/antigen.git
