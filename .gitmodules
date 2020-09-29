@@ -1,39 +1,9 @@
 [submodule "fish/nvm"]
 	path = fish/nvm
 	url = https://github.com/Alex7Kom/nvm-fish
-[submodule "awesome/.config/awesome/vicious"]
-	path = awesome/.config/awesome/vicious
-	url = https://github.com/vicious-widgets/vicious.git
 [submodule "zsh/.zsh/antigen"]
 	path = zsh/.zsh/antigen
 	url = https://github.com/zsh-users/antigen.git
-[submodule "tmux/.tmux/plugins/tpm"]
-	path = tmux/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
-[submodule "tmux/.tmux/plugins/tmux-sensible"]
-	path = tmux/.tmux/plugins/tmux-sensible
-	url = https://github.com/tmux-plugins/tmux-sensible
-[submodule "tmux/.tmux/plugins/vim-tmux-navigator"]
-	path = tmux/.tmux/plugins/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator
-[submodule "tmux/.tmux/plugins/tmux-yank"]
-	path = tmux/.tmux/plugins/tmux-yank
-	url = https://github.com/tmux-plugins/tmux-yank
 [submodule "emacs/.emacs.d"]
 	path = emacs/.emacs.d
-	url = git@github.com:syl20bnr/spacemacs.git
-[submodule "tmux/.tmux/plugins/extrakto"]
-	path = tmux/.tmux/plugins/extrakto
-	url = https://github.com/laktak/extrakto.git
-[submodule "tmux/.tmux/plugins/tmux-resurrect"]
-	path = tmux/.tmux/plugins/tmux-resurrect
-	url = https://github.com/tmux-plugins/tmux-resurrect
-[submodule "tmux/.tmux/plugins/tmux-continuum"]
-	path = tmux/.tmux/plugins/tmux-continuum
-	url = https://github.com/tmux-plugins/tmux-continuum
-[submodule "tmux/.tmux/plugins/tmux-pain-control"]
-	path = tmux/.tmux/plugins/tmux-pain-control
-	url = https://github.com/tmux-plugins/tmux-pain-control
-[submodule "tmux/.tmux/plugins/tmux-sessionist"]
-	path = tmux/.tmux/plugins/tmux-sessionist
-	url = https://github.com/tmux-plugins/tmux-sessionist
+	url = https://github.com/syl20bnr/spacemacs.git
