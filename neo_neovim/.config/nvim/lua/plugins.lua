@@ -47,4 +47,7 @@ return require('packer').startup(function(use)
       })
     end
   }
+
+  -- Better behaved :bdelete and :bwipeout
+  use 'moll/vim-bbye'
 end)
