@@ -21,6 +21,21 @@ return require('packer').startup(function(use)
   -- Colorschemes
   use 'crusoexia/vim-monokai'
 
+  -- Better highlighting and language integrations with treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        ensure_installed = "maintained", -- Install all modules with maintainers
+        -- Make sure match is installed, since we will need it for the `vim-matchup` plugin
+        matchup = {
+          enable = true
+        }
+      })
+    end
+  }
+
   -- Fuzzy find things with Telescope
   use {
     'nvim-telescope/telescope.nvim',
