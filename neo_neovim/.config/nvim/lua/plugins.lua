@@ -14,4 +14,10 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+
+  -- Vimpeccable helps easily write config in Lua
+  use 'svermeulen/vimpeccable'
+
+  -- Colorschemes
+  use 'crusoexia/vim-monokai'
 end)

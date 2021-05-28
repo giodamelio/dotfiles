@@ -74,6 +74,14 @@ _G.packer_plugins = {
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/vscode/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  ["vim-monokai"] = {
+    loaded = true,
+    path = "/home/vscode/.local/share/nvim/site/pack/packer/start/vim-monokai"
+  },
+  vimpeccable = {
+    loaded = true,
+    path = "/home/vscode/.local/share/nvim/site/pack/packer/start/vimpeccable"
   }
 }
 
