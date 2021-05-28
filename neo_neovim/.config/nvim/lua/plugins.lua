@@ -83,4 +83,7 @@ return require('packer').startup(function(use)
 
   -- Easily change quotes and braces and whatnot
   use 'tpope/vim-surround'
+
+  -- Improve % motion and also matching highlighting
+  use 'andymass/vim-matchup'
 end)
