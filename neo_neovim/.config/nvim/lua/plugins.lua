@@ -53,4 +53,7 @@ return require('packer').startup(function(use)
 
   -- Repeatable find bindings (f, F, t, T)
   use 'rhysd/clever-f.vim'
+
+  -- Show git status in the sign column
+  use 'mhinz/vim-signify'
 end)
