@@ -108,13 +108,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/vscode/.local/share/nvim/site/pack/packer/start/vim-bbye"
   },
+  ["vim-eunuch"] = {
+    loaded = true,
+    path = "/home/vscode/.local/share/nvim/site/pack/packer/start/vim-eunuch"
+  },
   ["vim-monokai"] = {
     loaded = true,
     path = "/home/vscode/.local/share/nvim/site/pack/packer/start/vim-monokai"
   },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/home/vscode/.local/share/nvim/site/pack/packer/start/vim-repeat"
+  },
   ["vim-signify"] = {
     loaded = true,
     path = "/home/vscode/.local/share/nvim/site/pack/packer/start/vim-signify"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/vscode/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
   vimpeccable = {
     loaded = true,

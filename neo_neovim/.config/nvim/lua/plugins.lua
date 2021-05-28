@@ -59,4 +59,13 @@ return require('packer').startup(function(use)
 
   -- Better commenting of things
   use 'b3nj5m1n/kommentary'
+
+  -- Unix command helpers
+  use 'tpope/vim-eunuch'
+
+  -- Use "." to repeat actions from supported plugins
+  use 'tpope/vim-repeat'
+
+  -- Easily change quotes and braces and whatnot
+  use 'tpope/vim-surround'
 end)
