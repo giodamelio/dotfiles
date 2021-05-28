@@ -17,3 +17,6 @@ RUN wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64
 RUN wget https://github.com/dandavison/delta/releases/download/0.8.0/delta-0.8.0-x86_64-unknown-linux-gnu.tar.gz \
   && tar -xf delta-0.8.0-x86_64-unknown-linux-gnu.tar.gz \
   && cp delta-0.8.0-x86_64-unknown-linux-gnu/delta /usr/local/bin
+
+RUN curl -LO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb \
+  && dpkg -i ripgrep_12.1.1_amd64.deb
