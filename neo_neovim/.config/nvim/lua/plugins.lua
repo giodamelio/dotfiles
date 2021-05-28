@@ -1,7 +1,6 @@
 -- Bootstrap the packer package manager
 local execute = vim.api.nvim_command
 local fn = vim.fn
-aaa
 
 local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
 
@@ -93,4 +92,7 @@ return require('packer').startup(function(use)
 
   -- Show marks in the sign column
   use 'kshenoy/vim-signature'
+
+  -- Shows git commit history for line under cursor
+  use 'rhysd/git-messenger.vim'
 end)
