@@ -50,4 +50,7 @@ return require('packer').startup(function(use)
 
   -- Better behaved :bdelete and :bwipeout
   use 'moll/vim-bbye'
+
+  -- Repeatable find bindings (f, F, t, T)
+  use 'rhysd/clever-f.vim'
 end)
