@@ -1,0 +1,14 @@
+" Language support
+Plug 'sheerun/vim-polyglot'
+Plug 'Olical/conjure', { 'do': 'bin/compile' } " Clojure repl connection
+
+" Other
+Plug 'roxma/nvim-yarp' " A remote plugin framework used by other plugins
+Plug 'ncm2/ncm2' " Completion framework
+Plug 'ncm2/ncm2-bufword' " Complete words in the current buffer
+Plug 'ncm2/ncm2-path' " Complete paths from current buffer/cwd/root
+Plug 'filipekiss/ncm2-look.vim' " Complete words from the system dictionary
+Plug 'ncm2/ncm2-ultisnips' " Complete from utilsnips
+Plug 'SirVer/ultisnips' " Snippet framework
+Plug 'honza/vim-snippets' " A library of preexisting snippits
+Plug 'ncm2/float-preview.nvim' " Floating completion
