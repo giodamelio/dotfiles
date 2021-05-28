@@ -56,4 +56,7 @@ return require('packer').startup(function(use)
 
   -- Show git status in the sign column
   use 'mhinz/vim-signify'
+
+  -- Better commenting of things
+  use 'b3nj5m1n/kommentary'
 end)
