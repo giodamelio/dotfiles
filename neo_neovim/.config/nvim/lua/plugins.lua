@@ -39,7 +39,18 @@ return require('packer').startup(function(use)
   -- Fuzzy find things with Telescope
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
+    config = function()
+      local trouble = require("trouble.providers.telescope")
+      require('telescope').setup({
+        defaults = {
+          mappings = {
+            i = { ["<c-t>"] = trouble.open_with_trouble },
+            n = { ["<c-t>"] = trouble.open_with_trouble },
+          },
+        },
+      })
+    end
   }
 
   -- Which key to help me remember keybindings
@@ -95,4 +106,12 @@ return require('packer').startup(function(use)
 
   -- Shows git commit history for line under cursor
   use 'rhysd/git-messenger.vim'
+
+  -- Keep track of all of a files troubles
+  use {
+    'folke/trouble.nvim',
+    config = function()
+      require('trouble').setup({})
+    end
+  }
 end)
