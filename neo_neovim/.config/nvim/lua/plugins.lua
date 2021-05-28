@@ -26,4 +26,12 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
+
+  -- Which key to help me remember keybindings
+  use {
+    'folke/which-key.nvim',
+    config = function()
+      require('which-key').setup()
+    end
+  }
 end)

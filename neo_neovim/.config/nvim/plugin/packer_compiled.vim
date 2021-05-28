@@ -94,6 +94,10 @@ _G.packer_plugins = {
   vimpeccable = {
     loaded = true,
     path = "/home/vscode/.local/share/nvim/site/pack/packer/start/vimpeccable"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/vscode/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 
