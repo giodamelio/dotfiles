@@ -34,4 +34,17 @@ return require('packer').startup(function(use)
       require('which-key').setup()
     end
   }
+
+  -- Fast and easy to configure status line
+  use {
+    'hoob3rt/lualine.nvim',
+    requires = {{'kyazdani42/nvim-web-devicons'}},
+    config = function()
+      require('lualine').setup({
+        options = {
+          theme = 'molokai'
+        },
+      })
+    end
+  }
 end)
