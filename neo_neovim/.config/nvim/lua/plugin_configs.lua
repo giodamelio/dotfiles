@@ -1,7 +1,14 @@
 local vimp = require('vimp')
+local wk = require('which-key')
 
--- Add some mappings for telescope
-vimp.nnoremap('<leader>ff', function() require('telescope.builtin').find_files() end)
-vimp.nnoremap('<leader>fg', function() require('telescope.builtin').live_grep() end)
-vimp.nnoremap('<leader>fb', function() require('telescope.builtin').buffers() end)
-vimp.nnoremap('<leader>fh', function() require('telescope.builtin').help_tags() end)
+-- ## Telescope
+-- Add some mappings for finding some things
+wk.register({
+  f = {
+    name = 'find',
+    f = { '<cmd>Telescope find_files<cr>', 'Find files in CWD recursivly' },
+    g = { '<cmd>Telescope live_grep<cr>', 'Grep CWD' },
+    b = { '<cmd>Telescope buffers<cr>', 'Find open buffers' },
+    h = { '<cmd>Telescope help_tags<cr>', 'Search help tags' },
+  }
+}, { prefix = '<leader>'})
