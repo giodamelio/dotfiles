@@ -86,4 +86,7 @@ return require('packer').startup(function(use)
 
   -- Improve % motion and also matching highlighting
   use 'andymass/vim-matchup'
+
+  -- Lint all the things
+  use 'dense-analysis/ale'
 end)
