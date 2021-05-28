@@ -2,7 +2,7 @@
 require('plugins')
 
 -- Set colorscheme
-vim.cmd('colorscheme monokai')
+vim.cmd('colorscheme tokyonight')
 
 -- Set leader keys
 vim.g.mapleader = " " -- Set global leader to space

@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
 
   -- Colorschemes
   use 'crusoexia/vim-monokai'
+  use 'folke/tokyonight.nvim'
 
   -- Better highlighting and language integrations with treesitter
   use {
@@ -68,7 +69,7 @@ return require('packer').startup(function(use)
     config = function()
       require('lualine').setup({
         options = {
-          theme = 'molokai'
+          theme = 'tokyonight'
         },
       })
     end
