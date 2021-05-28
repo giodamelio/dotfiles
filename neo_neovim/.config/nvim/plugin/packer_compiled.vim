@@ -75,6 +75,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/vscode/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/vscode/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/vscode/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/vscode/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
   ["vim-monokai"] = {
     loaded = true,
     path = "/home/vscode/.local/share/nvim/site/pack/packer/start/vim-monokai"
