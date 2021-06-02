@@ -21,14 +21,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # Setup some overlays
-  nixpkgs.overlays = [
-    # Build Neovim from source
-    (import (builtins.fetchTarball {
-      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-    }))
-  ];
-
   # Install some general programs
   home.packages = with pkgs; [
     htop
@@ -38,8 +30,17 @@
     tree
     gcc
     nerdfonts
-    delta
+    fzf
 
-    neovim-nightly
+    xsv # csv utility
+    bandwhich # current network connection monitor
+    grex # build regex based on inputs
+  ];
+
+  imports = [
+    ./program/nvim.nix
+
+    ./role/coreutils-replacements.nix
+    ./role/shell-fish.nix
   ];
 }
