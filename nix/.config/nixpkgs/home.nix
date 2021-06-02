@@ -39,6 +39,7 @@
 
   imports = [
     ./program/nvim.nix
+    ./program/alacritty.nix
 
     ./role/coreutils-replacements.nix
     ./role/shell-fish.nix
