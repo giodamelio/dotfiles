@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     starship # easy shell
+    neofetch # show system info on shell init
   ];
 
   programs.fish = {
@@ -15,7 +16,7 @@
 
     # Remove greeting
     functions = {
-      fish_greeting = "";
+      fish_greeting = "neofetch";
     };
   };
 }
