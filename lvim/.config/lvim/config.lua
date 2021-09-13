@@ -3,7 +3,7 @@
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
-lvim.colorscheme = "onedarker"
+lvim.colorscheme = "tokyonight"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -93,13 +93,13 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- }
 
 -- Additional Plugins
--- lvim.plugins = {
---     {"folke/tokyonight.nvim"}, {
---         "ray-x/lsp_signature.nvim",
---         config = function() require"lsp_signature".on_attach() end,
---         event = "InsertEnter"
---     }
--- }
+lvim.plugins = {
+    {"folke/tokyonight.nvim"}, {
+        "ray-x/lsp_signature.nvim",
+        config = function() require"lsp_signature".on_attach() end,
+        event = "InsertEnter"
+    }
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
