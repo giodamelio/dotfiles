@@ -1,7 +1,17 @@
-# ls
-alias ls='ls --color=auto'
-alias la='ls -ah --color=auto'
-alias ll='ls -l --color=auto'
+# ls accounting for differences between os's
+case "$OSTYPE" in
+  darwin*)
+    # -G shows colors, -F shows listing postfixes by item type
+    alias ls='ls -GF'
+    alias la='ls -ahGF'
+    alias ll='ls -lGF'
+  ;;
+  linux*)
+    alias ls='ls --color=auto'
+    alias la='ls -ah --color=auto'
+    alias ll='ls -l --color=auto'
+  ;;
+esac
 
 # Make Vim point to Neovim
 alias vim='nvim'
