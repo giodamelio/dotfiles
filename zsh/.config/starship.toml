@@ -4,11 +4,5 @@ disabled = true # Disable the package module entirely
 [directory]
 truncate_to_repo = false # Show the expanded path even in git repos
 
-[git_status]
-modified.style = "green"
-modified_count.enabled = true
-modified_count.style = "green"
-
-staged.style = "yellow"
-staged_count.enabled = true
-staged_count.style = "yellow"
+[git_metrics]
+disabled = false
