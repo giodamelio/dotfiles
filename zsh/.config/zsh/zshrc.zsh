@@ -27,6 +27,9 @@ export PATH=$HOME/bin:$PATH
 # Load bins from nix
 if [ -e /home/giodamelio/.nix-profile/etc/profile.d/nix.sh ]; then . /home/giodamelio/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
+# Load cargo
+if [ -e $HOME/.cargo/env ]; then . $HOME/.cargo/env; fi
+
 #### Settings #################################################################
 # Set our editor
 export EDITOR=nvim
