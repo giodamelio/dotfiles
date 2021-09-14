@@ -49,10 +49,8 @@ autoload -U compinit
 compinit
 
 #### Histdb ###################################################################
-# Save the timing and output status
-add-zsh-hook precmd histdb-update-outcome
-
 # Replace the reverse history finder with the one from histdb
+source $(antibody path larkery/zsh-histdb)/histdb-interactive.zsh
 bindkey '^r' _histdb-isearch
 
 # Make zsh-autozuggestions use data from histdb
