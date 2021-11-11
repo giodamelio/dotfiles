@@ -1,1 +1,2 @@
 require("plugin")
+require("colorscheme")

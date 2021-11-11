@@ -9,6 +9,10 @@ return require('packer').startup(function(use)
   -- Make packer manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Colorschemes
+  use 'folke/tokyonight.nvim'
+  use 'tanvirtin/monokai.nvim'
+
   -- Auto sync the packer plugins if the config is being bootstraped
   -- **Keep at the end of the plugin list**
   if packer_bootstrap then
