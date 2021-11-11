@@ -1,5 +1,10 @@
 local wk = require('which-key')
 
+-- Top level leader bindings
+wk.register({
+  ['<tab>'] = { '<cmd>e #<cr>', 'Switch to last buffer' },
+}, { prefix = '<leader>'})
+
 -- Telescope bindings
 local ts = require('telescope.builtin')
 wk.register({
