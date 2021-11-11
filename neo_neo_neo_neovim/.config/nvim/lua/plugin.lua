@@ -13,6 +13,14 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'tanvirtin/monokai.nvim'
 
+  -- Which Key to help define-remember my keybindings
+  use {
+    'folke/which-key.nvim',
+    config = function()
+      require('which-key').setup()
+    end
+  }
+
   -- Auto sync the packer plugins if the config is being bootstraped
   -- **Keep at the end of the plugin list**
   if packer_bootstrap then
