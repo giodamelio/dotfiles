@@ -30,6 +30,12 @@ return require('packer').startup(function(use)
   -- Setup the language server
   use 'neovim/nvim-lspconfig'
 
+  -- Tresitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+  }
+
   -- Setup snippets
   use 'dcampos/nvim-snippy'
   use 'dcampos/cmp-snippy'
