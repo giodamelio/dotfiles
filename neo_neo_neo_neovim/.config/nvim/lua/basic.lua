@@ -31,3 +31,6 @@ vim.opt.mouse = ''
 
 -- Options for completions
 vim.opt.completeopt = 'menu,menuone,noselect'
+
+-- Enable 24 bit colors requires ISO-8613-3 compatible terminal
+vim.opt.termguicolors = true
