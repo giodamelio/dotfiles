@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
   }
+  use 'p00f/nvim-ts-rainbow' -- Rainbow parens
 
   -- Setup snippets
   use 'dcampos/nvim-snippy'
@@ -58,6 +59,26 @@ return require('packer').startup(function(use)
   -- Lists make your troubles go away!
   use 'folke/trouble.nvim'
   use 'luukvbaal/stabilize.nvim' -- Stabalize troubles openening
+
+  -- Better comments
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end,
+  }
+
+  -- Do a Unix to it!
+  use 'tpope/vim-eunuch'
+
+  -- Add a well behaved :Bdelete (keeps splits etc...)
+  use 'moll/vim-bbye'
+
+  -- Deal with pairs of things
+  use 'tpope/vim-surround'
+
+  -- Show marks in the sign column
+  use 'chentau/marks.nvim'
 
   -- Auto sync the packer plugins if the config is being bootstraped
   -- **Keep at the end of the plugin list**
