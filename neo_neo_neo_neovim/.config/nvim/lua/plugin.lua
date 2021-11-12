@@ -46,6 +46,9 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons' -- For the icons
 
+  -- Show git status
+  use 'lewis6991/gitsigns.nvim'
+
   -- Auto sync the packer plugins if the config is being bootstraped
   -- **Keep at the end of the plugin list**
   if packer_bootstrap then
