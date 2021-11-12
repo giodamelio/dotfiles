@@ -80,6 +80,14 @@ return require('packer').startup(function(use)
   -- Show marks in the sign column
   use 'chentau/marks.nvim'
 
+  -- Keep the cursor vertically centered
+  use {
+    'arnamak/stay-centered.nvim',
+    config = function()
+      require('stay-centered')
+    end,
+  }
+
   -- Auto sync the packer plugins if the config is being bootstraped
   -- **Keep at the end of the plugin list**
   if packer_bootstrap then
