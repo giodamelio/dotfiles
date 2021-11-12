@@ -1,4 +1,5 @@
 require("basic")
 require("plugin")
+require("lsp-completion")
 require("colorscheme")
 require("keybinding")

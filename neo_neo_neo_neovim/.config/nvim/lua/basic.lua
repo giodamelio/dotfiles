@@ -28,3 +28,6 @@ vim.opt.cursorline = true
 
 -- Completely disable the mouse
 vim.opt.mouse = ''
+
+-- Options for completions
+vim.opt.completeopt = 'menu,menuone,noselect'

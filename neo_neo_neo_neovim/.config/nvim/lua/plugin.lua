@@ -30,6 +30,17 @@ return require('packer').startup(function(use)
   -- Setup the language server
   use 'neovim/nvim-lspconfig'
 
+  -- Setup snippets
+  use 'dcampos/nvim-snippy'
+  use 'dcampos/cmp-snippy'
+
+  -- Setup completions
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+
   -- Auto sync the packer plugins if the config is being bootstraped
   -- **Keep at the end of the plugin list**
   if packer_bootstrap then
