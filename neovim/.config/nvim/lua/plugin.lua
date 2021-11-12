@@ -72,7 +72,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-eunuch'
 
   -- Add a well behaved :Bdelete (keeps splits etc...)
-  use 'moll/vim-bbye'
+  use 'famiu/bufdelete.nvim'
 
   -- Deal with pairs of things
   use 'tpope/vim-surround'
