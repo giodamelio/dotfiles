@@ -9,6 +9,9 @@ return require('packer').startup(function(use)
   -- Make packer manage itself
   use 'wbthomason/packer.nvim'
 
+  -- So many plugins need this
+  use 'nvim-lua/plenary.nvim'
+
   -- Colorschemes
   use 'folke/tokyonight.nvim'
   use 'tanvirtin/monokai.nvim'
@@ -22,10 +25,7 @@ return require('packer').startup(function(use)
   }
 
   -- Fuzzy find all the things!
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+  use 'nvim-telescope/telescope.nvim'
 
   -- Setup the language server
   use 'neovim/nvim-lspconfig'
