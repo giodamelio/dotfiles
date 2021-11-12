@@ -88,6 +88,16 @@ return require('packer').startup(function(use)
     end,
   }
 
+  -- Generate permalinks to Git forges
+  use {
+    'ruifm/gitlinker.nvim',
+    config = function()
+      require('gitlinker').setup({
+        mappings = nil
+      })
+    end,
+  }
+
   -- Auto sync the packer plugins if the config is being bootstraped
   -- **Keep at the end of the plugin list**
   if packer_bootstrap then
