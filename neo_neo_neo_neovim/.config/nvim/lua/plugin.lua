@@ -49,6 +49,10 @@ return require('packer').startup(function(use)
   -- Show git status
   use 'lewis6991/gitsigns.nvim'
 
+  -- Lists make your troubles go away!
+  use 'folke/trouble.nvim'
+  use 'luukvbaal/stabilize.nvim' -- Stabalize troubles openening
+
   -- Auto sync the packer plugins if the config is being bootstraped
   -- **Keep at the end of the plugin list**
   if packer_bootstrap then
