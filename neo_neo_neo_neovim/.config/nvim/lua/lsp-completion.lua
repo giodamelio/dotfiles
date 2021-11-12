@@ -1,5 +1,6 @@
 ---- Setup Completion with nvim-cmp ----
 local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 cmp.setup({
   snippet = {
@@ -12,7 +13,10 @@ cmp.setup({
     { name = 'snippy' },
   }, {
     { name = 'buffer' },
-  })
+  }),
+  formatting = {
+    format = lspkind.cmp_format({ maxwidth = 50})
+  }
 })
 
 -- Use buffer source when searching with `/`

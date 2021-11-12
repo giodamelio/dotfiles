@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
+  use 'onsails/lspkind-nvim' -- Pretty symbols for nvim-cmp
 
   -- Auto sync the packer plugins if the config is being bootstraped
   -- **Keep at the end of the plugin list**
