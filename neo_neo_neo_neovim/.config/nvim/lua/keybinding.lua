@@ -1,5 +1,11 @@
 local wk = require('which-key')
 
+-- Top level bindings
+wk.register({
+  K = { function() vim.lsp.buf.hover() end, 'Hover' },
+  gd = { function() vim.lsp.buf.definition() end, 'Go to definition' },
+}, {})
+
 -- Top level leader bindings
 wk.register({
   ['<tab>'] = { '<cmd>e #<cr>', 'Switch to last buffer' },

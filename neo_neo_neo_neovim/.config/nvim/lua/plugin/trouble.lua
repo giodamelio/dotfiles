@@ -14,5 +14,7 @@ wk.register({
     r = { '<cmd>TroubleToggle lsp_references<cr>', 'Trouble references' },
     e = { '<cmd>TroubleToggle lsp_definitions<cr>', 'Trouble definitions' },
     i = { '<cmd>TroubleToggle lsp_implementations<cr>', 'Trouble implementations' },
+    n = { function() vim.lsp.diagnostic.goto_next() end, 'Go to next diagnostic' },
+    p = { function() vim.lsp.diagnostic.goto_prev() end, 'Go to previous diagnostic' },
   },
 }, { prefix = '<leader>'})
