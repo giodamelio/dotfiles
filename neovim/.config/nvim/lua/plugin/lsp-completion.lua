@@ -46,6 +46,7 @@ local lsp = require('lspconfig')
 local language_servers = {
   rust_analyzer = {},
   elixirls = {},
+  gopls = {},
 }
 
 local global_config = {
