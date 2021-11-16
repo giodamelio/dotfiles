@@ -21,7 +21,7 @@ vim.opt.clipboard = 'unnamedplus'
 
 -- Show trailing spaces as dots
 vim.opt.list = true
-vim.opt.listchars = 'trail:·'
+vim.opt.listchars = 'trail:·,tab:  '
 
 -- Highlight the line the cursor is on
 vim.opt.cursorline = true
