@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
 
   -- So many plugins need this
   use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
 
   -- Colorschemes
   use 'folke/tokyonight.nvim'
@@ -96,6 +97,18 @@ return require('packer').startup(function(use)
         mappings = nil
       })
     end,
+  }
+
+  -- Language specific plugins. Should be lazy loaded by FileType
+
+  -- Go development
+  use {
+    'crispgm/nvim-go',
+    ft = 'go',
+  }
+  use {
+    'sebdah/vim-delve',
+    ft = 'go',
   }
 
   -- Auto sync the packer plugins if the config is being bootstraped
