@@ -1,34 +1,14 @@
 local wk = require('which-key')
-local pickers = require 'telescope.pickers'
-local finders = require 'telescope.finders'
-local conf = require('telescope.config').values
-local themes = require('telescope.themes')
-local actions = require 'telescope.actions'
-local action_state = require 'telescope.actions.state'
+local tsutil = require('util-telescope')
 
 -- Set the default testing strategy to 'neovim'
 vim.g['test#strategy'] = 'neovim'
 
--- Allow changing the test strategy easily with Telescope
-local change_strategy = function()
-  pickers.new(themes.get_dropdown({}), {
-    prompt_title = 'Choose Test Strategy',
-    finder = finders.new_table {
-      results = { 'neovim', 'kitty', 'terminal' }
-    },
-    sorter = conf.generic_sorter(),
-    attach_mappings = function(prompt_bufnr, map)
-      -- When an item is selected, set the strategy and print a message
-      actions.select_default:replace(function()
-        actions.close(prompt_bufnr)
-        local selection = action_state.get_selected_entry()
-        print('Test strategy set to: ' .. selection[1])
-        vim.g['test#strategy'] = selection[1]
-      end)
-
-      return true
-    end,
-  }):find()
+function change_strategy()
+  tsutil.basic_text('Choose Test Strategy', { 'neovim', 'kitty', 'terminal' }, function(selection)
+    print('Test strategy set to: ' .. selection)
+    vim.g['test#strategy'] = selection
+  end)
 end
 
 -- Set some keybindings
