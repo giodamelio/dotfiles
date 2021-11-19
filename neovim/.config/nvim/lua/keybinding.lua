@@ -1,4 +1,5 @@
 local wk = require('which-key')
+local comment = require('Comment')
 
 -- Top level bindings
 wk.register({
@@ -9,6 +10,7 @@ wk.register({
 -- Top level leader bindings
 wk.register({
   ['<tab>'] = { '<cmd>e #<cr>', 'Switch to last buffer' },
+  c = { function() comment.toggle() end, 'Comment current line' },
 }, { prefix = '<leader>'})
 
 -- Telescope bindings
