@@ -99,6 +99,9 @@ return require('packer').startup(function(use)
     end,
   }
 
+  -- Run tests easily
+  use 'vim-test/vim-test'
+
   -- Language specific plugins. Should be lazy loaded by FileType
 
   -- Go development

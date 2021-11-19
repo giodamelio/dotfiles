@@ -7,8 +7,8 @@ st.setup()
 
 -- Setup some keybindings
 wk.register({
-  t = { 
-    name = 'Trouble',
+  d = { 
+    name = 'Diagnostics/Trouble',
     t = { '<cmd>TroubleToggle<cr>', 'Time for trouble' },
     d = { '<cmd>TroubleToggle lsp_document_diagnostics<cr>', 'Trouble document diagnostics' },
     r = { '<cmd>TroubleToggle lsp_references<cr>', 'Trouble references' },
