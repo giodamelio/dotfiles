@@ -5,8 +5,7 @@
 if [ "$CODESPACES" == "true" ]; then
     sudo apt-get update && sudo apt-get -y install --no-install-recommends stow
     
-    stow git
-    stow neovim
+    stow -t ~ git neovim
     
     exit 0
 fi
