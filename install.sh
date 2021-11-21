@@ -1,11 +1,9 @@
 #!/bin/bash
 
 # Hack to make my dotfiles in Github Codespaces
-# Install stow and remove some conflicting config files
+# Install stow
 if [ "$CODESPACES" == "true" ]; then
-    apt-get -y install --no-install-recommends stow
-    
-    rm ~/.gitconfig
+    sudo apt-get -y install --no-install-recommends stow
     
     stow git
     stow neovim
