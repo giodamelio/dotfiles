@@ -6,7 +6,11 @@ if [ "$CODESPACES" == "true" ]; then
     apt-get -y install --no-install-recommends stow
     
     rm ~/.gitconfig
-    rm ~/.bashrc
+    
+    stow git
+    stow neovim
+    
+    exit 0
 fi
 
 stow */
