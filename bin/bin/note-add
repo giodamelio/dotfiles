@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+filename=~/notes/$(/usr/local/bin/gdate --rfc-3339=date).txt
+
+{
+  printf "_____ %s _____\n\n" "$(/usr/local/bin/gdate --rfc-3339=seconds)"
+  echo "$@"
+  echo
+} >> "$filename"

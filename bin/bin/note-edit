@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+today=$(/usr/local/bin/gdate --rfc-3339=date)
+filename=~/notes/${1:-$today}.txt
+
+"${EDITOR:-vim}" "$filename"

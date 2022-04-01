@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/notes || exit
+rg --smart-case "$@" .
