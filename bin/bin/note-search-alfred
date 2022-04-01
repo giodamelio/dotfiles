@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd ~/notes || exit
+
+/usr/local/bin/rg --json --smart-case "$@" ~/notes | \
+  /usr/local/bin/jq -n -f ~/bin/note-search-alfred.jq
