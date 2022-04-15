@@ -61,6 +61,9 @@ return require('packer').startup(function(use)
   use 'folke/trouble.nvim'
   use 'luukvbaal/stabilize.nvim' -- Stabalize troubles openening
 
+  -- Do the git
+  use 'tpope/vim-fugitive'
+
   -- Better comments
   use {
     'numToStr/Comment.nvim',
