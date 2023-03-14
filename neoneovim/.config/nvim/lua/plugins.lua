@@ -1,10 +1,9 @@
-return require('packer').startup(function(use)
-  -- Make packer manage itself
-  use 'wbthomason/packer.nvim'
-
+return require('lazy').setup({
   -- TokyoNight Colorscheme
-  use {
+  {
     'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
     config = function()
       require('tokyonight').setup({
         style = 'storm',
@@ -17,20 +16,20 @@ return require('packer').startup(function(use)
 
       vim.cmd[[colorscheme tokyonight]]
     end
-  }
+  },
 
   -- Interactivly show keybindings
-  use {
+  {
     'folke/which-key.nvim',
     config = function()
       require('which-key').setup {}
     end
-  }
+  },
 
   -- Fuzzy find all the things
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} },
+  {
+    'nvim-telescope/telescope.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       local wk = require("which-key")
       local builtin = require('telescope.builtin')
@@ -45,4 +44,4 @@ return require('packer').startup(function(use)
       )
     end
   }
-end)
+})
