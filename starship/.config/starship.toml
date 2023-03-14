@@ -1,5 +1,11 @@
-# Minimal left prompt
-format = """$character"""
+format = """$all$fill $time$line_break$character"""
 
-# Move the rest of the prompt to the right of the shell
-right_format = """$all"""
+[directory]
+truncation_length = 4
+
+[fill]
+symbol = "."
+style = "#666666"
+
+[time]
+disabled = false
